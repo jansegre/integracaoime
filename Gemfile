@@ -5,8 +5,13 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development, :test do
+   gem 'sqlite3'
+end
 
+group :production do
+  gem 'mysql'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,10 +34,18 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+platforms :ruby do # linux
+  gem 'unicorn'
+end
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
+
+# Flexible authentication solution for Rails with Warden.
+gem 'devise'
+
+# The administration framework for Ruby on Rails applications.
+gem 'activeadmin'

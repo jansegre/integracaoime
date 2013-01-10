@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery_easing
 //= require plugins
+//= require bootstrap
 //= require_tree .

@@ -27,6 +27,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'font-awesome-sass-rails'
+
 gem 'haml'
 
 # To use ActiveModel has_secure_password

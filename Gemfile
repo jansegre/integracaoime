@@ -41,7 +41,7 @@ gem 'haml'
 
 # Use unicorn as the app server
 platforms :ruby do # linux
-  gem 'unicorn'
+  gem 'unicorn-rails'
 end
 
 # Deploy with Capistrano

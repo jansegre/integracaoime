@@ -16,3 +16,4 @@
 
 # Ignore Eclipse .project
 /.project
+/.settings/

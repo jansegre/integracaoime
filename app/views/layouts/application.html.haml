@@ -15,14 +15,17 @@
     = csrf_meta_tags
     %title=t :title
     = stylesheet_link_tag    "application", :media => "all"
+    -# modernizr has to be loaded as soon as possible to fix html5 tags on IE7/8
     = javascript_include_tag "modernizr"
 
   %body
     /[if lt IE 7]
       %p.chromeframe You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
     
+    -# main content will come here
     = yield
     
+    -# start loading the scripts after the dom is loaded
     = javascript_include_tag "application"
     
     -# load Google Analytics when in production

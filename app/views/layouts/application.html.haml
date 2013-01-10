@@ -25,9 +25,10 @@
     
     = javascript_include_tag "application"
     
-    -# Google Analytics
-    :javascript
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
+    -# load Google Analytics when in production
+    - if Rails.env.production?
+      :javascript
+        var _gaq=[['_setAccount','#{Rails.application.config.ga_account}'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));

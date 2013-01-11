@@ -8,7 +8,8 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3, JavaScript
-    Haml, Sass, Coffeescript
+    Haml, Sass, CoffeeScript
     jQuery, Modernizr, HTML5 Boilerplate
     Font Awesome, Bootstrap
-    Ruby, Rails
+    Ruby, Rails, Unicorn, Nginx, Ubuntu
+

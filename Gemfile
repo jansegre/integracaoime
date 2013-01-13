@@ -11,6 +11,7 @@ group :development, :test do
   # Deploy with Capistrano
   gem 'capistrano'
   gem 'capistrano-unicorn'
+  gem 'rvm-capistrano'
 end
 
 group :production do

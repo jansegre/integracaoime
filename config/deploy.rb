@@ -1,3 +1,6 @@
+require "rvm/capistrano"
+require "bundler/capistrano"
+
 set :application, "integracaoime"
 set :repository, "."
 
@@ -13,6 +16,15 @@ role :app, "integracao.segre.in"                          # This may be the same
 role :db,  "integracao.segre.in", :primary => true # This is where Rails migrations will run
 role :db,  "integracao.segre.in"
 
+set :rake, "/usr/local/bin/rake"
+set :bundle, "/usr/local/bin/bundle"
+
+set :default_environment, {
+  'RUBY_VERSION' => 'ruby 1.9.3'
+}
+
+before 'deploy:setup', 'rvm:install_rvm'
+#before 'deploy:setup', 'rvm:install_ruby'
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"

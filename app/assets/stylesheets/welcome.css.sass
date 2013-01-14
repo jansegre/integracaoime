@@ -1,18 +1,18 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-/* GLOBAL STYLES
- *--------------------------------------------------
-/* Padding below the footer and lighter body text
+@import compass
 
+// GLOBAL STYLES
+  --------------------------------------------------
+
+// Padding below the footer and lighter body text
 body
   padding-bottom: 40px
   color: #5a5a5a
+  //min-width: 630px
 
-/* CUSTOMIZE THE NAVBAR
- *--------------------------------------------------
+// CUSTOMIZE THE NAVBAR
+  --------------------------------------------------
 
-/* Special class on .container surrounding .navbar, used for positioning it into place.
+// Special class on .container surrounding .navbar, used for positioning it into place.
 .navbar-wrapper
   position: absolute
   top: 0
@@ -21,39 +21,37 @@ body
   z-index: 10
   margin-top: 20px
   margin-bottom: -90px
-  /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar.
+  // Negative margin to pull up carousel. 90px is roughly margins and height of navbar.
 
 .navbar-wrapper .navbar
 
-/* Remove border and change up box shadow for more contrast
+// Remove border and change up box shadow for more contrast
 .navbar .navbar-inner
   border: 0
-  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25)
-  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25)
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25)
+  +box-shadow(0 2px 10px rgba(0, 0, 0, 0.25))
 
-/* Downsize the brand/project name a bit
+// Downsize the brand/project name a bit
 .navbar .brand
   padding: 14px 20px 16px
-  /* Increase vertical padding to match navbar links
+  // Increase vertical padding to match navbar links
   font-size: 16px
   font-weight: bold
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5)
 
-/* Navbar links: increase padding for taller navbar
+// Navbar links: increase padding for taller navbar
 .navbar .nav > li > a
   padding: 15px 20px
 
-/* Offset the responsive button for proper vertical alignment
+// Offset the responsive button for proper vertical alignment
 .navbar .btn-navbar
   margin-top: 10px
 
-/* CUSTOMIZE THE NAVBAR
- *--------------------------------------------------
+// CUSTOMIZE THE NAVBAR
+  --------------------------------------------------
 
-/* Carousel base class
+// Carousel base class
 .carousel
-  margin-bottom: 60px
+  margin-bottom: 40px
 
 .carousel .container
   position: relative
@@ -66,9 +64,13 @@ body
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4)
   background-color: transparent
   border: 0
+  z-index: 11
 
 .carousel .item
   height: 500px
+  background-position: center
+  //TODO make this work on IE
+  +background-size(cover)
 
 .carousel img
   position: absolute
@@ -81,7 +83,7 @@ body
   background-color: transparent
   position: static
   max-width: 550px
-  padding: 0 20px
+  padding: 0 70px
   margin-top: 200px
 
 .carousel-caption h1,
@@ -94,10 +96,10 @@ body
 .carousel-caption .btn
   margin-top: 10px
 
-/* MARKETING CONTENT
- *--------------------------------------------------
+// MARKETING CONTENT
+  --------------------------------------------------
 
-/* Center align the text within the three columns below the carousel
+// Center align the text within the three columns below the carousel
 .marketing .span4
   text-align: center
 
@@ -108,52 +110,56 @@ body
   margin-left: 10px
   margin-right: 10px
 
-/* Featurettes
- *-------------------------
+// Featurettes
+  -------------------------
 
 .featurette-divider
   margin: 80px 0
-  /* Space out the Bootstrap <hr> more
+  // Space out the Bootstrap <hr> more
 
 .featurette
   padding-top: 120px
-  /* Vertically center images part 1: add padding above and below text.
+  // Vertically center images part 1: add padding above and below text.
   overflow: hidden
-  /* Vertically center images part 2: clear their floats.
+  // Vertically center images part 2: clear their floats.
 
 .featurette-image
   margin-top: -120px
-  /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it.
+  // Vertically center images part 3: negative margin up the image the same amount of the padding to center it.
 
-/* Give some space on the sides of the floated elements so text doesn't run right into it.
+// Give some space on the sides of the floated elements so text doesn't run right into it.
 .featurette-image.pull-left
   margin-right: 40px
 
 .featurette-image.pull-right
   margin-left: 40px
 
-/* Thin out the marketing headings
+// Thin out the marketing headings
 .featurette-heading
   font-size: 50px
   font-weight: 300
   line-height: 1
   letter-spacing: -1px
 
-/* RESPONSIVE CSS
- *--------------------------------------------------
+// RESPONSIVE CSS
+  --------------------------------------------------
 
 @media (max-width: 979px)
+  .container
+    width: auto
   .container.navbar-wrapper
     margin-bottom: 0
     width: auto
   .navbar-inner
     border-radius: 0
     margin: -20px 0
+  .carousel
+    margin-bottom: 20px
   .carousel .item
-    height: 500px
+    height: 450px
   .carousel img
     width: auto
-    height: 500px
+    height: 450px
   .featurette
     height: auto
     padding: 0
@@ -166,25 +172,24 @@ body
 
 @media (max-width: 767px)
   .navbar-inner
-    margin: -20px
-  .carousel
+    margin: -20px 0
+  //.carousel
     margin-left: -20px
     margin-right: -20px
   .carousel .container
   .carousel .item
-    height: 300px
+    height: 350px
   .carousel img
-    height: 300px
+    height: 350px
   .carousel-caption
     width: 65%
-    padding: 0 70px
     margin-top: 100px
   .carousel-caption h1
     font-size: 30px
   .carousel-caption .lead,
   .carousel-caption .btn
     font-size: 18px
-  .marketing .span4 + .span4
+  //.marketing .span4 + .span4
     margin-top: 40px
   .featurette-heading
     font-size: 30px

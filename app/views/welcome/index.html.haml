@@ -40,22 +40,22 @@
 -# Carousel
 #myCarousel.carousel.slide
   .carousel-inner
-    .item.active
-      = image_tag "slide-01.jpg"
+    .item.active{ :style => "background-image:url('#{image_path 'slide-01.jpg'}')" }
+      -#= image_tag "slide-01.jpg"
       .container
         .carousel-caption
           %h1 Example headline.
           %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
           %a.btn.btn-large.btn-primary{:href => "#"} Sign up today
-    .item
-      = image_tag "slide-02.jpg"
+    .item{ :style => "background-image:url('#{image_path 'slide-02.jpg'}')" }
+      -#= image_tag "slide-02.jpg"
       .container
         .carousel-caption
           %h1 Another example headline.
           %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
           %a.btn.btn-large.btn-primary{:href => "#"} Learn more
-    .item
-      = image_tag "slide-03.jpg"
+    .item{ :style => "background-image:url('#{image_path 'slide-03.jpg'}')" }
+      -#= image_tag "slide-03.jpg"
       .container
         .carousel-caption
           %h1 One more for good measure.
@@ -68,9 +68,9 @@
 
 -# Marketing messaging and featurettes
 -# Wrap the rest of the page in another container to center all the content.
-.container.marketing
+.container.container-fluid.marketing
   -# Three columns of text below the carousel
-  .row
+  .row-fluid
     .span4
       %h2
         %i.icon-flag

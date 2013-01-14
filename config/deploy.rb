@@ -4,6 +4,7 @@ require "bundler/capistrano"
 set :application, "integracaoime"
 set :repository, "."
 
+set :user, "jan"
 set :deploy_via, :copy
 set :deploy_to, "/var/www/rails/#{application}"
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
@@ -42,5 +43,14 @@ before 'deploy:setup', 'rvm:install_rvm'
 # end
 
 #after 'deploy:restart', 'unicorn:reload' # app IS NOT preloaded
-after 'deploy:restart', 'unicorn:restart' # app preloaded
+#after 'deploy:restart', 'unicorn:restart' # app preloaded
 
+namespace :app do
+  for action in [:start, :stop, :restart, :reload]
+    task action do
+      run "#{try_sudo} /etc/init.d/unicorn.#{application} #{action}"
+    end
+  end
+end
+
+after 'deploy:restart', 'app:reload'

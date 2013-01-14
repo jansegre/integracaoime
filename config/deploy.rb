@@ -42,9 +42,6 @@ before 'deploy:setup', 'rvm:install_rvm'
 #   end
 # end
 
-#after 'deploy:restart', 'unicorn:reload' # app IS NOT preloaded
-#after 'deploy:restart', 'unicorn:restart' # app preloaded
-
 namespace :app do
   for action in [:start, :stop, :restart, :reload]
     task action do

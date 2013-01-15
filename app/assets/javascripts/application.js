@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery_easing
+//= require twitter/bootstrap
 //= require plugins
-//= require bootstrap
 //= require_tree .

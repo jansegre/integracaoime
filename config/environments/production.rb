@@ -47,6 +47,10 @@ IntegracaoIME::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( _font-awesome-ie7.min.css modernizr.js )
+  config.assets.precompile += %w( 404.html 422.html 500.html )
+
+  # Defines the prefix where assets are served from. Defaults to /assets
+  #config.assets.prefix = '/s'
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

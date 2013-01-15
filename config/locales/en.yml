@@ -1,6 +1,6 @@
 en:
-  title: IntegracaoIME
-  desc: IME"'"s integration week.
+  title: IME Integration
+  desc: "IME's integration week."
   outdated: 'You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.'
   error_404:
     title: Not Found
@@ -11,9 +11,9 @@ en:
   error_422:
     title: Change Rejected
     text1: Sorry, but the change you tried to make was rejected.
-    text2: Maybe you tried to change something you didn"'"t have access to.
+    text2: "Maybe you tried to change something you didn't have access to."
   error_500:
     title: Server Error
     text1: Sorry, but something went wrong.
-    text2: We"'"ve been notified and will fix it as soon as possible.
+    text2: "We've been notified and will fix it as soon as possible."
 

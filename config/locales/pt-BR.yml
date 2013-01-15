@@ -1,5 +1,18 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 pt-BR:
-  title: "IntegracaoIME"
+  title: IntegracaoIME
+  desc: Semana de integração do IME.
+  outdated: 'Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar sua experiência.'
+  error_404:
+    title: Não Encontrado
+    text1: Desculpe, mas a página que você estava tentando ver não existe.
+    text2: Isso pode ser devido a
+    cause1: um endereço mal digitado
+    cause2: um link desatualizado
+  error_422:
+    title: Alteração Negada
+    text1: Desculpe mas a alteração que você tentou fazer foi negada.
+    text2: Talvez você tenha tentado alterar algo sem possuir permissão.
+  error_500:
+    title: Erro do Servidor
+    text1: Desculpe mas algo errado ocorreu no servidor.
+    text2: Nos já fomos notificados e estamos concertando o problema.

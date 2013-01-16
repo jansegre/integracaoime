@@ -46,7 +46,7 @@ IntegracaoIME::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( _font-awesome-ie7.min.css modernizr.js errors.css )
+  config.assets.precompile += %w( _font-awesome-ie7.min.css modernizr.js respond.js errors.css )
   config.assets.precompile += %w( 404.html 422.html 500.html )
 
   # Defines the prefix where assets are served from. Defaults to /assets

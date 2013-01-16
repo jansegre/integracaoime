@@ -1,6 +1,8 @@
 .navbar-wrapper
   -# Wrap the .navbar in .container to center it within the absolutely positioned parent.
   .container
+    /[if lt IE 7]
+      .alert.alert-block!=t :outdated
     .navbar.navbar-inverse
       .navbar-inner
         -# Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
@@ -10,7 +12,7 @@
           %span.icon-bar
         %a.brand{:href => "#"}=t 'title'
         %p.navbar-text.pull-right
-          %a{:href => "#"}
+          %a.navbar-link{:href => "#"}
             Username
         -# Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
         .nav-collapse.collapse.main-tabs
@@ -39,6 +41,10 @@
                   %a{:href => "#"} Separated link
                 %li
                   %a{:href => "#"} One more separated link
+    /
+      .alert.alert-block
+        %button.close{"data-dismiss" => "alert"} &times;
+        !=t :outdated
 
 -# Carousel
 #myCarousel.carousel.slide.carousel-fade

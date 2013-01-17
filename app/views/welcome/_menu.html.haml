@@ -1,0 +1,68 @@
+.navbar-wrapper
+  -# Wrap the .navbar in .container to center it within the absolutely positioned parent.
+  .container
+    /[if lt IE 7]
+      .alert.alert-block!=t :outdated
+    .navbar.navbar-inverse
+      .navbar-inner
+        -# Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
+        %a.btn.btn-navbar.pull-left{"data-target" => ".main-tabs", "data-toggle" => "collapse"}
+          %i.icon-reorder
+        %a.brand{:href => "#"}
+          =t 'title'
+        %p.navbar-text.pull-right
+          %a.navbar-link{:href => "#"}
+            %i.icon-signin
+            =t :login
+        -# Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
+        .nav-collapse.collapse.main-tabs
+          %ul.nav
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                =t :title, :scope => :more_about
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"}=t :mission, :scope => :more_about
+                %li
+                  %a{:href => "#"}=t :values, :scope => :more_about
+                %li
+                  %a{:href => "#"}=t :members, :scope => :more_about
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                =t :title, :scope => :the_event
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"}=t :what_is, :scope => :the_event
+                %li.dropdown-submenu
+                  %a{:href => "#"}=t :integration2013, :scope => :the_event
+                  %ul.dropdown-menu
+                    %li
+                      %a{:href => "#"}=t :schedule, :scope => :the_event
+                    %li
+                      %a{:href => "#"}=t :participants, :scope => :the_event
+                    %li
+                      %a{:href => "#"}=t :honor_guests, :scope => :the_event
+                %li
+                  %a{:href => "#"}=t :previous, :scope => :the_event
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                =t :title, :scope => :company
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"}=t :all_participants, :scope => :company
+                %li
+                  %a{:href => "#"}=t :why_participate, :scope => :company
+                %li
+                  %a{:href => "#"}=t :participate, :scope => :company
+            %li
+              %a{:href => "#"}=t :media
+            %li
+              %a{:href => "#"}=t :contact
+    /
+      .alert.alert-block
+        %button.close{"data-dismiss" => "alert"} &times;
+        !=t :outdated
+

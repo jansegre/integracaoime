@@ -50,4 +50,6 @@ namespace :app do
   end
 end
 
+before 'deploy:restart', 'deploy:migrate'
 after 'deploy:restart', 'app:reload'
+

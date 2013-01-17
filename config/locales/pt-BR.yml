@@ -30,6 +30,7 @@ pt-BR:
   # footer
   holder: Integração IME
   rights: Todos os direitos reservados
+  back_to_top: Voltar ao topo
 
   # error pages
   error_404:

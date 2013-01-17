@@ -18,8 +18,17 @@
     = javascript_include_tag "modernizr"
 
   %body
-    -# main content will come here
-    = yield
+    = render "shared/menu"
+    - if content_for? :after_menu
+      = yield :after_menu
+    - else
+      .push-down
+
+    .container.container-fluid.marketing
+      -# main content will come here
+      = yield
+
+      = render "shared/footer"
 
     -# start loading the scripts after the dom is loaded
     = javascript_include_tag "application"

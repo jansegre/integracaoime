@@ -1,8 +1,6 @@
-= render "welcome/menu"
-= render "welcome/carousel"
+- content_for :after_menu do
+  = render "shared/carousel"
 
-.container.container-fluid.marketing
-  = render "welcome/marketing"
-  =# render "welcome/featurettes"
-  = render "welcome/footer"
+= render "shared/marketing"
+=# render "shared/featurettes"
 

@@ -8,15 +8,15 @@
         -# Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
         %a.btn.btn-navbar.pull-left{"data-target" => ".main-tabs", "data-toggle" => "collapse"}
           %i.icon-reorder
-        %a.brand{:href => "#"}
+        %a.brand{:href => url_for(root_path)}
           =t 'title'
         %p.navbar-text.pull-right
           - if user_signed_in?
-            %a.navbar-link{:href => "#"}
+            %a.navbar-link{:href => url_for(destroy_user_session_path), :data => {:method => :delete}}
               =t :logout
               %i.icon-signout
           - else
-            %a.navbar-link{:href => "#"}
+            %a.navbar-link{:href => url_for(new_user_session_path)}
               %i.icon-signin
               =t :login
         -# Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.

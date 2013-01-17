@@ -11,9 +11,13 @@
         %a.brand{:href => "#"}
           =t 'title'
         %p.navbar-text.pull-right
-          %a.navbar-link{:href => "#"}
-            %i.icon-signin
-            =t :login
+          - if user_signed_in?
+            %a.navbar-link{:href => url_for(:controller => :session, :action => :destroy)}
+              %i.icon-signout
+          - else
+            %a.navbar-link{:href => "#"}
+              %i.icon-signin
+              =t :login
         -# Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
         .nav-collapse.collapse.main-tabs
           %ul.nav

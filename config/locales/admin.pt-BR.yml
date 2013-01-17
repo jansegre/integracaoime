@@ -1,0 +1,12 @@
+pt-BR:
+  active_admin:
+    dashboard: Painel
+  activerecord:
+    models:
+      user:
+        one:   Usuário
+        other: Usuários
+      admin_user:
+        one:   Administrador
+        other: Administradores
+

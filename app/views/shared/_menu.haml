@@ -1,25 +1,42 @@
 .navbar-wrapper
-  -# Wrap the .navbar in .container to center it within the absolutely positioned parent.
   .container
     /[if lt IE 7]
       .alert.alert-block!=t :outdated
     .navbar.navbar-inverse
       .navbar-inner
-        -# Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
+        -# Button for triggering responsive navbar
         %a.btn.btn-navbar.pull-left{"data-target" => ".main-tabs", "data-toggle" => "collapse"}
           %i.icon-reorder
+        -# Brand name
+        -# TODO add logo
         %a.brand{:href => url_for(root_path)}
           =t 'title'
-        %p.navbar-text.pull-right
+        -# Login/Logout menus
+        %ul.nav.pull-right
           - if user_signed_in?
-            %a.navbar-link{:href => url_for(destroy_user_session_path), :data => {:method => :delete}}
-              =t :logout
-              %i.icon-signout
+            %li.dropdown
+              %a.dropdown-toggle.navbar-link{"data-toggle" => "dropdown", :href => "#"}
+                = current_user.name
+              %ul.dropdown-menu
+                %li
+                  %a.navbar-link{:href => "#"}
+                    =t :curriculum
+                %li
+                  %a.navbar-link{:href => "#"}
+                    =t :tips
+                %li
+                  %a.navbar-link{:href => "#"}
+                    =t :feedback
+                %li
+                  %a.navbar-link{:href => url_for(destroy_user_session_path), :data => {:method => :delete}}
+                    =t :logout
+                    %i.icon-signout
           - else
-            %a.navbar-link{:href => url_for(new_user_session_path)}
-              %i.icon-signin
-              =t :login
-        -# Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
+            %li
+              %a.navbar-link{:href => url_for(new_user_session_path)}
+                %i.icon-signin
+                =t :login
+        -# Place all navbar contents you want collapsed withing .navbar-collapse.collapse
         .nav-collapse.collapse.main-tabs
           %ul.nav
             %li.dropdown
@@ -66,6 +83,7 @@
               %a{:href => "#"}=t :media
             %li
               %a{:href => "#"}=t :contact
+    -# Flash alerts bellow the menu but still inside the container
     - if flash[:error]
       .alert.alert-error
         %button.close{"data-dismiss" => "alert"} &times;

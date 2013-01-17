@@ -2,5 +2,7 @@
   = render "shared/carousel"
 
 = render "shared/marketing"
-=# render "shared/featurettes"
+
+- if user_signed_in?
+  = render "shared/featurettes"
 

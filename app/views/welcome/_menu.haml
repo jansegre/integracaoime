@@ -12,7 +12,8 @@
           =t 'title'
         %p.navbar-text.pull-right
           - if user_signed_in?
-            %a.navbar-link{:href => url_for(:controller => :session, :action => :destroy)}
+            %a.navbar-link{:href => "#"}
+              =t :logout
               %i.icon-signout
           - else
             %a.navbar-link{:href => "#"}

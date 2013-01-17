@@ -1,6 +1,7 @@
 ActiveAdmin.register User do
   index do
     column :email
+    column :approved
     column :current_sign_in_at
     column :last_sign_in_at
     column :sign_in_count
@@ -12,9 +13,28 @@ ActiveAdmin.register User do
   form do |f|
     f.inputs "User Details" do
       f.input :email
-      f.input :password
-      f.input :password_confirmation
+      f.input :approved
+      # let devise do its thing
+      #f.input :password
+      #f.input :password_confirmation
     end
     f.actions
+  end
+
+  batch_action :approve do |selection|
+    selected = User.find(selection)
+    User.transaction do
+      selected.each do |u|
+        u.approved = true
+        u.save
+      end
+    end
+  end
+
+  index do
+    selectable_column
+    column :email
+    column :approved
+    default_actions
   end
 end

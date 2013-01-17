@@ -27,6 +27,10 @@ pt-BR:
   contact: Contato
   login: Login
 
+  # footer
+  holder: Integração IME
+  rights: Todos os direitos reservados
+
   # error pages
   error_404:
     title: Não Encontrado

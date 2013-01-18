@@ -62,6 +62,15 @@ IntegracaoIME::Application.configure do
   # the I18n.default_locale when a translation can not be found)
   config.i18n.fallbacks = true
 
+  #XXX hack to fix locale issue
+  # see <http://stackoverflow.com/questions/7193043/activeadmin-internationalization>
+  config.before_configuration do
+    I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+    I18n.default_locale = 'pt-BR'
+    I18n.locale = 'pt-BR'
+    I18n.reload!
+  end
+
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 

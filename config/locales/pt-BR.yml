@@ -2,36 +2,50 @@ pt-BR:
   # basic
   title: Integração IME
   desc: Semana de integração do IME.
-  outdated: 'Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar sua experiência.'
 
-  # menu
-  more_about:
-    title: Saiba Mais
-    mission: Missão
-    values: Valores
-    members: Membros
-  the_event:
-    title: O Evento
-    what_is: O que é
-    integration2013: Integração 2013
-    schedule: Programação
-    participants: Empresas Participantes
-    honor_guests: Palestrantes Magnos
-    previous: Eventos Anteriores
-  company:
-    title: Empresa
-    all_participants: Veja Quem Já Participou
-    why_participate: Porque Participar
-    participate: Participe
-  media: Fotos e Vídeos
-  contact: Contato
-  login: Login
-  logout: Sair
-  curriculum: Currículo
-  tips: Dicas
-  feedback: Feedback
+  shared:
+    old_browser:
+      outdated: 'Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar sua experiência.'
 
-  # footer
+    # top navbar
+    menu:
+      more_about: Saiba Mais
+      mission: Missão
+      values: Valores
+      members: Membros
+      the_event: O Evento
+      what_is: O que é
+      integration2013: Integração 2013
+      schedule: Programação
+      participants: Empresas Participantes
+      honor_guests: Palestrantes Magnos
+      previous: Eventos Anteriores
+      company: Empresa
+      all_participants: Veja Quem Já Participou
+      why_participate: Porque Participar
+      participate: Participe
+      media: Fotos e Vídeos
+      contact: Contato
+      login: Entrar
+      logout: Sair
+      curriculum: Currículo
+      tips: Dicas
+      feedback: Feedback
+
+    # login modal
+    login:
+      sign_in: Entrar
+      email: Email
+      password: Senha
+      remember_me: Lembrar-me
+      sign_up: Registrar-se
+      forgot: Esqueceu sua senha?
+      confirm: Confirmar email
+      unlock: Destravar conta
+      sign_in_with: Entrar com o %{provider}
+      close: Fechar
+
+    # footer
   holder: Integração IME
   rights: Todos os direitos reservados
   back_to_top: Voltar ao topo

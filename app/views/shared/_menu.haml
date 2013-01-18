@@ -1,7 +1,6 @@
 .navbar-wrapper
   .container
-    /[if lt IE 7]
-      .alert.alert-block!=t :outdated
+    = render "shared/old_browser"
     .navbar.navbar-inverse
       .navbar-inner
         -# Button for triggering responsive navbar
@@ -10,79 +9,82 @@
         -# Brand name
         -# TODO add logo
         %a.brand{:href => url_for(root_path)}
-          =t 'title'
+          =t "title"
         -# Login/Logout menus
         %ul.nav.pull-right
           - if user_signed_in?
             %li.dropdown
-              %a.dropdown-toggle.navbar-link{"data-toggle" => "dropdown", :href => "#"}
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 = current_user.name
+                %i.icon-angle-down
               %ul.dropdown-menu
                 %li
                   %a.navbar-link{:href => "#"}
-                    =t :curriculum
+                    =t ".curriculum"
                 %li
                   %a.navbar-link{:href => "#"}
-                    =t :tips
+                    =t ".tips"
                 %li
                   %a.navbar-link{:href => "#"}
-                    =t :feedback
+                    =t ".feedback"
+                %li.divider
                 %li
                   %a.navbar-link{:href => url_for(destroy_user_session_path), :data => {:method => :delete}}
-                    =t :logout
+                    =t ".logout"
                     %i.icon-signout
           - else
             %li
-              %a.navbar-link{:href => url_for(new_user_session_path)}
+              -# %a.navbar-link{:href => url_for(new_user_session_path)}
+              %a.navbar-link{:href => "#loginModal", :role => :button, "data-toggle" => :modal}
                 %i.icon-signin
-                =t :login
+                =t ".login"
         -# Place all navbar contents you want collapsed withing .navbar-collapse.collapse
         .nav-collapse.collapse.main-tabs
           %ul.nav
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                =t :title, :scope => :more_about
-                %b.caret
+                =t ".more_about"
+                %i.icon-angle-down
               %ul.dropdown-menu
                 %li
-                  %a{:href => "#"}=t :mission, :scope => :more_about
+                  %a{:href => "#"}=t ".mission"
                 %li
-                  %a{:href => "#"}=t :values, :scope => :more_about
+                  %a{:href => "#"}=t ".values"
                 %li
-                  %a{:href => "#"}=t :members, :scope => :more_about
+                  %a{:href => "#"}=t ".members"
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                =t :title, :scope => :the_event
-                %b.caret
+                =t ".the_event"
+                %i.icon-angle-down
               %ul.dropdown-menu
                 %li
-                  %a{:href => "#"}=t :what_is, :scope => :the_event
+                  %a{:href => "#"}=t ".what_is"
                 %li.dropdown-submenu
-                  %a{:href => "#"}=t :integration2013, :scope => :the_event
+                  %a{:href => "#"}=t ".integration2013"
                   %ul.dropdown-menu
                     %li
-                      %a{:href => "#"}=t :schedule, :scope => :the_event
+                      %a{:href => "#"}=t ".schedule"
                     %li
-                      %a{:href => "#"}=t :participants, :scope => :the_event
+                      %a{:href => "#"}=t ".participants"
                     %li
-                      %a{:href => "#"}=t :honor_guests, :scope => :the_event
+                      %a{:href => "#"}=t ".honor_guests"
                 %li
-                  %a{:href => "#"}=t :previous, :scope => :the_event
+                  %a{:href => "#"}=t ".previous"
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                =t :title, :scope => :company
-                %b.caret
+                =t ".company"
+                %i.icon-angle-down
               %ul.dropdown-menu
                 %li
-                  %a{:href => "#"}=t :all_participants, :scope => :company
+                  %a{:href => "#"}=t ".all_participants"
                 %li
-                  %a{:href => "#"}=t :why_participate, :scope => :company
+                  %a{:href => "#"}=t ".why_participate"
                 %li
-                  %a{:href => "#"}=t :participate, :scope => :company
+                  %a{:href => "#"}=t ".participate"
             %li
-              %a{:href => "#"}=t :media
+              %a{:href => "#"}=t ".media"
             %li
-              %a{:href => "#"}=t :contact
+              %a{:href => "#"}=t ".contact"
     -# Flash alerts bellow the menu but still inside the container
     - if flash[:error]
       .alert.alert-error

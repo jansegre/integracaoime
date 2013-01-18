@@ -22,6 +22,8 @@
     = javascript_include_tag "modernizr"
 
   %body
+    - unless user_signed_in?
+      = render "shared/login"
     = render "shared/menu"
     - if content_for? :after_menu
       = yield :after_menu
@@ -32,7 +34,7 @@
       -# main content will come here
       = yield
 
-    .container
+    .container.container-fluid
       = render "shared/footer"
 
     -# start loading the scripts after the dom is loaded

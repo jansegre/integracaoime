@@ -32,6 +32,9 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  # speed up assets compilation
+  gem 'turbo-sprockets-rails3', '>= 0.3'
 end
 
 gem 'haml'

@@ -1,7 +1,7 @@
 = semantic_form_for(@user, :url => user_registration_path) do |f|
 
   .page-header
-    %h2 Register
+    %h2=t ".title"
 
   .form-horizontal
     = f.inputs do
@@ -12,6 +12,6 @@
       = f.input :accepted_terms
 
   = f.actions do
-    =# f.submit "Register", :class => "btn btn-primary"
-    = f.action :submit, :button_html => {:class => "btn btn-primary"}
+    = f.action :cancel, :label => t(".cancel"), :as => :link
+    = f.action :submit, :label => t(".register"), :button_html => {:class => "btn btn-primary"}
 

@@ -50,6 +50,12 @@ pt-BR:
   rights: Todos os direitos reservados
   back_to_top: Voltar ao topo
 
+  registrations:
+    new:
+      title: Criar Usuário
+      register: Registrar
+      cancel: Cancelar
+
   # error pages
   error_404:
     title: Não Encontrado

@@ -1,0 +1,19 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one:   Usuário
+        other: Usuários
+      admin_user:
+        one:   Administrador
+        other: Administradores
+    attributes:
+      user:
+        name: Nome
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da senha
+        accepted_terms: Leu e aceitou os termos
+        student: Aluno
+        company: Empresa
+

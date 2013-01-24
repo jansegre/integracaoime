@@ -4,12 +4,4 @@ pt-BR:
     batch_actions:
       labels:
         approve: Aprovar
-  activerecord:
-    models:
-      user:
-        one:   Usuário
-        other: Usuários
-      admin_user:
-        one:   Administrador
-        other: Administradores
 

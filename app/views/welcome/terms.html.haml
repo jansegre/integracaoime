@@ -1,54 +1,3 @@
-/
-  %h2 Sign up
-  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-    = devise_error_messages!
-    %div
-      = f.label :email
-      %br/
-      = f.email_field :email, :autofocus => true
-    %div
-      = f.label :password
-      %br/
-      = f.password_field :password
-    %div
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation
-    %div= f.submit "Sign up"
-  = render "devise/shared/links"
-#registerModal.modal.hide.fade
-  = form_for(:user, :url => register_new_user_path) do |f|
-
-    .modal-header
-      %button.close{"data-dismiss" => :modal, "aria-hidden" => :true} &times;
-      %h2 Register
-
-    .modal-body
-      .form-horizontal
-        .control-group
-          = f.label :name, :class => "control-label"
-          .controls
-            = f.text_field :name, :autofocus => true
-        .control-group
-          = f.label :email, :class => "control-label"
-          .controls
-            = f.email_field :email
-        .control-group
-          = f.label :password, :class => "control-label"
-          .controls
-            = f.password_field :password
-        .control-group
-          = f.label :password_confirmation, :class => "control-label"
-          .controls
-            = f.password_field :password_confirmation
-        .control-group
-          = f.label :accepted_terms, :class => "control-label"
-          .controls
-            = f.check_box :accepted_terms, :checked => true, :disabled => true
-
-    .modal-footer
-      = f.submit "Register", :class => "btn btn-primary"
-
 .page-header
   %h1 Terms &amp; Conditions
 %div{:style => "text-align: justify"}
@@ -59,6 +8,6 @@
   %p Etiam blandit, dui eget dapibus molestie, massa elit elementum nulla, eget adipiscing neque diam molestie nunc. Fusce ornare tellus a elit facilisis sit amet malesuada justo iaculis. Quisque nibh odio, dictum eget consequat ut, sagittis et libero. Duis a porttitor massa. Duis congue nulla quam. Aliquam eu tortor magna. Suspendisse id risus lacus, vitae feugiat erat.
   %p Morbi nec neque ipsum, eget auctor sem. Aenean eu eros lacus, ut congue sem. Maecenas sit amet aliquam felis. Vivamus nec ipsum urna. Donec ornare iaculis ante, et mollis nisl pretium interdum. Proin aliquam facilisis erat, quis tincidunt tortor convallis vitae. Vestibulum posuere consequat neque bibendum ultrices. Praesent venenatis dictum risus, eleifend varius massa varius ac. Pellentesque laoreet dolor sed risus feugiat tristique. Sed accumsan, odio eu faucibus pulvinar, dolor augue cursus lectus, adipiscing tempor justo lorem non quam. Suspendisse eu turpis sit amet odio commodo tempor a eget mauris. Nunc nisi lorem, scelerisque sit amet posuere non, auctor et neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 .pull-right
-  %a.btn-primary.btn{:href => "#registerModal", :role => :button, "aria-hidden" => "true", "data-toggle" => :modal}
+  %a.btn-primary.btn{:href => url_for(new_user_registration_path), :role => :button, "aria-hidden" => "true", "data-toggle" => :modal}
     I have read and accept the terms above
 

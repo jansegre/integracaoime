@@ -45,9 +45,8 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
-    bootstrap-sass-rails (2.2.2.0)
-      railties (>= 3.1.0)
-      sass-rails (>= 3.1.0)
+    bootstrap-sass (2.2.2.0)
+      sass (~> 3.2)
     bourbon (3.0.1)
       sass (>= 3.2.0)
       thor
@@ -86,6 +85,9 @@ GEM
       sass-rails (>= 3.1.1)
     formtastic (2.2.1)
       actionpack (>= 3.0)
+    formtastic-bootstrap (2.0.0)
+      formtastic (~> 2.2)
+      formtastic-bootstrap
     fssm (0.2.9)
     haml (3.1.7)
     has_scope (0.5.1)
@@ -203,12 +205,13 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
-  bootstrap-sass-rails
+  bootstrap-sass
   capistrano
   coffee-rails (~> 3.2.1)
   compass-rails
   devise
   font-awesome-sass-rails
+  formtastic-bootstrap
   haml
   jquery-rails
   mysql2

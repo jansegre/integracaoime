@@ -26,7 +26,7 @@ group :assets do
 
   gem 'jquery-rails'
   gem 'font-awesome-sass-rails'
-  gem 'bootstrap-sass-rails'
+  gem 'bootstrap-sass'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
@@ -36,6 +36,9 @@ group :assets do
   # speed up assets compilation
   gem 'turbo-sprockets-rails3', '>= 0.3'
 end
+
+# A Formtastic form builder that creates markup suitable for the Twitter Bootstrap framework.
+gem 'formtastic-bootstrap'
 
 gem 'haml'
 

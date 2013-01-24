@@ -3,16 +3,21 @@ IntegracaoIME::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  devise_for :users, :skip => [:sessions]
+  devise_for :users,
+             :skip => [:sessions, :registrations],
+             :controllers => {:registrations => "registrations"}
   as :user do
-    get 'login' => 'devise/sessions#new', :as => :new_user_session
-    post 'login' => 'devise/sessions#create', :as => :user_session
-    delete 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session
+    #get "login" => "devise/sessions#new", :as => :new_user_session
+    post "login" => "devise/sessions#create", :as => :user_session
+    delete "logout" => "devise/sessions#destroy", :as => :destroy_user_session
+
+    get "register" => "registrations#new", :as => :new_user_registration
+    post "register" => "registrations#create", :as => :user_registration
   end
 
-  root :to => 'welcome#index'
+  get "terms" => "welcome#terms", :as => :terms
 
-  get 'test' => 'application#index'
+  root :to => "welcome#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

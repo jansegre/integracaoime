@@ -1,7 +1,0 @@
-pt-BR:
-  active_admin:
-    dashboard: Painel
-    batch_actions:
-      labels:
-        approve: Aprovar
-

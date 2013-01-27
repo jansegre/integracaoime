@@ -56,6 +56,40 @@ pt-BR:
       register: Registrar
       cancel: Cancelar
 
+  # models
+  activemodel: &activemodel
+    models:
+      user:
+        one:   Usuário
+        other: Usuários
+      admin_user:
+        one:   Administrador
+        other: Administradores
+    attributes:
+      default: &default_attrs
+        _type: Tipo
+        _id: ID
+      user:
+        <<: *default_attrs
+        name: Nome
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da senha
+        accepted_terms: Leu e aceitou os termos
+        student: Aluno
+        company: Empresa
+  mongoid:
+    <<: *activemodel
+  activerecord:
+    <<: *activemodel
+
+  # admin
+  active_admin:
+    dashboard: Painel
+    batch_actions:
+      labels:
+        approve: Aprovar
+
   # error pages
   error_404:
     title: Não Encontrado

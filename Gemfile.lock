@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/elia/activeadmin-mongoid.git
+  revision: 3e974fb6d705c3b4f4e15ef1267aa4636b24359b
+  specs:
+    activeadmin-mongoid (0.0.1)
+      activeadmin (~> 0.4)
+      meta_search (>= 1.1.0.pre)
+      mongoid (>= 2.0)
+      sass-rails (~> 3.1, >= 3.1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -211,7 +221,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  activeadmin
+  activeadmin-mongoid!
   bootstrap-sass
   capistrano
   coffee-rails (~> 3.2.1)

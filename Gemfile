@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
+gem 'mongoid', '~> 3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -55,7 +56,7 @@ gem 'unicorn-rails', :platforms => :ruby
 # gem 'debugger'
 
 # Flexible authentication solution for Rails with Warden.
-gem 'devise'
+gem 'devise', '>= 2.2.2'
 
 # The administration framework for Ruby on Rails applications.
 gem 'activeadmin'

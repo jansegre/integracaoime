@@ -50,8 +50,9 @@ class User
   validates_presence_of :name
   validates_length_of :name, :minimum => 3, :maximum => 128
 
-  field :approved, :type => Boolean, :default => false
-  field :accepted_terms, type: Boolean, default: true
+  field :admin,          :type => Boolean, :default => false
+  field :approved,       :type => Boolean, :default => false
+  field :accepted_terms, :type => Boolean, :default => true
 
 
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at

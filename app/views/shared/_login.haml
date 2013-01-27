@@ -2,7 +2,7 @@
   = form_for(:user, :url => user_session_path) do |f|
 
     .modal-header
-      %button.close{"data-dismiss" => :modal, "aria-hidden" => :true} &times;
+      %a.close{"data-dismiss" => :modal, "aria-hidden" => :true} &times;
       %h3=t ".sign_in"
 
     .modal-body

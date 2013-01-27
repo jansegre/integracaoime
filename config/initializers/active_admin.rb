@@ -150,3 +150,31 @@ ActiveAdmin.setup do |config|
   # Set the CSV builder options (default is {})
   # config.csv_options = {}
 end
+
+module ActiveAdmin
+  module Views
+    class TableFor
+      def bcolumn(attribute)
+        column(attribute) do |model|
+          case model[attribute]
+          when true then '&#x2714;'.html_safe
+          when false then '&#x2717;'.html_safe
+          else ''
+          end
+        end
+      end
+    end
+    class AttributesTable
+      def brow(attribute)
+        row(attribute) do |model|
+          case model[attribute]
+          when true then '&#x2714;'.html_safe
+          when false then '&#x2717;'.html_safe
+          else ''
+          end
+        end
+      end
+    end
+  end
+end
+

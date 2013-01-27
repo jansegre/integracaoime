@@ -55,7 +55,7 @@ class User
   field :accepted_terms, :type => Boolean, :default => true
 
 
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at, :approved
   #attr_accessible :email, :password, :password_confirmation,
   #                :remember_me, :approved, :name, :accepted_terms
 

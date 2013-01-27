@@ -69,13 +69,26 @@ pt-BR:
       default: &default_attrs
         _type: Tipo
         _id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
       user:
         <<: *default_attrs
         name: Nome
         email: Email
         password: Senha
         password_confirmation: Confirmação da senha
+        encrypted_password: Senha criptografada
+        sign_in_count: Login feitos
+        current_sign_in_at: Login atual
+        last_sign_in_at: Último login
+        current_sign_in_ip: IP do login atual
+        last_sign_in_ip: IP do último login
+        reset_password_token: Token para redefinir senha
+        reset_password_sent_at: Token enviado em
+        remember_created_at: Lembrar-me criado em
+        approved: Aprovado
         accepted_terms: Leu e aceitou os termos
+        admin: Administrador
         student: Aluno
         company: Empresa
   mongoid:
@@ -83,9 +96,15 @@ pt-BR:
   activerecord:
     <<: *activemodel
 
+  # forms
+  formtastic:
+    :yes: Sim
+    :no: Não
+
   # admin
   active_admin:
     dashboard: Painel
+    waiting_approval: Esperando aprovação
     batch_actions:
       labels:
         approve: Aprovar

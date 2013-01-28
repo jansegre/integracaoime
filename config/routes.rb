@@ -1,11 +1,10 @@
 IntegracaoIME::Application.routes.draw do
   ActiveAdmin.routes(self)
 
-  devise_for :users, ActiveAdmin::Devise.config
-
   devise_for :users,
              :skip => [:sessions, :registrations],
              :controllers => {:registrations => "registrations"}
+
   as :user do
     #get "login" => "devise/sessions#new", :as => :new_user_session
     post "login" => "devise/sessions#create", :as => :user_session

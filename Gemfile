@@ -60,5 +60,5 @@ gem 'unicorn-rails', :platforms => :ruby
 gem 'devise', '>= 2.2.2'
 
 # The administration framework for Ruby on Rails applications.
-gem 'activeadmin-mongoid', :github => 'elia/activeadmin-mongoid'
+gem 'activeadmin-mongoid', :github => 'jansegre/activeadmin-mongoid'
 

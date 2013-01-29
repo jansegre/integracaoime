@@ -12,9 +12,9 @@ ActiveAdmin.register_page "Dashboard" do
 
     columns do
       column do
-        panel "Users Wating Approval" do
+        panel I18n.t("active_admin.waiting_approval") do
           ul do
-            User.where(:approved => [nil, false]).map do |u|
+            User.where(:approved => false).map do |u|
               li link_to u.email, edit_admin_user_path(u)
             end
           end

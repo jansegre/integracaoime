@@ -84,4 +84,8 @@ IntegracaoIME::Application.configure do
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
+
+  # Use memcached for session store
+  require 'action_dispatch/middleware/session/dalli_store'
+  config.session_store :dalli_store
 end

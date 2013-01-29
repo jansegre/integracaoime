@@ -65,7 +65,7 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # to return the currently logged in user.
-  config.current_user_method = :current_admin_user
+  config.current_user_method = :current_user
 
 
   # == Logging Out
@@ -78,13 +78,14 @@ ActiveAdmin.setup do |config|
   # will call the method to return the path.
   #
   # Default:
-  config.logout_link_path = :destroy_admin_user_session_path
+  config.logout_link_path = :destroy_user_session_path
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
   #
   # Default:
   # config.logout_link_method = :get
+  config.logout_link_method = :delete
 
   # == Root
   #
@@ -150,3 +151,31 @@ ActiveAdmin.setup do |config|
   # Set the CSV builder options (default is {})
   # config.csv_options = {}
 end
+
+module ActiveAdmin
+  module Views
+    class TableFor
+      def bcolumn(attribute)
+        column(attribute) do |model|
+          case model[attribute]
+          when true then '&#x2714;'.html_safe
+          when false then '&#x2717;'.html_safe
+          else ''
+          end
+        end
+      end
+    end
+    class AttributesTable
+      def brow(attribute)
+        row(attribute) do |model|
+          case model[attribute]
+          when true then '&#x2714;'.html_safe
+          when false then '&#x2717;'.html_safe
+          else ''
+          end
+        end
+      end
+    end
+  end
+end
+

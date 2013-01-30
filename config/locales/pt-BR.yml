@@ -63,18 +63,18 @@ pt-BR:
       user:
         one:   Usuário
         other: Usuários
-      admin_user:
-        one:   Administrador
-        other: Administradores
+      company:
+        one:   Empresa
+        other: Empresas
     attributes:
       default: &default_attrs
         _type: Tipo
         _id: ID
         created_at: Criado em
         updated_at: Atualizado em
+        name: Nome
       user:
         <<: *default_attrs
-        name: Nome
         email: Email
         password: Senha
         password_confirmation: Confirmação da senha
@@ -91,7 +91,11 @@ pt-BR:
         accepted_terms: Leu e aceitou os termos
         admin: Administrador
         student: Aluno
-        company: Empresa
+        company_id: Empresa
+      company:
+        <<: *default_attrs
+        users: Usuários
+        subscriber: Assinante
   mongoid:
     <<: *activemodel
   activerecord:

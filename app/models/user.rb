@@ -52,10 +52,12 @@ class User
 
   field :admin,          :type => Boolean, :default => false
   field :approved,       :type => Boolean, :default => false
-  field :accepted_terms, :type => Boolean, :default => true
+  field :student,        :type => Boolean
+
+  belongs_to :company
 
 
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at, :approved
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at, :approved, :student, :company_id
   #attr_accessible :email, :password, :password_confirmation,
   #                :remember_me, :approved, :name, :accepted_terms
 

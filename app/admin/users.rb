@@ -3,6 +3,7 @@ ActiveAdmin.register User do
   filter :email, :as => :string
   filter :name, :as => :string
   filter :approved, :as => :select
+  filter :student, :as => :select
 
   index do
     selectable_column
@@ -10,6 +11,7 @@ ActiveAdmin.register User do
     column :email
     bcolumn :admin
     bcolumn :approved
+    bcolumn :student
     #column :current_sign_in_at
     #column :last_sign_in_at
     column :sign_in_count
@@ -25,6 +27,8 @@ ActiveAdmin.register User do
         f.input :password_confirmation
       end
       f.input :approved, :as => :boolean
+      f.input :student, :as => :boolean
+      f.input :company
     end
     f.actions
   end

@@ -1,0 +1,14 @@
+class Company
+  include Mongoid::Document
+  include Mongoid::Timestamps
+
+  field :name
+  field :subscriber, :type => Boolean
+  validates_presence_of :name
+
+  has_many :users
+
+  attr_accessible :name, :subscriber, :users
+
+  index({ name: 1}, {unique: true, background: true})
+end

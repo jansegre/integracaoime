@@ -5,7 +5,7 @@ ActiveAdmin.register Company do
   index do
     selectable_column
     column :name
-    column :subscriber
+    bcolumn :subscriber
     default_actions
   end
 

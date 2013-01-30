@@ -8,7 +8,7 @@ class Company
 
   has_many :users
 
-  attr_accessible :name, :subscriber, :users
+  attr_accessible :name, :subscriber, :user_ids
 
   index({ name: 1}, {unique: true, background: true})
 end

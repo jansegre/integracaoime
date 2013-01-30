@@ -14,4 +14,7 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+
+  # Override build_footer method in ActiveAdmin::Views::Pages
+  require 'active_admin_views_pages_base.rb'
 end

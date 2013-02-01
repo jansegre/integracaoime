@@ -51,24 +51,50 @@ class User
   validates_length_of :name, :minimum => 3, :maximum => 128
 
   field :admin,          :type => Boolean, :default => false
-  field :approved,       :type => Boolean, :default => false
+  #field :approved,       :type => Boolean, :default => false
   field :student,        :type => Boolean
 
   belongs_to :company
   has_one :curriculum_vitae
 
+  attr_accessible :name, :email, :password, :password_confirmation,
+                  :remember_me, :created_at, :updated_at, :approved,
+                  :student, :company_id, :curriculum_vitae
 
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at, :approved, :student, :company_id
-  #attr_accessible :email, :password, :password_confirmation,
-  #                :remember_me, :approved, :name, :accepted_terms
+  def initialize *args
+    super
+    self[:unapproved] = true
+  end
+
+  def approve!
+    remove_attribute :unapproved
+  end
+
+  def lock!
+    self[:locked] = true
+  end
+
+  def unlock!
+    remove_attribute :locked
+  end
+
+  def approved?
+    not self[:unapproved]
+  end
+
+  def locked?
+    self[:locked]
+  end
 
   def active_for_authentication?
-    super && approved?
+    super && approved? && !locked?
   end
 
   def inactive_message
-    if !approved?
+    if not approved?
       :not_approved
+    elsif locked?
+      :locked
     else
       super # Use whatever other message
     end

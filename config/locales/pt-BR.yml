@@ -66,6 +66,9 @@ pt-BR:
       company:
         one:   Empresa
         other: Empresas
+      curriculum_vitae:
+        one:   Currículo
+        other: Currículos
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -88,6 +91,7 @@ pt-BR:
         reset_password_sent_at: Token enviado em
         remember_created_at: Lembrar-me criado em
         approved: Aprovado
+        unapproved: Não Aprovado
         accepted_terms: Leu e aceitou os termos
         admin: Administrador
         student: Aluno
@@ -96,6 +100,8 @@ pt-BR:
         <<: *default_attrs
         users: Usuários
         subscriber: Assinante
+      curriculum_vitae:
+        <<: *default_attrs
   mongoid:
     <<: *activemodel
   activerecord:
@@ -110,9 +116,19 @@ pt-BR:
   active_admin:
     dashboard: Painel
     waiting_approval: Esperando aprovação
+    resource:
+      show:
+        lock: Bloquear
+        unlock: Desbloquear
+        approve: Aprovar
     batch_actions:
       labels:
         approve: Aprovar
+
+  flash:
+    locked: Bloqueado com sucesso.
+    unlocked: Desbloqueado com sucesso.
+    approved: Aprovado com sucesso.
 
   # error pages
   error_404:

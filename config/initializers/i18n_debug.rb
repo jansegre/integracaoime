@@ -1,5 +1,6 @@
 require 'i18n'
-debug_i18n = false
+#debug_i18n = false
+debug_i18n = true
 
 if (Rails.env.development? || Rails.env.test?) && debug_i18n
   module I18n

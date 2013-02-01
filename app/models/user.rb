@@ -55,6 +55,7 @@ class User
   field :student,        :type => Boolean
 
   belongs_to :company
+  has_one :curriculum_vitae
 
 
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :created_at, :updated_at, :approved, :student, :company_id

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CurriculumVitaeTest < ActiveSupport::TestCase
+class ResumeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

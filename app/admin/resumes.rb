@@ -1,4 +1,4 @@
-ActiveAdmin.register CurriculumVitae do
+ActiveAdmin.register Resume do
   filter :user
 
   form do |f|

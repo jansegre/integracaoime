@@ -1,4 +1,4 @@
-class CurriculumVitae
+class Resume
   include Mongoid::Document
   include Mongoid::Timestamps
 

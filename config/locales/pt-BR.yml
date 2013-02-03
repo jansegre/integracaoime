@@ -61,8 +61,11 @@ pt-BR:
     resume:
       title: Currículo
       references: Referências
+      courses: Cursos
     new_resume:
       title: Criar currículo
+    edit_resume:
+      title: Editar currículo
     hints:
       title: Dicas
     feedback:
@@ -117,6 +120,8 @@ pt-BR:
       resume:
         <<: *default_attrs
         references: Referências
+        courses: Cursos
+        user_id: Usuário
       hint:
         <<: *default_attrs
         description: Descrição

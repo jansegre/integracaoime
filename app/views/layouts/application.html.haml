@@ -9,7 +9,7 @@
     = csrf_meta_tags
     %title>
       - if content_for? :title
-        #{t :title} - #{yield :title}
+        #{yield :title} - #{t :title}
       - else
         = t :title
     = stylesheet_link_tag "application", :media => "all"

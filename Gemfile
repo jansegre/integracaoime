@@ -13,6 +13,9 @@ group :development, :test do
   # Deploy with Capistrano
   gem 'capistrano'
   gem 'rvm-capistrano'
+
+  # The ruby 1.9 debugger
+  gem 'debugger'
 end
 
 group :production do
@@ -39,22 +42,17 @@ group :assets do
   gem 'turbo-sprockets-rails3', '>= 0.3'
 end
 
+# Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
+gem 'carrierwave-mongoid', '~> 0.4', :require => 'carrierwave/mongoid'
+
 # A Formtastic form builder that creates markup suitable for the Twitter Bootstrap framework.
 gem 'formtastic-bootstrap'
 
+# Beautiful, DRY, well-indented, clear markup: templating haiku.
 gem 'haml'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
 
 # Use unicorn as the app server
 gem 'unicorn-rails', :platforms => :ruby
-
-# To use debugger
-# gem 'debugger'
 
 # Flexible authentication solution for Rails with Warden.
 gem 'devise', '>= 2.2.2'

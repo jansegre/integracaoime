@@ -1,1 +1,10 @@
 %h1=t ".title"
+
+.row-fluid
+  %ul.thumbnails
+    - @hints.each do |h|
+      %li.span4
+        .thumbnail
+          = image_tag(h.image_url) unless h.image_url.nil?
+          %p= h.description
+

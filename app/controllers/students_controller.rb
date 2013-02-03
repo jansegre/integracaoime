@@ -44,7 +44,7 @@ class StudentsController < ApplicationController
 
   # display hints
   def hints
-    #TODO
+    @hints = Hint.all_published
   end
 
   # display feedback page

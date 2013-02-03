@@ -38,8 +38,11 @@ ActiveAdmin.register User do
   member_action :approve, :method => :put do
     user = User.find(params[:id])
     user.approve!
-    user.save
-    redirect_to({:action => :show}, :notice => t("flash.approved"))
+    if user.save
+      redirect_to({:action => :show}, :notice => t("flash.approved"))
+    else
+      redirect_to({:action => :show}, :warn => t("flash.error"))
+    end
   end
 
   member_action :lock, :method => :put do

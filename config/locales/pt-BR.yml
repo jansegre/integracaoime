@@ -80,6 +80,9 @@ pt-BR:
       resume:
         one:   Currículo
         other: Currículos
+      hint:
+        one:   Dica
+        other: Dicas
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -114,6 +117,11 @@ pt-BR:
       resume:
         <<: *default_attrs
         references: Referências
+      hint:
+        <<: *default_attrs
+        description: Descrição
+        image: Imagem
+        published: Publicada
   mongoid:
     <<: *activemodel
   activerecord:
@@ -135,6 +143,8 @@ pt-BR:
         lock: Bloquear
         unlock: Desbloquear
         approve: Aprovar
+        publish: Publicar
+        unpublish: Cancelar publicação
     batch_actions:
       labels:
         approve: Aprovar
@@ -148,6 +158,8 @@ pt-BR:
     student_required: É nescessário ser aluno para ter acesso a essa página.
     resume_updated: Currículo atualizado com sucesso.
     resume_created: Currículo criado com sucesso.
+    published: Publicada com sucesso.
+    unpublished: Publicação cancelada com sucesso.
 
   # error pages
   error_404:

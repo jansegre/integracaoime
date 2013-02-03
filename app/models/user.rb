@@ -57,6 +57,8 @@ class User
   belongs_to :company
   has_one :resume
 
+  validates_associated :resume
+
   attr_accessible :name, :email, :password, :password_confirmation,
                   :remember_me, :created_at, :updated_at, :approved,
                   :student, :company_id, :resume_id

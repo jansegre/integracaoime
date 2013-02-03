@@ -10,11 +10,18 @@ class ApplicationController < ActionController::Base
   def authenticate_admin_user!
     authenticate_user!
     unless current_user.admin?
-      flash[:alert] = "You don't have permission for this."
-      redirect_to root_path
+      redirect_to root_path, :alert => t('flash.admin_required')
+    end
+  end
+
+  # For use with StudentsController
+  def authenticate_student_user!
+    authenticate_user!
+    unless current_user.student?
+      redirect_to root_path, :alert => t('flash.student_required')
     end
   end
 
   # Override build_footer method in ActiveAdmin::Views::Pages
-  require 'active_admin_views_pages_base.rb'
+  require 'active_admin_views_pages_base'
 end

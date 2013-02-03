@@ -57,6 +57,17 @@ pt-BR:
       register: Registrar
       cancel: Cancelar
 
+  students:
+    resume:
+      title: Currículo
+      references: Referências
+    new_resume:
+      title: Criar currículo
+    hints:
+      title: Dicas
+    feedback:
+      title: Feedback
+
   # models
   activemodel: &activemodel
     models:
@@ -102,6 +113,7 @@ pt-BR:
         subscriber: Assinante
       resume:
         <<: *default_attrs
+        references: Referências
   mongoid:
     <<: *activemodel
   activerecord:
@@ -111,6 +123,8 @@ pt-BR:
   formtastic:
     :yes: Sim
     :no: Não
+    create: Criar %{model}
+    update: Atualizar %{model}
 
   # admin
   active_admin:
@@ -125,10 +139,15 @@ pt-BR:
       labels:
         approve: Aprovar
 
+  # flash messages
   flash:
     locked: Bloqueado com sucesso.
     unlocked: Desbloqueado com sucesso.
     approved: Aprovado com sucesso.
+    admin_required: Você não possui permissões de administrador.
+    student_required: É nescessário ser aluno para ter acesso a essa página.
+    resume_updated: Currículo atualizado com sucesso.
+    resume_created: Currículo criado com sucesso.
 
   # error pages
   error_404:

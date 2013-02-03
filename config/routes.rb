@@ -1,5 +1,14 @@
 IntegracaoIME::Application.routes.draw do
-  ActiveAdmin.routes(self)
+
+  root :to => "welcome#index"
+
+  get "user/resume" => "students#resume", :as => :resume
+  get "user/resume/new" => "students#new_resume", :as => :new_resume
+  post "user/resume/new" => "students#create_resume", :as => :create_resume
+  get "user/resume/edit" => "students#edit_resume", :as => :edit_resume
+  put "user/resume/edit" => "students#update_resume", :as => :update_resume
+  get "user/hints" => "students#hints", :as => :hints
+  get "user/feedback" => "students#feedback", :as => :feedback
 
   devise_for :users,
              :skip => [:sessions, :registrations],
@@ -16,7 +25,7 @@ IntegracaoIME::Application.routes.draw do
 
   get "terms" => "welcome#terms", :as => :terms
 
-  root :to => "welcome#index"
+  ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

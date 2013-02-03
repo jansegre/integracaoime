@@ -1,0 +1,9 @@
+%h1=t ".title"
+
+.well
+  %dl
+    %dt=t ".references"
+    %dd= @resume.references
+
+%a.btn{ href: url_for(action: "edit_resume") }=t ".edit"
+

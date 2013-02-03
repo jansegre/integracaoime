@@ -18,15 +18,16 @@
                 = current_user.name
                 %i.icon-angle-down
               %ul.dropdown-menu
-                %li
-                  %a.navbar-link{:href => "#"}
-                    =t ".resume"
-                %li
-                  %a.navbar-link{:href => "#"}
-                    =t ".tips"
-                %li
-                  %a.navbar-link{:href => "#"}
-                    =t ".feedback"
+                - if current_user.student?
+                  %li
+                    %a.navbar-link{:href => url_for(resume_path)}
+                      =t ".resume"
+                  %li
+                    %a.navbar-link{:href => url_for(hints_path)}
+                      =t ".tips"
+                  %li
+                    %a.navbar-link{:href => url_for(feedback_path)}
+                      =t ".feedback"
                 %li.divider
                 - if current_user.admin?
                   %li

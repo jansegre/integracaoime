@@ -70,6 +70,13 @@ pt-BR:
       title: Dicas
     feedback:
       title: Feedback
+      submit: Enviar
+
+  mail:
+    feedback:
+      subject: Feedback enviado por %{name}
+    contact:
+      subject: Contato de %{name}
 
   # models
   activemodel: &activemodel
@@ -165,6 +172,8 @@ pt-BR:
     resume_created: Currículo criado com sucesso.
     published: Publicada com sucesso.
     unpublished: Publicação cancelada com sucesso.
+    feedback_sent: Feedback enviado com sucesso.
+    feedback_failed: Houve um erro ao enviar o feedback.
 
   # error pages
   error_404:

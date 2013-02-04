@@ -2,3 +2,9 @@
   =t ".title"
 
 %h1=t ".title"
+
+= form_tag action: "send_feedback" do
+  %fieldset
+    = text_area_tag :message
+  = submit_tag t(".submit"), class: "btn"
+

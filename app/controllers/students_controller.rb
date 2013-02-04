@@ -49,11 +49,16 @@ class StudentsController < ApplicationController
 
   # display feedback page
   def feedback
-    #TODO
+    @message = ""
   end
 
   # receive post and email that feedback
   def send_feedback
-    #TODO
+    @message = params[:message]
+    if Staff.feedback_email(current_user, @message).deliver
+      redirect_to root_path, notice: t("flash.feedback_sent")
+    else
+      render action: "feedback", warn: t("flash.feedback_failed")
+    end
   end
 end

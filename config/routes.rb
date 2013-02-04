@@ -9,12 +9,13 @@ IntegracaoIME::Application.routes.draw do
   put "user/resume/edit" => "students#update_resume", :as => :update_resume
   get "user/hints" => "students#hints", :as => :hints
   get "user/feedback" => "students#feedback", :as => :feedback
+  post "user/feedback" => "students#send_feedback", :as => :send_feedback
 
   devise_for :users,
              :skip => [:sessions, :registrations],
              :controllers => {:registrations => "registrations"}
 
-  as :user do
+  devise_scope :user do
     #get "login" => "devise/sessions#new", :as => :new_user_session
     post "login" => "devise/sessions#create", :as => :user_session
     delete "logout" => "devise/sessions#destroy", :as => :destroy_user_session

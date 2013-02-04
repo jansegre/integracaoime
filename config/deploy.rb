@@ -4,7 +4,7 @@ require "bundler/capistrano"
 set :application, "integracaoime"
 set :repository, "."
 
-set :user, "jan"
+set :user, "capistrano"
 set :deploy_via, :copy
 set :deploy_to, "/var/www/rails/#{application}"
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
@@ -12,17 +12,17 @@ set :deploy_to, "/var/www/rails/#{application}"
 set :scm, :git
 set :copy_cache, true
 
+role :app, "integracao.segre.in", primary: true
 role :web, "integracao.segre.in"                          # Your HTTP server, Apache/etc
-role :app, "integracao.segre.in"                          # This may be the same as your `Web` server
-role :db,  "integracao.segre.in", :primary => true # This is where Rails migrations will run
-role :db,  "integracao.segre.in"
+#role :db,  "integracao.segre.in", :primary => true # This is where Rails migrations will run
+#role :db,  "integracao.segre.in"
 
-set :rake, "/usr/local/bin/rake"
-set :bundle, "/usr/local/bin/bundle"
+#set :rake, "/usr/local/bin/rake"
+#set :bundle, "/usr/local/bin/bundle"
 
-set :default_environment, {
-  'RUBY_VERSION' => 'ruby 1.9.3'
-}
+#set :default_environment, {
+#  'RUBY_VERSION' => 'ruby 1.9.3'
+#}
 
 before 'deploy:setup', 'rvm:install_rvm'
 #before 'deploy:setup', 'rvm:install_ruby'

@@ -8,18 +8,12 @@ gem 'dalli'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'sqlite3'
-
   # Deploy with Capistrano
   gem 'capistrano'
   gem 'rvm-capistrano'
 
   # The ruby 1.9 debugger
-  gem 'debugger'
-end
-
-group :production do
-  gem 'mysql2'
+  # gem 'debugger', :platforms => :mri_19
 end
 
 # Gems used only for assets and not required
@@ -34,7 +28,7 @@ group :assets do
   gem 'bootstrap-sass'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', '>= 0.11.3', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 

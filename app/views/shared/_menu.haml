@@ -28,7 +28,7 @@
                   %li
                     %a.navbar-link{:href => url_for(feedback_path)}
                       =t ".feedback"
-                %li.divider
+                  %li.divider
                 - if current_user.admin?
                   %li
                     %a.navbar-link{:href => url_for(admin_root_path)}

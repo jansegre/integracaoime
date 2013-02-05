@@ -1,7 +1,7 @@
 ActiveAdmin.register User do
 
-  filter :email, :as => :string
-  filter :name, :as => :string
+  filter :email
+  filter :name
   #filter :approved, :as => :select
   filter :student, :as => :select
 

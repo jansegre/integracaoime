@@ -12,7 +12,9 @@ class Hint
 
   attr_accessible :image, :image_cache, :description, :published
 
-  def self.all_published
-    where(:published.ne => nil)
+  class << self
+    def all_published
+      where(:published.ne => nil)
+    end
   end
 end

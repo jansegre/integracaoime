@@ -14,8 +14,9 @@
 /log/*.log
 /tmp
 
-# Ignore generated assets
+# Ignore generated assets and uploads
 /public/assets/
+/public/uploads/
 
 # Ignore Eclipse .project
 /.project

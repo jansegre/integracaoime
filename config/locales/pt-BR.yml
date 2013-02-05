@@ -96,6 +96,9 @@ pt-BR:
       initiative:
         one:   Iniciativa
         other: Iniciativas
+      calendar:
+        one:   Calendário
+        other: Calendários
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -140,6 +143,11 @@ pt-BR:
       initiative:
         <<: *default_attrs
         site: Site
+      calendar:
+        <<: *default_attrs
+        calendar: Calendário
+        year: Ano
+        specialty: Especialidade
   mongoid:
     <<: *activemodel
   activerecord:

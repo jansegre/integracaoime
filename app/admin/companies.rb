@@ -2,6 +2,8 @@ ActiveAdmin.register Company do
 
   filter :name
 
+  actions :index, :show, :new, :create, :update, :edit
+
   index do
     selectable_column
     column :name

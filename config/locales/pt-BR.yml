@@ -93,6 +93,9 @@ pt-BR:
       hint:
         one:   Dica
         other: Dicas
+      initiative:
+        one:   Iniciativa
+        other: Iniciativas
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -100,6 +103,8 @@ pt-BR:
         created_at: Criado em
         updated_at: Atualizado em
         name: Nome
+        image: Imagem
+        description: Descrição
       user:
         <<: *default_attrs
         email: Email
@@ -131,9 +136,10 @@ pt-BR:
         user_id: Usuário
       hint:
         <<: *default_attrs
-        description: Descrição
-        image: Imagem
         published: Publicada
+      initiative:
+        <<: *default_attrs
+        site: Site
   mongoid:
     <<: *activemodel
   activerecord:

@@ -24,6 +24,9 @@ role :web, "integracao.segre.in"                          # Your HTTP server, Ap
 #  'RUBY_VERSION' => 'ruby 1.9.3'
 #}
 
+# include uploads dir
+set :shared_children, shared_children + %w(public/uploads)
+
 before 'deploy:setup', 'rvm:install_rvm'
 #before 'deploy:setup', 'rvm:install_ruby'
 

@@ -43,7 +43,7 @@ gem 'carrierwave-mongoid', '~> 0.4', :require => 'carrierwave/mongoid'
 gem 'formtastic-bootstrap'
 
 # Beautiful, DRY, well-indented, clear markup: templating haiku.
-gem 'haml'
+gem 'haml-rails'
 
 # Use unicorn as the app server
 gem 'unicorn-rails', :platforms => :ruby

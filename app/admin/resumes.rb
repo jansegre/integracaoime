@@ -1,5 +1,5 @@
 ActiveAdmin.register Resume do
-  filter :user
+  filter :user, collection: proc { User.students }
 
   form do |f|
     f.inputs "User Details" do

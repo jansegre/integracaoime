@@ -137,6 +137,7 @@ pt-BR:
         references: Referências
         courses: Cursos
         user_id: Usuário
+        user: Usuário
       hint:
         <<: *default_attrs
         published: Publicada

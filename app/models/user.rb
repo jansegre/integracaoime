@@ -103,7 +103,11 @@ class User
 
   class << self
     def admins
-      where(admin: true)
+      where admin: true
+    end
+
+    def students
+      where student: true
     end
   end
 end

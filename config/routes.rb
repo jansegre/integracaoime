@@ -2,14 +2,21 @@ IntegracaoIME::Application.routes.draw do
 
   root :to => "welcome#index"
 
-  get "user/resume" => "students#resume", :as => :resume
-  get "user/resume/new" => "students#new_resume", :as => :new_resume
-  post "user/resume/new" => "students#create_resume", :as => :create_resume
-  get "user/resume/edit" => "students#edit_resume", :as => :edit_resume
-  put "user/resume/edit" => "students#update_resume", :as => :update_resume
-  get "user/hints" => "students#hints", :as => :hints
-  get "user/feedback" => "students#feedback", :as => :feedback
-  post "user/feedback" => "students#send_feedback", :as => :send_feedback
+  get "resumes" => "company#resumes", :as => :resumes
+  get "calendars" => "company#calendars", :as => :calendars
+  get "how_to" => "company#how_to", :as => :how_to
+  get "sponsor" => "company#sponsor", :as => :sponsor
+  get "highlight" => "company#highlight", :as => :highlight
+
+  get "resume" => "students#resume", :as => :resume
+  get "resume/new" => "students#new_resume", :as => :new_resume
+  post "resume/new" => "students#create_resume", :as => :create_resume
+  get "resume/edit" => "students#edit_resume", :as => :edit_resume
+  put "resume/edit" => "students#update_resume", :as => :update_resume
+  get "hints" => "students#hints", :as => :hints
+
+  get "feedback" => "users#feedback", :as => :feedback
+  post "feedback" => "users#send_feedback", :as => :send_feedback
 
   devise_for :users,
              :skip => [:sessions, :registrations],

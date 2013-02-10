@@ -29,9 +29,14 @@ pt-BR:
       login: Entrar
       logout: Sair
       resume: Currículo
+      resumes: Currículos
       tips: Dicas
       feedback: Feedback
       admin_dashboard: Administração
+      calendars: Calendários
+      how_to: Orientações para convênio
+      sponsor: Patrocine uma iniciativa
+      highlight: Destaque (Deixe sua mensagem)
 
     # login modal
     login:
@@ -68,6 +73,8 @@ pt-BR:
       title: Editar currículo
     hints:
       title: Dicas
+
+  users:
     feedback:
       title: Feedback
       submit: Enviar
@@ -183,12 +190,14 @@ pt-BR:
     approved: Aprovado com sucesso.
     admin_required: Você não possui permissões de administrador.
     student_required: É nescessário ser aluno para ter acesso a essa página.
+    company_required: É nescessário fazer parte de uma empresa para ter acesso a essa página.
     resume_updated: Currículo atualizado com sucesso.
     resume_created: Currículo criado com sucesso.
     published: Publicada com sucesso.
     unpublished: Publicação cancelada com sucesso.
     feedback_sent: Feedback enviado com sucesso.
     feedback_failed: Houve um erro ao enviar o feedback.
+    not_subscriber: Sua empresa não pussui acesso aos currículos.
 
   # error pages
   error_404:

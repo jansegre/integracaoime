@@ -101,6 +101,10 @@ class User
     end
   end
 
+  def company_member?
+    not company.nil?
+  end
+
   class << self
     def admins
       where admin: true

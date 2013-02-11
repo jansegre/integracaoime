@@ -46,19 +46,4 @@ class StudentsController < ApplicationController
   def hints
     @hints = Hint.all_published
   end
-
-  # display feedback page
-  def feedback
-    @message = ""
-  end
-
-  # receive post and email that feedback
-  def send_feedback
-    @message = params[:message]
-    if Staff.feedback_email(current_user, @message).deliver
-      redirect_to root_path, notice: t("flash.feedback_sent")
-    else
-      render action: "feedback", warn: t("flash.feedback_failed")
-    end
-  end
 end

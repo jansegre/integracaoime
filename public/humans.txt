@@ -11,5 +11,6 @@
     Haml, Sass, CoffeeScript
     jQuery, Modernizr, HTML5 Boilerplate
     Font Awesome, Bootstrap
-    Ruby, Rails, Unicorn, Nginx, Ubuntu
-
+    Ruby, Rails, Unicorn
+    MongoDB, Memcached
+    Nginx, Gentoo

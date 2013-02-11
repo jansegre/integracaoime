@@ -11,6 +11,14 @@ class CompanyController < ApplicationController
     end
   end
 
+  def resume
+    if current_company.subscriber?
+      @resume = Resume.find(params[:id])
+    else
+      redirect_to root_path, alert: t("flash.not_subscriber")
+    end
+  end
+
   def calendars
     @calendars = Calendar.all
   end

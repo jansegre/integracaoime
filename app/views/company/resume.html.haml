@@ -1,0 +1,7 @@
+- content_for :title do
+  = @resume.user.name
+
+%h1= @resume.user.name
+
+.well
+  = render "resumes/show"

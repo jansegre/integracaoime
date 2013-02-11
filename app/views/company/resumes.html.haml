@@ -1,2 +1,14 @@
-%h1 Company#resumes
-%p Find me in app/views/company/resumes.html.haml
+- content_for :title do
+  =t ".title"
+
+%h1=t ".title"
+
+%table.table.table-bordered.table-hover
+  %tr
+    %th=t ".student_name"
+    %th &nbsp;
+  - @resumes.each do |r|
+    %tr
+      %td= r.user.name
+      %td
+        %a{ href: url_for(user_resume_path r) }=t ".resume"

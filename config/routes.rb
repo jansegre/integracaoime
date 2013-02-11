@@ -3,6 +3,7 @@ IntegracaoIME::Application.routes.draw do
   root :to => "welcome#index"
 
   get "resumes" => "company#resumes", :as => :resumes
+  get "resume/:id" => "company#resume", :as => :user_resume
   get "calendars" => "company#calendars", :as => :calendars
   get "how_to" => "company#how_to", :as => :how_to
   get "sponsor" => "company#sponsor", :as => :sponsor

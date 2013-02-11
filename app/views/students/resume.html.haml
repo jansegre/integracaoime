@@ -4,12 +4,6 @@
 %h1=t ".title"
 
 .well
-  %dl
-    %dt=t ".references"
-    %dd= @resume.references
-  %dl
-    %dt=t ".courses"
-    %dd= @resume.courses
+  = render "resumes/show"
 
 %a.btn{ href: url_for(action: "edit_resume") }=t ".edit"
-

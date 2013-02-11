@@ -1,2 +1,16 @@
-%h1 Company#calendars
-%p Find me in app/views/company/calendars.html.haml
+- content_for :title do
+  =t ".title"
+
+%h1=t ".title"
+
+%table.table.table-bordered.table-hover
+  %tr
+    %th=t ".year"
+    %th=t ".specialty"
+    %th &nbsp;
+  - @calendars.each do |c|
+    %tr
+      %td= c.year
+      %td= c.specialty
+      %td
+        %a{ href: c.calendar_url }=t ".download"

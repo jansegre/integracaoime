@@ -65,14 +65,34 @@ pt-BR:
   students:
     resume:
       title: Currículo
-      references: Referências
-      courses: Cursos
     new_resume:
       title: Criar currículo
     edit_resume:
       title: Editar currículo
     hints:
       title: Dicas
+
+  company:
+    resume:
+      title: Currículo
+    resumes:
+      title: Currículos
+      student_name: Nome do Aluno
+      resume: Ver currículo
+    calendars:
+      title: Calendários
+      year: Ano
+      specialty: Especialidade
+      download: Download
+    how_to:
+      title: Orientações para o convênio
+    sponsor:
+      title: Patrocine uma iniciativa
+
+  resumes:
+    show:
+      references: Referências
+      courses: Cursos
 
   users:
     feedback:

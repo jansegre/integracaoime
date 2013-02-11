@@ -18,6 +18,17 @@
                 = current_user.name
                 %i.icon-angle-down
               %ul.dropdown-menu
+                - if current_user.student?
+                  %li
+                    %a.navbar-link{:href => url_for(resume_path)}
+                      =t ".resume"
+                  %li
+                    %a.navbar-link{:href => url_for(hints_path)}
+                      =t ".tips"
+                  %li
+                    %a.navbar-link{:href => url_for(feedback_path)}
+                      =t ".feedback"
+                  %li.divider
                 - if current_user.company_member?
                   - if current_company.subscriber?
                     %li
@@ -35,17 +46,6 @@
                   %li
                     %a.navbar-link{:href => url_for(highlight_path)}
                       =t ".highlight"
-                  %li
-                    %a.navbar-link{:href => url_for(feedback_path)}
-                      =t ".feedback"
-                  %li.divider
-                - if current_user.student?
-                  %li
-                    %a.navbar-link{:href => url_for(resume_path)}
-                      =t ".resume"
-                  %li
-                    %a.navbar-link{:href => url_for(hints_path)}
-                      =t ".tips"
                   %li
                     %a.navbar-link{:href => url_for(feedback_path)}
                       =t ".feedback"

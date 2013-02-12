@@ -126,6 +126,9 @@ pt-BR:
       calendar:
         one:   Calendário
         other: Calendários
+      highlight:
+        one:   Destaque
+        other: Destaques
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -135,6 +138,8 @@ pt-BR:
         name: Nome
         image: Imagem
         description: Descrição
+        company_id: Empresa
+        user_id: Usuário
       user:
         <<: *default_attrs
         email: Email
@@ -154,7 +159,6 @@ pt-BR:
         accepted_terms: Leu e aceitou os termos
         admin: Administrador
         student: Aluno
-        company_id: Empresa
       company:
         <<: *default_attrs
         users: Usuários
@@ -163,8 +167,6 @@ pt-BR:
         <<: *default_attrs
         references: Referências
         courses: Cursos
-        user_id: Usuário
-        user: Usuário
       hint:
         <<: *default_attrs
         published: Publicada
@@ -176,6 +178,8 @@ pt-BR:
         calendar: Calendário
         year: Ano
         specialty: Especialidade
+      highlight:
+        <<: *default_attrs
   mongoid:
     <<: *activemodel
   activerecord:

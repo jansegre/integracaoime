@@ -36,6 +36,9 @@ group :assets do
   gem 'turbo-sprockets-rails3', '>= 0.3'
 end
 
+# An interface to the ImageMagick and GraphicsMagick image processing libraries.
+gem 'rmagick', '~> 2.13'
+
 # Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
 gem 'carrierwave-mongoid', '~> 0.4', :require => 'carrierwave/mongoid'
 

@@ -1,25 +1,12 @@
 #myCarousel.carousel.slide.carousel-fade
   .carousel-inner
-    .item.active{ :style => "background-image:url('#{image_path 'slide-01.jpg'}')" }
-      .carousel-caption
-        .container
-          %h1 Example headline.
-          %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-          %a.btn.btn-large.btn-primary{:href => "#"} Sign up today
-    .item{ :style => "background-image:url('#{image_path 'slide-02.jpg'}')" }
-      .carousel-caption.right
-        .container
-          %h1 Another example headline.
-          %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-          %a.btn.btn-large.btn-primary{:href => "#"} Learn more
-    .item{ :style => "background-image:url('#{image_path 'slide-03.jpg'}')" }
-      .carousel-caption
-        .container
-          %h1 One more for good measure.
-          %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-          %a.btn.btn-large.btn-primary{:href => "#"} Browse gallery
+    - @highlights.each_with_index do |h, i|
+      .item{style: "background-image:url('#{h.image_url}')", class: (i == 0 ? "active" : nil)}
+        .carousel-caption{class: (i % 2 == 1 ? "right": nil)}
+          .container
+            %h1= h.title
+            %p.lead= h.description
   %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
     %i.icon-chevron-left
   %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
     %i.icon-chevron-right
-

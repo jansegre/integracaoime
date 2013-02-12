@@ -2,14 +2,15 @@ class Highlight
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :image, type: String
-  field :description, type: String
+  field :image
+  field :description
+  field :title
 
   mount_uploader :image, HighlightUploader
 
-  validates_presence_of :image, :description
+  validates_presence_of :image, :description, :title
 
-  attr_accessible :image, :image_cache, :description
+  attr_accessible :image, :image_cache, :description, :title
 
   has_one :company
 end

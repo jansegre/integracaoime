@@ -5,6 +5,7 @@ ActiveAdmin.register Highlight do
 
   index do
     selectable_column
+    column :title
     column :description
     column :company
     default_actions
@@ -13,6 +14,7 @@ ActiveAdmin.register Highlight do
   form do |f|
     f.inputs do
       f.input :image
+      f.input :title
       f.input :description, :as => :text
     end
     f.actions

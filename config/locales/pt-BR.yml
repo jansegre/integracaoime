@@ -139,7 +139,9 @@ pt-BR:
         image: Imagem
         description: Descrição
         company_id: Empresa
+        company: Empresa
         user_id: Usuário
+        users: Usuários
       user:
         <<: *default_attrs
         email: Email
@@ -161,7 +163,6 @@ pt-BR:
         student: Aluno
       company:
         <<: *default_attrs
-        users: Usuários
         subscriber: Assinante
       resume:
         <<: *default_attrs
@@ -180,6 +181,7 @@ pt-BR:
         specialty: Especialidade
       highlight:
         <<: *default_attrs
+        title: Título
   mongoid:
     <<: *activemodel
   activerecord:

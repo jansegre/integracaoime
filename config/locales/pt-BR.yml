@@ -88,6 +88,8 @@ pt-BR:
       title: Orientações para o convênio
     sponsor:
       title: Patrocine uma iniciativa
+    highlight:
+      title: Destaque
 
   resumes:
     show:
@@ -224,6 +226,8 @@ pt-BR:
     feedback_sent: Feedback enviado com sucesso.
     feedback_failed: Houve um erro ao enviar o feedback.
     not_subscriber: Sua empresa não pussui acesso aos currículos.
+    highlight_created: Destaque criado com sucesso.
+    highlight_updated: Destaque atualizado com sucesso.
 
   # error pages
   error_404:

@@ -8,6 +8,8 @@ IntegracaoIME::Application.routes.draw do
   get "how_to" => "company#how_to", :as => :how_to
   get "sponsor" => "company#sponsor", :as => :sponsor
   get "highlight" => "company#highlight", :as => :highlight
+  post "highlight" => "company#create_highlight", :as => :create_highlight
+  put "highlight" => "company#update_highlight", :as => :update_highlight
 
   get "resume" => "students#resume", :as => :resume
   get "resume/new" => "students#new_resume", :as => :new_resume

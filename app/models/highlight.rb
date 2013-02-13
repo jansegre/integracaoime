@@ -12,5 +12,5 @@ class Highlight
 
   attr_accessible :image, :image_cache, :description, :title
 
-  has_one :company
+  belongs_to :company
 end

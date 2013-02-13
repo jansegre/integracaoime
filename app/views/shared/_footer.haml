@@ -1,10 +1,28 @@
 %footer
   %hr
+  .row-fluid.logos
+    .span6
+      %p.muted Patrocínio
+      %object{data: asset_path("logos/oi.svg"),    title: "Oi!",   height: "64px", width: "64px"}
+        %img{src:   asset_path("logos/oi.png"),    alt:   "Oi!",   style: "height:64px;width:64px"}
+      %object{data: asset_path("logos/cielo.svg"), title: "Cielo", height: "64px", width: "120px"}
+        %img{src:   asset_path("logos/cielo.png"), alt:   "Cielo", style: "height:40px;width:120px"}
+      %object{data: asset_path("logos/ge.svg"),    title: "GE",    height: "64px", width: "64px"}
+        %img{src:   asset_path("logos/ge.png"),    alt:   "GE",    style: "height:64px;width:64px"}
+      %object{data: asset_path("logos/ambev.svg"), title: "Ambev", height: "64px", width: "160px"}
+        %img{src:   asset_path("logos/ambev.png"), alt:   "Ambev", style: "height:40px;width:160px"}
+    .span6
+      %p.muted Apoio
+      %object{data: asset_path("logos/ime.svg"),       title: "IME",        height: "64px", width: "48.9px"}
+        %img{src:   asset_path("logos/ime.png"),       alt:   "IME",        style: "height:64px;width:48.9px"}
+      %object{data: asset_path("logos/vialink.svg"),   title: "Vialink",    height: "64px", width: "224px"}
+        %img{src:   asset_path("logos/vialink.png"),   alt:   "Vialink",    style: "height:40px;width:224px"}
+      %object{data: asset_path("logos/imejunior.svg"), title: "IME Júnior", height: "64px", width: "64px"}
+        %img{src:   asset_path("logos/imejunior.png"), alt:   "IME Júnior", style: "height:64px;width:64px"}
+  -#%p.pull-right
+  -#  %a{:href => "#"}=t :back_to_top
   %p.pull-right
-    %a{:href => "#"}=t :back_to_top
-  %p
+    %span.muted=t :rights
     &copy;
     = DateTime.now.year
     =t :holder
-    %span.muted=t :rights
-

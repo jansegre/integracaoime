@@ -20,10 +20,10 @@
               %ul.dropdown-menu
                 - if current_user.student?
                   %li
-                    %a.navbar-link{:href => url_for(resume_path)}
+                    %a.navbar-link{:href => url_for(student_resume_path)}
                       =t ".resume"
                   %li
-                    %a.navbar-link{:href => url_for(hints_path)}
+                    %a.navbar-link{:href => url_for(student_hints_path)}
                       =t ".tips"
                   %li
                     %a.navbar-link{:href => url_for(feedback_path)}
@@ -32,19 +32,19 @@
                 - if current_user.company_member?
                   - if current_company.subscriber?
                     %li
-                      %a.navbar-link{:href => url_for(resumes_path)}
+                      %a.navbar-link{:href => url_for(company_resumes_path)}
                         =t ".resumes"
                   %li
-                    %a.navbar-link{:href => url_for(calendars_path)}
+                    %a.navbar-link{:href => url_for(company_calendars_path)}
                       =t ".calendars"
                   %li
-                    %a.navbar-link{:href => url_for(how_to_path)}
+                    %a.navbar-link{:href => url_for(company_how_to_path)}
                       =t ".how_to"
                   %li
-                    %a.navbar-link{:href => url_for(sponsor_path)}
+                    %a.navbar-link{:href => url_for(company_sponsor_path)}
                       =t ".sponsor"
                   %li
-                    %a.navbar-link{:href => url_for(highlight_path)}
+                    %a.navbar-link{:href => url_for(company_highlight_path)}
                       =t ".highlight"
                   %li
                     %a.navbar-link{:href => url_for(feedback_path)}

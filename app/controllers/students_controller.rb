@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
   def resume
     @resume = current_user.resume
     if @resume.nil?
-      redirect_to new_resume_path
+      redirect_to action: "new_resume"
     end
   end
 
@@ -20,7 +20,7 @@ class StudentsController < ApplicationController
     if current_user.create_resume(params[:resume])
       redirect_to({ action: "resume" }, notice: t("flash.resume_created"))
     else
-      render action: "new"
+      render action: "new_resume"
     end
   end
 
@@ -38,7 +38,7 @@ class StudentsController < ApplicationController
     if current_user.resume.update_attributes(params[:resume])
       redirect_to({ action: "resume" }, notice: t("flash.resume_updated"))
     else
-      render action: "edit"
+      render action: "edit_resume"
     end
   end
 

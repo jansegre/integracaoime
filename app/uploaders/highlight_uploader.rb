@@ -56,9 +56,7 @@ class HighlightUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    if super
-      super.chomp(File.extname(super)) + '.png'
-    end
+    super.chomp(File.extname(super)) + '.png' if original_filename
   end
 
 end

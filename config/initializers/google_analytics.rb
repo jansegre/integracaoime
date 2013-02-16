@@ -1,4 +1,3 @@
 IntegracaoIME::Application.configure do
-  #TODO update this value with a real account
-  config.ga_account = 'UA-XXXXX-X'
+  config.ga_tracking_id = "UA-38548553-2"
 end

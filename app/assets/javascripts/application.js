@@ -11,7 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require plugins
 //= require jquery_ujs
 //= require bootstrap
-//= require plugins
-//= require_tree .
+//= require welcome

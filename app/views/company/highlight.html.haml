@@ -1,7 +1,12 @@
 - content_for :title do
   =t ".title"
 
-%h1=t ".title"
+%h1
+  =t ".title"
+  - if @highlight.active
+    %span.label.label-success=t ".active"
+  - else
+    %span.label=t ".not_active"
 
 = semantic_form_for @highlight, url: @url do |f|
 

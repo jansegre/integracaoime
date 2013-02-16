@@ -90,6 +90,8 @@ pt-BR:
       title: Patrocine uma iniciativa
     highlight:
       title: Destaque
+      active: Ativo
+      not_active: Inativo
 
   resumes:
     show:
@@ -184,6 +186,7 @@ pt-BR:
       highlight:
         <<: *default_attrs
         title: Título
+        active: Ativado
   mongoid:
     <<: *activemodel
   activerecord:
@@ -207,9 +210,13 @@ pt-BR:
         approve: Aprovar
         publish: Publicar
         unpublish: Cancelar publicação
+        activate: Ativar
+        deactivate: Desativar
     batch_actions:
       labels:
         approve: Aprovar
+        activate_selected: Ativar
+        deactivate_selected: Desativar
 
   # flash messages
   flash:
@@ -228,6 +235,11 @@ pt-BR:
     not_subscriber: Sua empresa não pussui acesso aos currículos.
     highlight_created: Destaque criado com sucesso.
     highlight_updated: Destaque atualizado com sucesso.
+    activated: Ativado com sucesso.
+    deactivated: Desativado com sucesso.
+    error: Ocorreu um erro ao realizar essa ação.
+    activated_selected: Os destaques selecionados foram ativados com sucesso.
+    deactivated_selected: Os destaques selecionados foram desativados com sucesso.
 
   # error pages
   error_404:

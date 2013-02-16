@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @highlights = Highlight.all
+    @highlights = Highlight.all_active
   end
 
   def terms

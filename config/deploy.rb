@@ -27,7 +27,7 @@ role :web, "integracao.segre.in"                          # Your HTTP server, Ap
 # include uploads dir
 set :shared_children, shared_children + %w(public/uploads)
 
-before 'deploy:setup', 'rvm:install_rvm'
+#before 'deploy:setup', 'rvm:install_rvm'
 #before 'deploy:setup', 'rvm:install_ruby'
 
 # if you want to clean up old releases on each deploy uncomment this:

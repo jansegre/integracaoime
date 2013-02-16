@@ -1,19 +1,18 @@
-class Highlight
+class Sponsor
   include Mongoid::Document
   include Mongoid::Timestamps
 
   field :image
-  field :description
   field :title
+  field :content
+  field :link
   field :active, type: Boolean, default: false
 
-  belongs_to :company
+  mount_uploader :image, HintImageUploader
 
-  mount_uploader :image, HighlightUploader
+  validates_presence_of :image, :content, :title
 
-  validates_presence_of :image, :description, :title
-
-  attr_accessible :image, :image_cache, :description, :title, :active
+  attr_accessible :image, :image_cache, :title, :content, :link, :active
 
   index({ active: 1 }, { background: true })
 

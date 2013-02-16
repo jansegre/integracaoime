@@ -51,6 +51,9 @@ pt-BR:
       sign_in_with: Entrar com o %{provider}
       close: Fechar
 
+    marketing:
+      more: Veja mais &raquo;
+
     # footer
   holder: Integração IME
   rights: Todos os direitos reservados

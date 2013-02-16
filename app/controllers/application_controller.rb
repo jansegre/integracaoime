@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
   def authenticate_company_user!
     authenticate_user!
     unless current_user.company_member?
-      redirect_to root_path, :alert => t('flash.student_required')
+      redirect_to root_path, :alert => t('flash.company_required')
     end
   end
 

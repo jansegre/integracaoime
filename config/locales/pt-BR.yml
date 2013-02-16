@@ -136,6 +136,9 @@ pt-BR:
       highlight:
         one:   Destaque
         other: Destaques
+      sponsor:
+        one:   Publicidade
+        other: Publicidades
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -190,6 +193,12 @@ pt-BR:
         <<: *default_attrs
         title: Título
         active: Ativado
+      sponsor:
+        <<: *default_attrs
+        title: Título
+        content: Conteúdo
+        active: Ativado
+        link: Link
   mongoid:
     <<: *activemodel
   activerecord:

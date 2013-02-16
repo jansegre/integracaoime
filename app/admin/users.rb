@@ -77,6 +77,6 @@ ActiveAdmin.register User do
       u.approve!
       u.save
     end
-    redirect_to({:action => :index}, :notice => "Approved!")
+    redirect_to({ action: "index" }, notice: t("flash.batch_approved"))
   end
 end

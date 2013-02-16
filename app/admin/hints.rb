@@ -23,7 +23,7 @@ ActiveAdmin.register Hint do
     if hint.save
       redirect_to({:action => :show}, :notice => t("flash.published"))
     else
-      redirect_to({:action => :show}, :warn => t("flash.error"))
+      redirect_to({:action => :show}, :alert => t("flash.error"))
     end
   end
 
@@ -33,7 +33,7 @@ ActiveAdmin.register Hint do
     if hint.save
       redirect_to({:action => :show}, :notice => t("flash.unpublished"))
     else
-      redirect_to({:action => :show}, :warn => t("flash.error"))
+      redirect_to({:action => :show}, :alert => t("flash.error"))
     end
   end
 

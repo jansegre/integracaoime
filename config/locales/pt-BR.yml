@@ -122,6 +122,9 @@ pt-BR:
       sponsor:
         one:   Publicidade
         other: Publicidades
+      menu:
+        one:   Menu
+        other: Menus
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -135,6 +138,8 @@ pt-BR:
         company: Empresa
         user_id: Usuário
         users: Usuários
+        title: Título
+        active: Ativado
       user:
         <<: *default_attrs
         email: Email
@@ -174,14 +179,17 @@ pt-BR:
         specialty: Especialidade
       highlight:
         <<: *default_attrs
-        title: Título
-        active: Ativado
       sponsor:
         <<: *default_attrs
-        title: Título
         content: Conteúdo
-        active: Ativado
         link: Link
+      menu:
+        <<: *default_attrs
+        slug: Slug
+        parent: Pai
+        parent_id: Pai
+        parent_ids: ID dos Pais
+        position: Posição
   mongoid:
     <<: *activemodel
   activerecord:
@@ -233,8 +241,8 @@ pt-BR:
     activated: Ativado com sucesso.
     deactivated: Desativado com sucesso.
     error: Ocorreu um erro ao realizar essa ação.
-    activated_selected: Os destaques selecionados foram ativados com sucesso.
-    deactivated_selected: Os destaques selecionados foram desativados com sucesso.
+    activated_selected: Os itens selecionados foram ativados com sucesso.
+    deactivated_selected: Os itens selecionados foram desativados com sucesso.
 
   # error pages
   error_404:

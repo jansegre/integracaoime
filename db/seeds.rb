@@ -20,8 +20,8 @@ def create_menu_tree menu
 end
 
 create_menu_tree(
-  title: "ROOT",
-  slug: "root",
+  title: "__ROOT__",
+  slug: "__root__",
   active: false,
   children: [
   { title: "Sabia Mais", slug: "more", children: [

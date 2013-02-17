@@ -17,9 +17,21 @@ class Menu
     children.where(active: true)
   end
 
+  def activate!
+    self.active = true
+  end
+
+  def deactivate!
+    self.active = false
+  end
+
   class << self
+    def all_active
+      where active: true
+    end
+
     def root_menu
-      find_by(slug: "root")
+      find_by slug: "__root__"
     end
   end
 end

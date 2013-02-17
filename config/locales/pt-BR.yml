@@ -125,6 +125,9 @@ pt-BR:
       menu:
         one:   Menu
         other: Menus
+      page:
+        one:   Página
+        other: Páginas
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -190,6 +193,11 @@ pt-BR:
         parent_id: Pai
         parent_ids: ID dos Pais
         position: Posição
+      page:
+        <<: *default_attrs
+        content: Conteúdo
+        menu: Menu
+        menu_id: Menu
   mongoid:
     <<: *activemodel
   activerecord:

@@ -2,6 +2,8 @@ IntegracaoIME::Application.routes.draw do
 
   root :to => "welcome#index"
 
+  get "page/:slug" => "pages#show", :as => :page
+
   get "resume" => "students#resume", :as => :student_resume
   get "resume/new" => "students#new_resume", :as => :student_new_resume
   post "resume/new" => "students#create_resume", :as => :stdudent_create_resume

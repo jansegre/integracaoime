@@ -70,7 +70,7 @@
             - @root_menu.active_children.each do |m|
               - if m.active_children.empty?
                 %li
-                  %a{href: "##{m.slug}"}= m.title
+                  %a{href: url_for(page_path(m.slug))}= m.title
               - else
                 %li.dropdown
                   %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -80,14 +80,14 @@
                     - m.active_children.each do |m|
                       - if m.active_children.empty?
                         %li
-                          %a{:href => "##{m.slug}"}= m.title
+                          %a{:href => url_for(page_path(m.slug))}= m.title
                       - else
                         %li.dropdown-submenu
-                          %a{:href => "##{m.slug}"}= m.title
+                          %a{:href => m.page.nil? ? "#" : url_for(page_path(m.slug))}= m.title
                           %ul.dropdown-menu
                             - m.active_children.each do |m|
                               %li
-                                %a{:href => "##{m.slug}"}= m.title
+                                %a{:href => url_for(page_path(m.slug))}= m.title
     -# Flash alerts bellow the menu but still inside the container
     - if flash[:error]
       .alert.alert-error

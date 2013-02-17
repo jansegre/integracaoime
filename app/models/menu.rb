@@ -6,7 +6,8 @@ class Menu
   field :title
   field :slug
   field :active, type: Boolean, default: true
-  #belongs_to :page
+
+  belongs_to :page
 
   validates_presence_of :title
 

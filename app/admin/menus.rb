@@ -8,17 +8,17 @@ ActiveAdmin.register Menu do
     column :slug
     column :title
     column :parent
+    column :page
     default_actions
   end
 
   form do |f|
     f.inputs do
-      if f.object.new_record?
-        f.input :parent
-      end
+      f.input :parent if f.object.new_record?
       f.input :title
       f.input :slug
       f.input :active, :as => :boolean
+      f.input :page
     end
     f.actions
   end

@@ -64,53 +64,30 @@
               %a.navbar-link{:href => "#loginModal", :role => :button, "data-toggle" => :modal}
                 %i.icon-signin
                 =t ".login"
-        -# Place all navbar contents you want collapsed withing .navbar-collapse.collapse
+        -# Main root menu
         .nav-collapse.collapse.main-tabs
           %ul.nav
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                =t ".more_about"
-                %i.icon-angle-down
-              %ul.dropdown-menu
+            - @root_menu.active_children.each do |m|
+              - if m.active_children.empty?
                 %li
-                  %a{:href => "#"}=t ".mission"
-                %li
-                  %a{:href => "#"}=t ".values"
-                %li
-                  %a{:href => "#"}=t ".members"
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                =t ".the_event"
-                %i.icon-angle-down
-              %ul.dropdown-menu
-                %li
-                  %a{:href => "#"}=t ".what_is"
-                %li.dropdown-submenu
-                  %a{:href => "#"}=t ".integration2013"
+                  %a{href: "##{m.slug}"}= m.title
+              - else
+                %li.dropdown
+                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    = m.title
+                    %i.icon-angle-down
                   %ul.dropdown-menu
-                    %li
-                      %a{:href => "#"}=t ".schedule"
-                    %li
-                      %a{:href => "#"}=t ".participants"
-                    %li
-                      %a{:href => "#"}=t ".honor_guests"
-                %li
-                  %a{:href => "#"}=t ".previous"
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                =t ".company"
-                %i.icon-angle-down
-              %ul.dropdown-menu
-                %li
-                  %a{:href => "#"}=t ".all_participants"
-                %li
-                  %a{:href => "#"}=t ".why_participate"
-                %li
-                  %a{:href => "#"}=t ".participate"
-            %li
-              %a{:href => "#"}=t ".media"
-            %li
-              %a{:href => "#"}=t ".contact"
+                    - m.active_children.each do |m|
+                      - if m.active_children.empty?
+                        %li
+                          %a{:href => "##{m.slug}"}= m.title
+                      - else
+                        %li.dropdown-submenu
+                          %a{:href => "##{m.slug}"}= m.title
+                          %ul.dropdown-menu
+                            - m.active_children.each do |m|
+                              %li
+                                %a{:href => "##{m.slug}"}= m.title
     -# Flash alerts bellow the menu but still inside the container
     - if flash[:error]
       .alert.alert-error

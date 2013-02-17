@@ -9,23 +9,6 @@ pt-BR:
 
     # top navbar
     menu:
-      more_about: Saiba Mais
-      mission: Missão
-      values: Valores
-      members: Membros
-      the_event: O Evento
-      what_is: O que é
-      integration2013: Integração 2013
-      schedule: Programação
-      participants: Empresas Participantes
-      honor_guests: Palestrantes Magnos
-      previous: Eventos Anteriores
-      company: Empresa
-      all_participants: Veja Quem Já Participou
-      why_participate: Porque Participar
-      participate: Participe
-      media: Fotos e Vídeos
-      contact: Contato
       login: Entrar
       logout: Sair
       resume: Currículo

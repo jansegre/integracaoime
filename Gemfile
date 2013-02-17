@@ -36,6 +36,9 @@ group :assets do
   gem 'turbo-sprockets-rails3', '>= 0.3'
 end
 
+# A tree structure for Mongoid documents using the materialized path pattern
+gem 'mongoid-tree', '~> 1.0', :require => 'mongoid/tree'
+
 # An interface to the ImageMagick and GraphicsMagick image processing libraries.
 gem 'rmagick', '~> 2.13'
 

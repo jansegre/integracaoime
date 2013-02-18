@@ -1,4 +1,5 @@
 ActiveAdmin.register Hint do
+  menu parent: "Dashboard"
 
   filter :description
 
@@ -7,6 +8,20 @@ ActiveAdmin.register Hint do
     column :description
     column :published
     default_actions
+  end
+
+  show do |i|
+    attributes_table do
+      i.attribute_names.each do |a|
+        row a unless a == "image"
+      end
+      row :image do
+        a href: i.image.url do
+          image_tag(i.image.thumb.url)
+        end unless i.image.url.nil?
+      end
+    end
+    active_admin_comments
   end
 
   form do |f|

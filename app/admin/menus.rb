@@ -1,4 +1,5 @@
 ActiveAdmin.register Menu do
+  menu parent: "CMS"
 
   filter :title
 

@@ -1,4 +1,5 @@
 ActiveAdmin.register Calendar do
+  menu parent: "Dashboard"
 
   filter :year
   filter :specialty

@@ -128,6 +128,12 @@ pt-BR:
       page:
         one:   Página
         other: Páginas
+      media:
+        one:   Midia
+        other: Midia
+      image:
+        one:   Imagem
+        other: Imagens
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -198,6 +204,8 @@ pt-BR:
         content: Conteúdo
         menu: Menu
         menu_id: Menu
+      image:
+        <<: *default_attrs
   mongoid:
     <<: *activemodel
   activerecord:

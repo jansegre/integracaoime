@@ -1,4 +1,4 @@
-ActiveAdmin.register Image do
+ActiveAdmin.register Gallery do
   menu parent: "CMS"
 
   filter :title
@@ -6,18 +6,19 @@ ActiveAdmin.register Image do
   index do
     selectable_column
     column :title
-    column :description
     default_actions
   end
 
   show do |i|
     attributes_table do
       i.attribute_names.each do |a|
-        row a unless a == "image"
+        row a
       end
-      row :image do
-        a href: i.image.url do
-          image_tag(i.image.thumb.url)
+      row :medias do
+        for m in i.medias
+          a href: m.image.url do
+            image_tag(m.image.small.url)
+          end
         end
       end
     end
@@ -27,9 +28,8 @@ ActiveAdmin.register Image do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :description
-      f.input :image
-      f.input :gallery, :as => :select
+      f.input :page
+      f.input :medias, :as => :select
     end
     f.actions
   end

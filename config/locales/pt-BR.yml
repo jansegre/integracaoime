@@ -129,11 +129,14 @@ pt-BR:
         one:   Página
         other: Páginas
       media:
-        one:   Midia
-        other: Midia
+        one:   Mídia
+        other: Mídia
       image:
         one:   Imagem
         other: Imagens
+      gallery:
+        one:   Galeria
+        other: Galerias
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -175,6 +178,8 @@ pt-BR:
         <<: *default_attrs
         references: Referências
         courses: Cursos
+        user: Aluno
+        user_id: Aluno
       hint:
         <<: *default_attrs
         published: Publicada
@@ -204,8 +209,15 @@ pt-BR:
         content: Conteúdo
         menu: Menu
         menu_id: Menu
+      media:
+        <<: *default_attrs
+        gallery: Galeria
+        gallery_id: Galeria
       image:
         <<: *default_attrs
+      gallery:
+        <<: *default_attrs
+        medias: Mídias
   mongoid:
     <<: *activemodel
   activerecord:

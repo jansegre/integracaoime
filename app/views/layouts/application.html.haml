@@ -21,6 +21,10 @@
     -# modernizr has to be loaded asap to fix html5 tags on IE7/8
     = javascript_include_tag "modernizr"
 
+    -# used to load at the end, but it makes it impossible for inline
+    -# javascripts to use jquery or any other library
+    = javascript_include_tag "application"
+
   %body
     - unless user_signed_in?
       = render "shared/login"
@@ -36,9 +40,6 @@
 
     .container.container-fluid
       = render "shared/footer"
-
-    -# start loading the scripts after the dom is loaded
-    = javascript_include_tag "application"
 
     -# load Google Analytics when in production
     - if Rails.env.production?

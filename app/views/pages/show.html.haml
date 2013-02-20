@@ -1,4 +1,18 @@
 - content_for :title do
   = @menu.title
 
+- if @page.gallery?
+  - content_for :after_menu do
+    #galleria
+      - @page.gallery.medias.each do |m|
+        - case m
+        - when Image
+          %a{href: m.image.url}
+            %img{src: m.image.thumb.url, data: {title: m.title, description: m.description}}
+    :javascript
+      $(function(){
+        Galleria.loadTheme("#{asset_path("classic/galleria.classic.js")}");
+        Galleria.run("#galleria");
+      })
+
 != @page.content

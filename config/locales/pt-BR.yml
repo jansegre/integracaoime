@@ -137,6 +137,9 @@ pt-BR:
       gallery:
         one:   Galeria
         other: Galerias
+      video:
+        one:   Vídeo
+        other: Vídeos
     attributes:
       default: &default_attrs
         _type: Tipo

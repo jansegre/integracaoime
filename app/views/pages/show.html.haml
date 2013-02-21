@@ -9,6 +9,9 @@
         - when Image
           %a{href: m.image.url}
             %img{src: m.image.thumb.url, data: {title: m.title, description: m.description}}
+        - when Video
+          %a{href: m.video}
+            .video= m.title
     :javascript
       $(function(){
         Galleria.loadTheme("#{asset_path("classic/galleria.classic.js")}");

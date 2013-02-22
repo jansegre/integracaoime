@@ -60,3 +60,6 @@ gem 'devise', '>= 2.2.2'
 # The administration framework for Ruby on Rails applications.
 gem 'activeadmin-mongoid', :github => 'jansegre/activeadmin-mongoid'
 
+# This is a wysiyg html editor for the Active Admin interface using wysihtml5.
+gem 'activeadmin-wysihtml5', github: 'jansegre/activeadmin-wysihtml5', require: 'activeadmin-wysihtml5'
+

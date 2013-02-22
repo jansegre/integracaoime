@@ -27,7 +27,7 @@ ActiveAdmin.register Page do
     f.inputs do
       f.input :name
       #TODO wysiwyg editor
-      f.input :content, :as => :text
+      f.input :content, :as => :wysihtml5
     end
     f.actions
   end

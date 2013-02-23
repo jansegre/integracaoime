@@ -2,19 +2,24 @@ IntegracaoIME::Application.routes.draw do
 
   root :to => "welcome#index"
 
-  get "resumes" => "company#resumes", :as => :resumes
-  get "resume/:id" => "company#resume", :as => :user_resume
-  get "calendars" => "company#calendars", :as => :calendars
-  get "how_to" => "company#how_to", :as => :how_to
-  get "sponsor" => "company#sponsor", :as => :sponsor
-  get "highlight" => "company#highlight", :as => :highlight
+  get "page/:slug" => "pages#show", :as => :page
 
-  get "resume" => "students#resume", :as => :resume
-  get "resume/new" => "students#new_resume", :as => :new_resume
-  post "resume/new" => "students#create_resume", :as => :create_resume
-  get "resume/edit" => "students#edit_resume", :as => :edit_resume
-  put "resume/edit" => "students#update_resume", :as => :update_resume
-  get "hints" => "students#hints", :as => :hints
+  get "resume" => "students#resume", :as => :student_resume
+  get "resume/new" => "students#new_resume", :as => :student_new_resume
+  post "resume/new" => "students#create_resume", :as => :stdudent_create_resume
+  get "resume/edit" => "students#edit_resume", :as => :student_edit_resume
+  put "resume/edit" => "students#update_resume", :as => :student_update_resume
+  get "hints" => "students#hints", :as => :student_hints
+
+  get "resumes" => "company#resumes", :as => :company_resumes
+  # the following route has to come after resume/new and resume/edit
+  get "resume/:id" => "company#resume", :as => :company_user_resume
+  get "calendars" => "company#calendars", :as => :company_calendars
+  get "how_to" => "company#how_to", :as => :company_how_to
+  get "sponsor" => "company#sponsor", :as => :company_sponsor
+  get "highlight" => "company#highlight", :as => :company_highlight
+  post "highlight" => "company#create_highlight", :as => :company_create_highlight
+  put "highlight" => "company#update_highlight", :as => :company_update_highlight
 
   get "feedback" => "users#feedback", :as => :feedback
   post "feedback" => "users#send_feedback", :as => :send_feedback

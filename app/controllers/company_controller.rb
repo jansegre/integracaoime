@@ -30,5 +30,28 @@ class CompanyController < ApplicationController
   end
 
   def highlight
+    @highlight = current_company.highlight
+    if @highlight.nil?
+      @highlight = Highlight.new
+      @url = { action: "create_highlight" }
+    else
+      @url = { action: "update_highlight" }
+    end
+  end
+
+  def create_highlight
+    if current_company.create_highlight(params[:highlight])
+      redirect_to({ action: "highlight" }, notice: t("flash.highlight_created"))
+    else
+      render action: "highlight"
+    end
+  end
+
+  def update_highlight
+    if current_company.highlight.update_attributes(params[:highlight])
+      redirect_to({ action: "highlight" }, notice: t("flash.highlight_updated"))
+    else
+      render action: "highlight"
+    end
   end
 end

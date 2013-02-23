@@ -9,23 +9,6 @@ pt-BR:
 
     # top navbar
     menu:
-      more_about: Saiba Mais
-      mission: Missão
-      values: Valores
-      members: Membros
-      the_event: O Evento
-      what_is: O que é
-      integration2013: Integração 2013
-      schedule: Programação
-      participants: Empresas Participantes
-      honor_guests: Palestrantes Magnos
-      previous: Eventos Anteriores
-      company: Empresa
-      all_participants: Veja Quem Já Participou
-      why_participate: Porque Participar
-      participate: Participe
-      media: Fotos e Vídeos
-      contact: Contato
       login: Entrar
       logout: Sair
       resume: Currículo
@@ -50,6 +33,9 @@ pt-BR:
       unlock: Destravar conta
       sign_in_with: Entrar com o %{provider}
       close: Fechar
+
+    marketing:
+      more: Veja mais &raquo;
 
     # footer
   holder: Integração IME
@@ -88,6 +74,10 @@ pt-BR:
       title: Orientações para o convênio
     sponsor:
       title: Patrocine uma iniciativa
+    highlight:
+      title: Destaque
+      active: Ativo
+      not_active: Inativo
 
   resumes:
     show:
@@ -126,6 +116,30 @@ pt-BR:
       calendar:
         one:   Calendário
         other: Calendários
+      highlight:
+        one:   Destaque
+        other: Destaques
+      sponsor:
+        one:   Publicidade
+        other: Publicidades
+      menu:
+        one:   Menu
+        other: Menus
+      page:
+        one:   Página
+        other: Páginas
+      media:
+        one:   Mídia
+        other: Mídia
+      image:
+        one:   Imagem
+        other: Imagens
+      gallery:
+        one:   Galeria
+        other: Galerias
+      video:
+        one:   Vídeo
+        other: Vídeos
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -135,6 +149,12 @@ pt-BR:
         name: Nome
         image: Imagem
         description: Descrição
+        company_id: Empresa
+        company: Empresa
+        user_id: Usuário
+        users: Usuários
+        title: Título
+        active: Ativado
       user:
         <<: *default_attrs
         email: Email
@@ -154,17 +174,15 @@ pt-BR:
         accepted_terms: Leu e aceitou os termos
         admin: Administrador
         student: Aluno
-        company_id: Empresa
       company:
         <<: *default_attrs
-        users: Usuários
         subscriber: Assinante
       resume:
         <<: *default_attrs
         references: Referências
         courses: Cursos
-        user_id: Usuário
-        user: Usuário
+        user: Aluno
+        user_id: Aluno
       hint:
         <<: *default_attrs
         published: Publicada
@@ -176,6 +194,33 @@ pt-BR:
         calendar: Calendário
         year: Ano
         specialty: Especialidade
+      highlight:
+        <<: *default_attrs
+      sponsor:
+        <<: *default_attrs
+        content: Conteúdo
+        link: Link
+      menu:
+        <<: *default_attrs
+        slug: Slug
+        parent: Pai
+        parent_id: Pai
+        parent_ids: ID dos Pais
+        position: Posição
+      page:
+        <<: *default_attrs
+        content: Conteúdo
+        menu: Menu
+        menu_id: Menu
+      media:
+        <<: *default_attrs
+        gallery: Galeria
+        gallery_id: Galeria
+      image:
+        <<: *default_attrs
+      gallery:
+        <<: *default_attrs
+        medias: Mídias
   mongoid:
     <<: *activemodel
   activerecord:
@@ -199,9 +244,13 @@ pt-BR:
         approve: Aprovar
         publish: Publicar
         unpublish: Cancelar publicação
+        activate: Ativar
+        deactivate: Desativar
     batch_actions:
       labels:
         approve: Aprovar
+        activate_selected: Ativar
+        deactivate_selected: Desativar
 
   # flash messages
   flash:
@@ -218,6 +267,13 @@ pt-BR:
     feedback_sent: Feedback enviado com sucesso.
     feedback_failed: Houve um erro ao enviar o feedback.
     not_subscriber: Sua empresa não pussui acesso aos currículos.
+    highlight_created: Destaque criado com sucesso.
+    highlight_updated: Destaque atualizado com sucesso.
+    activated: Ativado com sucesso.
+    deactivated: Desativado com sucesso.
+    error: Ocorreu um erro ao realizar essa ação.
+    activated_selected: Os itens selecionados foram ativados com sucesso.
+    deactivated_selected: Os itens selecionados foram desativados com sucesso.
 
   # error pages
   error_404:

@@ -1,4 +1,6 @@
 ActiveAdmin.register Resume do
+  menu parent: "Users"
+
   filter :user, collection: proc { User.students }
 
   form do |f|

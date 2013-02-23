@@ -1,4 +1,5 @@
 ActiveAdmin.register Hint do
+  menu parent: "Dashboard"
 
   filter :description
 
@@ -7,6 +8,20 @@ ActiveAdmin.register Hint do
     column :description
     column :published
     default_actions
+  end
+
+  show do |i|
+    attributes_table do
+      i.attribute_names.each do |a|
+        row a unless a == "image"
+      end
+      row :image do
+        a href: i.image.url do
+          image_tag(i.image.thumb.url)
+        end unless i.image.url.nil?
+      end
+    end
+    active_admin_comments
   end
 
   form do |f|
@@ -23,7 +38,7 @@ ActiveAdmin.register Hint do
     if hint.save
       redirect_to({:action => :show}, :notice => t("flash.published"))
     else
-      redirect_to({:action => :show}, :warn => t("flash.error"))
+      redirect_to({:action => :show}, :alert => t("flash.error"))
     end
   end
 
@@ -33,7 +48,7 @@ ActiveAdmin.register Hint do
     if hint.save
       redirect_to({:action => :show}, :notice => t("flash.unpublished"))
     else
-      redirect_to({:action => :show}, :warn => t("flash.error"))
+      redirect_to({:action => :show}, :alert => t("flash.error"))
     end
   end
 

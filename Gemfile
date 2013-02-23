@@ -36,6 +36,12 @@ group :assets do
   gem 'turbo-sprockets-rails3', '>= 0.3'
 end
 
+# A tree structure for Mongoid documents using the materialized path pattern
+gem 'mongoid-tree', '~> 1.0', :require => 'mongoid/tree'
+
+# An interface to the ImageMagick and GraphicsMagick image processing libraries.
+gem 'rmagick', '~> 2.13'
+
 # Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
 gem 'carrierwave-mongoid', '~> 0.4', :require => 'carrierwave/mongoid'
 
@@ -53,4 +59,7 @@ gem 'devise', '>= 2.2.2'
 
 # The administration framework for Ruby on Rails applications.
 gem 'activeadmin-mongoid', :github => 'jansegre/activeadmin-mongoid'
+
+# This is a wysiyg html editor for the Active Admin interface using wysihtml5.
+gem 'activeadmin-wysihtml5', github: 'jansegre/activeadmin-wysihtml5', require: 'activeadmin-wysihtml5'
 

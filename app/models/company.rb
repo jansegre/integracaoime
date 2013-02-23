@@ -7,6 +7,7 @@ class Company
   validates_presence_of :name
 
   has_many :users
+  has_one :highlight
 
   attr_accessible :name, :subscriber, :user_ids
 

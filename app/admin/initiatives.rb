@@ -1,4 +1,5 @@
 ActiveAdmin.register Initiative do
+  menu parent: "Dashboard"
 
   filter :name
 

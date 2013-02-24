@@ -51,6 +51,12 @@ namespace :app do
       run "#{try_sudo} /etc/init.d/unicorn.#{application} #{action}"
     end
   end
+  task :reprocess_images do
+    run "cd #{deploy_to}/current && bundle exec rake cw:recreate_versions"
+  end
+  task :db_seed do
+    run "cd #{deploy_to}/current && bundle exec rake db:seed"
+  end
 end
 
 after 'deploy:restart', 'app:reload'

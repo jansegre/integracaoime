@@ -20,6 +20,7 @@
     = stylesheet_link_tag "application", media: "all"
     /[if IE 7]
       = stylesheet_link_tag "_font-awesome-ie7.min", media: "all"
+    = yield :extra_styles
     /[if lt IE 9]
       -# Respond.js has to be loaded asap to minimize glitches
       = javascript_include_tag "respond"

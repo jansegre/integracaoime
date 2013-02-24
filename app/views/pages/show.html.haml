@@ -1,6 +1,9 @@
 - content_for :title do
   = @menu.title
 
+- content_for :extra_styles do
+  = stylesheet_link_tag "classic/galleria.classic", media: "all"
+
 - if @page.gallery?
   - content_for :after_menu do
     #galleria

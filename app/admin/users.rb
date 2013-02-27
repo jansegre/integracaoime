@@ -27,10 +27,12 @@ ActiveAdmin.register User do
       if f.object.new_record?
         f.input :password
         f.input :password_confirmation
+        f.input :approved, :as => :boolean
       end
-      #f.input :approved, :as => :boolean
       f.input :student, :as => :boolean
       f.input :company
+      f.input :position
+      f.input :representative, :as => :boolean
     end
     f.actions
   end

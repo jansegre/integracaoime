@@ -174,9 +174,15 @@ pt-BR:
         accepted_terms: Leu e aceitou os termos
         admin: Administrador
         student: Aluno
+        position: Cargo
+        representative: Representante da Empresa
       company:
         <<: *default_attrs
         subscriber: Assinante
+        name: Nome Fictício
+        legal_name: Razão Social
+        cnpj: CNPJ
+        address: Endereço
       resume:
         <<: *default_attrs
         references: Referências

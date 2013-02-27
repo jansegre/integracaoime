@@ -3,13 +3,15 @@ class Company
   include Mongoid::Timestamps
 
   field :name
+  field :legal_name
+  field :cnpj
+  field :address
   field :subscriber, :type => Boolean
-  validates_presence_of :name
 
   has_many :users
   has_one :highlight
 
-  attr_accessible :name, :subscriber, :user_ids
+  validates_presence_of :name, :legal_name, :cnpj, :address
 
-  index({ name: 1}, {unique: true, background: true})
+  index({ name: 1 }, { unique: true, background: true })
 end

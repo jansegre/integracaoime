@@ -43,9 +43,6 @@ class User
   ## Token authenticatable
   # field :authentication_token, type: String
 
-  # run 'rake db:mongoid:create_indexes' to create indexes
-  index({ email: 1 }, { unique: true, background: true })
-
   field :name, type: String
   validates_presence_of :name
   validates_length_of :name, minimum: 3, maximum: 128
@@ -53,14 +50,14 @@ class User
   field :admin,   type: Boolean, default: false
   field :student, type: Boolean
 
+  field :position
+  field :representative, type: Boolean
   belongs_to :company
   has_one :resume
 
   validates_associated :resume
 
-  attr_accessible :name, :email, :password, :password_confirmation,
-                  :remember_me, :created_at, :updated_at, :approved,
-                  :student, :company_id, :resume_id
+  index({ email: 1 }, { unique: true, background: true })
 
   def initialize *args
     super

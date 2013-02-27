@@ -16,8 +16,15 @@ ActiveAdmin.register Gallery do
       end
       row :medias do
         for m in i.medias
-          a href: m.image.url do
-            image_tag(m.image.small.url)
+          case m
+          when Image
+            a href: m.image.url do
+              image_tag m.image.small.url
+            end
+          when Video
+            a href: m.video do
+              image_tag m.thumb, height: "50px"
+            end
           end
         end
       end

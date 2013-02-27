@@ -17,7 +17,7 @@ ActiveAdmin.register Video do
       end
       row :video do
         a href: i.video do
-          image_tag i.thumb(0), height: "140px"
+          image_tag i.thumb, height: "140px"
         end
       end
     end

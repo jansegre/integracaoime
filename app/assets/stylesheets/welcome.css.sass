@@ -14,6 +14,16 @@ footer hr
 // CUSTOMIZE THE NAVBAR
   --------------------------------------------------
 
+$blue: #3e4095
+//$lblue: lighten($blue, 30%)
+$dblue: darken($blue, 10%)
+$ddblue: darken($blue, 20%)
+$blue2: hsl(hue($blue) - 20deg, 100%, 70%)
+$lblue2: lighten($blue2, 8%)
+$dlblue2: desaturate(darken($lblue2, 8%), 27%)
+$dblue2: darken($blue2, 5%)
+$blue12: mix($blue, $blue2, 66%)
+
 // Special class on .container surrounding .navbar, used for positioning it into place.
 .navbar-wrapper
   position: absolute
@@ -21,59 +31,104 @@ footer hr
   left: 0
   right: 0
   z-index: 20
-  margin-top: 20px
-  margin-bottom: -90px
+  //margin-top: 20px
+  //margin-bottom: -90px
   // Negative margin to pull up carousel. 90px is roughly margins and height of navbar.
 
 // Fix .navbar-text
 .navbar-text
   padding: 15px 20px 15px
-  //margin-right: -20px
   line-height: 20px
 
-// Enforce correct pulling on .navbar
-.navbar .pull-right
-  float: right
+.navbar.navbar-integracao
+  .navbar-inner
+    padding: 0px
+    min-height: 72px
+    border-color: $blue12
 
-.navbar .pull-left
-  float: left
+  // Enforce correct pulling on .navbar
+  .pull-right
+    float: right
+  .pull-left
+    float: left
 
-// Fixing icon-reorder on .btn-navbar
-.navbar .btn-navbar
-  padding: 4px 10px 1.5px
-  i
-    line-height: 17px
-    font-size: 17px
+  // Fixing icon-reorder on .btn-navbar
+  .btn-navbar
+    padding: 3.5px 10px 1.5px
+    margin: 3px 5px 6px
+    +text-shadow(1px 1px 1px rgba(0, 0, 0, 0.251))
+    &, &:hover
+      color: $blue
+    i
+      line-height: 17px
+      font-size: 17px
 
-// Remove border and change up box shadow for more contrast
-.navbar .navbar-inner
-  border: 0
-  +box-shadow(0 2px 10px rgba(0, 0, 0, 0.25))
-  filter: none
+  .side
+    float: left
+    //border: solid $blue12
+    border-width: 0 0 1px
+    margin: 0 0 -1px
 
-// Downsize the brand/project name a bit
-.navbar .brand
-  padding: 14px 20px 16px
-  // Increase vertical padding to match navbar links
-  font-size: 16px
-  font-weight: bold
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5)
+  .menu-row .nav
+    background-color: mix($dblue, $ddblue)
+    +background-image(linear-gradient(top, $dblue, $ddblue))
+    //border: solid mix($blue, $blue2)
+    //border-width: 0 0 1px
+    //margin-bottom: -1px
+    $rad: 6px
+    +border-top-radius($rad)
+    & > li:first-child > a
+      +border-top-left-radius($rad)
+    & > li:last-child > a
+      +border-top-right-radius($rad)
+    & > li > a
+      color: #eee
+      +text-shadow(1px 1px 2px black)
+    & > li.dropdown.open > .dropdown-toggle
+      background-color: $lblue2
+      color: #333
+      +background-image(linear-gradient(top, $lblue2, $dlblue2))
+      +text-shadow(-1px 1px 2px white)
 
-// Navbar links: increase padding for taller navbar
-.navbar .nav > li > a
-  padding: 15px 15px
+  .nav > li > a
+    padding: 8px 15px 8px
 
-// Offset the responsive button for proper vertical alignment
-.navbar .btn-navbar
-  margin-top: 10px
+  .dropdown-menu li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-submenu:hover > a,
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .dropdown-menu a:hover
+    background-color: mix($blue, $dblue)
+    +background-image(linear-gradient(top, $blue, $dblue))
+
+  // fix icon-xxxx on .navbar
+  .dropdown-toggle i
+    line-height: 20px
+
+  // CUSTOMIZE THE BRAND  
+  .brand
+    //min-height: 100%
+    padding: 10px 10px 0
+    margin: 0 0 -1px
+    color: $blue
+    font-size: 24px
+    //border: solid $blue
+    //border-width: 0 0 1px
+    +text-shadow(1px 1px 3px rgba(0,0,0,0.2))
+    //span
+      //margin: 8px 100px 0px 20px
+      //padding-top: 8px
+    u, span
+      vertical-align: top
+    u
+      color: $blue2
+      text-decoration: none
+    img
+      margin: -14px 0 -4px
 
 // div to push the navbar down when nothing bellow
 .push-down
   height: 140px
-
-// fix icon-xxxx on .navbar
-.navbar .dropdown-toggle i
-  line-height: 20px
 
 // CUSTOMIZE THE MODAL WINDOW
   --------------------------------------------------
@@ -116,18 +171,6 @@ footer hr
 // CUSTOMIZE THE NAVBAR
   --------------------------------------------------
 
-// Carousel base class
-.carousel
-  margin-bottom: 40px
-
-.carousel-caption .container
-  +box-sizing(border-box)
-  z-index: 10
-  padding:
-    left: 60px
-    right: 60px
-    bottom: 20px
-
 .carousel-control
   height: 80px
   margin-top: 0
@@ -136,20 +179,27 @@ footer hr
   background-color: transparent
   border: 0
   z-index: 15
+  top: 290px
 
-.carousel .item
-  height: 500px
-  background-position: center
-  background-repeat: no-repeat
-  //TODO make this work on IE
-  +background-size(cover)
+// Carousel base class
+.carousel
+  margin-bottom: 40px
+  .push-down
+    height: 84px
 
-.carousel img
-  position: absolute
-  top: 0
-  left: 0
-  min-width: 100%
-  height: 500px
+  .item
+    height: 500px
+    background-position: center
+    background-repeat: no-repeat
+    //TODO make this work on IE
+    +background-size(cover)
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    min-width: 100%
+    height: 500px
 
 .carousel-caption
   background-color: transparent
@@ -161,15 +211,22 @@ footer hr
   &.left
     text-align: left
 
-.carousel-caption h1,
-.carousel-caption .lead
-  margin: 0
-  line-height: 1.25
-  color: #fff
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4)
+  .container
+    +box-sizing(border-box)
+    z-index: 10
+    padding:
+      left: 60px
+      right: 60px
+      bottom: 20px
 
-.carousel-caption .btn
-  margin-top: 10px
+  h1, .lead
+    margin: 0
+    line-height: 1.25
+    color: #fff
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4)
+
+  .btn
+    margin-top: 10px
 
 // MARKETING CONTENT
   --------------------------------------------------
@@ -204,12 +261,11 @@ footer hr
   margin-top: -120px
   // Vertically center images part 3: negative margin up the image the same amount of the padding to center it.
 
-// Give some space on the sides of the floated elements so text doesn't run right into it.
-.featurette-image.pull-left
-  margin-right: 40px
-
-.featurette-image.pull-right
-  margin-left: 40px
+  // Give some space on the sides of the floated elements so text doesn't run right into it.
+  &.pull-left
+    margin-right: 40px
+  &.pull-right
+    margin-left: 40px
 
 // Thin out the marketing headings
 .featurette-heading
@@ -229,47 +285,76 @@ footer hr
 
 
 @media (max-width: 979px)
+  .navbar.navbar-integracao
+    .row
+      margin-left: 0
+    .brand
+      position: absolute
+    .multi-row
+      width: 100%
+    .menu-row .nav
+      margin: 0 0 -2px
+      border: solid $blue12
+      border-width: 1px 0 0
+      +border-top-radius(0)
+      & > li:first-child > a
+        +border-top-left-radius(0)
+      & > li:last-child > a
+        +border-top-right-radius(0)
+    .nav-collapse .nav > li > a,
+    .nav-collapse .dropdown-menu a
+      color: #eee
+      font-weight: normal
+    .navbar-inner
+      border-color: mix($blue, $blue2)
+    .side
+      display: none
+
   .container
     width: auto
-  .container.navbar-wrapper
-    margin-bottom: 0
-    width: auto
-  .navbar-inner
-    border-radius: 0
-    margin: -20px 0
+    //.container.navbar-wrapper
+      margin-bottom: 0
+      width: auto
+    //.navbar-inner
+      border-radius: 0
+      margin: -20px 0
+  .carousel-control
+    top: 265px
   .carousel
     margin-bottom: 20px
-  .carousel .item
-    height: 450px
-  .carousel img
-    width: auto
-    height: 450px
+    .item
+      height: 450px
+    img
+      width: auto
+      height: 450px
   .featurette
     height: auto
     padding: 0
-  .featurette-image.pull-left,
-  .featurette-image.pull-right
-    display: block
-    float: none
-    max-width: 40%
-    margin: 0 auto 20px
+  .featurette-image
+    &.pull-left, &.pull-right
+      display: block
+      float: none
+      max-width: 40%
+      margin: 0 auto 20px
 
 @media (max-width: 767px)
-  .navbar-inner
-    margin: -20px 0
+  .navbar
+    margin: 0
+  .carousel-control
+    top: 215px
   .carousel
     margin:
       left: -20px
       right: -20px
-  .carousel .item
-    height: 350px
-  .carousel img
-    height: 350px
-  .carousel-caption h1
-    font-size: 30px
-  .carousel-caption .lead,
-  .carousel-caption .btn
-    font-size: 18px
+    .item
+      height: 350px
+    img
+      height: 350px
+  .carousel-caption
+    h1
+      font-size: 30px
+    .lead, .btn
+      font-size: 18px
   .marketing .span4 + .span4
     margin-top: 40px
   .featurette-heading

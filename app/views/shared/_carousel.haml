@@ -1,4 +1,5 @@
 #myCarousel.carousel.slide.carousel-fade
+  .push-down
   .carousel-inner
     - @highlights.each_with_index do |h, i|
       .item{style: "background-image:url('#{h.image_url}')", class: (i == 0 ? "active" : nil)}

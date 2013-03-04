@@ -1,116 +1,125 @@
 .navbar-wrapper
   .container
     = render "shared/old_browser"
-    .navbar.navbar-inverse
+    .navbar.navbar-integracao.navbar-fixed-top
       .navbar-inner
-        -# Button for triggering responsive navbar
-        %a.btn.btn-navbar.pull-left{"data-target" => ".main-tabs", "data-toggle" => "collapse"}
-          %i.icon-reorder
-        -# Brand name
-        -# TODO add logo
-        %a.brand{:href => url_for(root_path)}
-          =t "title"
-        -# Login/Logout menus
-        %ul.nav.pull-right
-          - if user_signed_in?
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                = current_user.name
-                %i.icon-angle-down
-              %ul.dropdown-menu
-                - if current_user.student?
-                  %li
-                    %a.navbar-link{:href => url_for(student_resume_path)}
-                      =t ".resume"
-                  %li
-                    %a.navbar-link{:href => url_for(student_hints_path)}
-                      =t ".tips"
-                  %li
-                    %a.navbar-link{:href => url_for(feedback_path)}
-                      =t ".feedback"
-                  %li.divider
-                - if current_user.company_member?
-                  - if current_company.subscriber?
-                    %li
-                      %a.navbar-link{:href => url_for(company_resumes_path)}
-                        =t ".resumes"
-                  %li
-                    %a.navbar-link{:href => url_for(company_calendars_path)}
-                      =t ".calendars"
-                  %li
-                    %a.navbar-link{:href => url_for(company_how_to_path)}
-                      =t ".how_to"
-                  %li
-                    %a.navbar-link{:href => url_for(company_sponsor_path)}
-                      =t ".sponsor"
-                  %li
-                    %a.navbar-link{:href => url_for(company_highlight_path)}
-                      =t ".highlight"
-                  %li
-                    %a.navbar-link{:href => url_for(feedback_path)}
-                      =t ".feedback"
-                  %li.divider
-                - if current_user.admin?
-                  %li
-                    %a.navbar-link{:href => url_for(admin_root_path)}
-                      =t ".admin_dashboard"
-                %li
-                  %a.navbar-link{:href => url_for(destroy_user_session_path), :data => {:method => :delete}}
-                    =t ".logout"
-                    %i.icon-signout
-          - else
-            %li
-              -# %a.navbar-link{:href => url_for(new_user_session_path)}
-              %a.navbar-link{:href => "#loginModal", :role => :button, "data-toggle" => :modal}
-                %i.icon-signin
-                =t ".login"
-        -# Main root menu
-        .nav-collapse.collapse.main-tabs
-          %ul.nav
-            - @root_menu.active_children.each do |m|
-              - if m.active_children.empty?
-                %li
-                  %a{href: url_for(page_path(m.slug))}= m.title
-              - else
-                %li.dropdown
-                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                    = m.title
-                    %i.icon-angle-down
-                  %ul.dropdown-menu
-                    - m.active_children.each do |m|
-                      - if m.active_children.empty?
+        .container
+          -# Brand name
+          %a.brand{href: url_for(root_path)}
+            %img{src: asset_path("logo.svg"), alt: "logo", height: "80px", width: "80px"}
+            -#%object{data: asset_path("logo.svg"), title: "integraçãoime", height: "80px", width: "80px"}
+            -#%img{src:   asset_path("logo.png"), alt:   "integraçãoime", style: "height:80px;width:80px"}
+            %span
+              integração<u>ime</u>
+          .multi-row.pull-right
+            .row
+              -# Login/Logout menus
+              %ul.nav.pull-right
+                - if user_signed_in?
+                  %li.dropdown
+                    %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}
+                      = current_user.name
+                      %i.icon-angle-down
+                    %ul.dropdown-menu
+                      - if current_user.student?
                         %li
-                          %a{:href => url_for(page_path(m.slug))}= m.title
-                      - else
-                        %li.dropdown-submenu
-                          %a{:href => m.page.nil? ? "#" : url_for(page_path(m.slug))}= m.title
-                          %ul.dropdown-menu
-                            - m.active_children.each do |m|
+                          %a.navbar-link{href: url_for(student_resume_path)}
+                            =t ".resume"
+                        %li
+                          %a.navbar-link{href: url_for(student_hints_path)}
+                            =t ".tips"
+                        %li
+                          %a.navbar-link{href: url_for(feedback_path)}
+                            =t ".feedback"
+                        %li.divider
+                      - if current_user.company_member?
+                        - if current_company.subscriber?
+                          %li
+                            %a.navbar-link{href: url_for(company_resumes_path)}
+                              =t ".resumes"
+                        %li
+                          %a.navbar-link{href: url_for(company_calendars_path)}
+                            =t ".calendars"
+                        %li
+                          %a.navbar-link{href: url_for(company_how_to_path)}
+                            =t ".how_to"
+                        %li
+                          %a.navbar-link{href: url_for(company_sponsor_path)}
+                            =t ".sponsor"
+                        %li
+                          %a.navbar-link{href: url_for(company_highlight_path)}
+                            =t ".highlight"
+                        %li
+                          %a.navbar-link{href: url_for(feedback_path)}
+                            =t ".feedback"
+                        %li.divider
+                      - if current_user.admin?
+                        %li
+                          %a.navbar-link{href: url_for(admin_root_path)}
+                            =t ".admin_dashboard"
+                      %li
+                        %a.navbar-link{href: url_for(destroy_user_session_path), data: {method: "delete"}}
+                          =t ".logout"
+                          %i.icon-signout
+                - else
+                  %li
+                    -# %a.navbar-link{:href => url_for(new_user_session_path)}
+                    %a.navbar-link{href: "#loginModal", role: "button", data: {toggle: "modal"}}
+                      %i.icon-signin
+                      =t ".login"
+            .row.menu-row
+              -# Button for triggering responsive navbar
+              %a.btn.btn-navbar.pull-right{data: {target: ".main-tabs", toggle: "collapse"}}
+                %i.icon-reorder
+              -# Main root menu
+              .nav-collapse.collapse.main-tabs
+                -#%img.side{src: asset_path("side.png")}
+                %ul.nav
+                  - @root_menu.active_children.each do |m|
+                    - if m.active_children.empty?
+                      %li
+                        %a{href: url_for(page_path(m.slug))}= m.title
+                    - else
+                      %li.dropdown
+                        %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}
+                          = m.title
+                          %i.icon-angle-down
+                        %ul.dropdown-menu
+                          - m.active_children.each do |m|
+                            - if m.active_children.empty?
                               %li
-                                %a{:href => url_for(page_path(m.slug))}= m.title
+                                %a{href: url_for(page_path(m.slug))}= m.title
+                            - else
+                              %li.dropdown-submenu
+                                %a{href: m.page.nil? ? "#" : url_for(page_path(m.slug))}= m.title
+                                %ul.dropdown-menu
+                                  - m.active_children.each do |m|
+                                    %li
+                                      %a{href: url_for(page_path(m.slug))}= m.title
+              
     -# Flash alerts bellow the menu but still inside the container
     - if flash[:error]
       .alert.alert-error
-        %button.close{"data-dismiss" => "alert"} &times;
+        %button.close{data: {dismiss: "alert"}} &times;
         = flash[:error]
     - if flash[:alert]
       .alert.alert-error
-        %button.close{"data-dismiss" => "alert"} &times;
+        %button.close{data: {dismiss: "alert"}} &times;
         = flash[:alert]
     - if flash[:success]
       .alert.alert-success
-        %button.close{"data-dismiss" => "alert"} &times;
+        %button.close{data: {dismiss: "alert"}} &times;
         = flash[:success]
     - if flash[:notice]
       .alert.alert-success
-        %button.close{"data-dismiss" => "alert"} &times;
+        %button.close{data: {dismiss: "alert"}} &times;
         = flash[:notice]
     - if flash[:info]
       .alert.alert-info
-        %button.close{"data-dismiss" => "alert"} &times;
+        %button.close{data: {dismiss: "alert"}} &times;
         = flash[:info]
     - if flash[:warn]
       .alert
-        %button.close{"data-dismiss" => "alert"} &times;
+        %button.close{data: {dismiss: "alert"}} &times;
         = flash[:warn]
 

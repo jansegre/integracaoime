@@ -9,6 +9,7 @@ pt-BR:
 
     # top navbar
     menu:
+      home: Home
       login: Entrar
       logout: Sair
       resume: Currículo

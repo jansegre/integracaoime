@@ -75,6 +75,8 @@
               .nav-collapse.collapse.main-tabs
                 -#%img.side{src: asset_path("side.png")}
                 %ul.nav
+                  %li
+                    %a{href: url_for(root_path)}=t ".home"
                   - @root_menu.active_children.each do |m|
                     - if m.active_children.empty?
                       %li

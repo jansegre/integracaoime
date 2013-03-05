@@ -36,6 +36,7 @@ pt-BR:
 
     marketing:
       more: Veja mais &raquo;
+      partners: Parceiros
 
     # footer
   holder: Integração IME
@@ -140,6 +141,9 @@ pt-BR:
       video:
         one:   Vídeo
         other: Vídeos
+      partner:
+        one:   Parceiro
+        other: Parceiros
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -227,6 +231,9 @@ pt-BR:
       gallery:
         <<: *default_attrs
         medias: Mídias
+      partner:
+        <<: *default_attrs
+        link: Link
   mongoid:
     <<: *activemodel
   activerecord:

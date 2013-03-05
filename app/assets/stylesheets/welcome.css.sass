@@ -1,18 +1,5 @@
 @import compass
 
-// GLOBAL STYLES
-  --------------------------------------------------
-
-// Padding below the footer and lighter body text
-body
-  padding-bottom: 40px
-  color: #5a5a5a
-
-footer hr
-  margin-top: 80px
-
-// CUSTOMIZE THE NAVBAR
-  --------------------------------------------------
 
 $blue: #3e4095
 //$lblue: lighten($blue, 30%)
@@ -23,6 +10,46 @@ $lblue2: lighten($blue2, 8%)
 $dlblue2: desaturate(darken($lblue2, 8%), 27%)
 $dblue2: darken($blue2, 5%)
 $blue12: mix($blue, $blue2, 66%)
+// tones of white
+$white: #fff
+$white2: #f2f2f2
+$white12: mix($white, $white2)
+// shades of grey
+$lgrey: #ddd
+$llgrey: #eee
+
+$bgcolor: $llgrey
+
+=gradient($start, $stop)
+  background-color: mix($start, $stop)
+  +background-image(linear-gradient(top, $start, $stop))
+  filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='") + ie-hex-str($start) + unquote("', endColorstr='") + ie-hex-str($stop) + unquote("',GradientType=0)")
+
+// GLOBAL STYLES
+  --------------------------------------------------
+
+// Padding below the footer and lighter body text
+body
+  color: #5a5a5a
+  background-color: $white2
+
+// CUSTOMIZE THE NAVBAR
+  --------------------------------------------------
+
+.nav-footer
+  margin-top: 80px
+  border-style: solid
+  border-width: 1px 0 0
+  border-color: $blue12
+  //border-color: $lgrey
+  background-color: $white12
+  //+background-image(linear-gradient(top, $white2, $white))
+  background-repeat: repeat-x
+  +box-shadow(inset 0px 1px 10px rgba(0, 0, 0, 0.1))
+  & > .container
+    padding:
+      top: 40px
+      bottom: 20px
 
 // Special class on .container surrounding .navbar, used for positioning it into place.
 .navbar-wrapper
@@ -45,6 +72,12 @@ $blue12: mix($blue, $blue2, 66%)
     padding: 0px
     min-height: 72px
     border-color: $blue12
+    background-color: $white12
+    //+background-image(linear-gradient(top, $white, $white2))
+    background-image: none
+    //background-color: $bgcolor
+    //& > .container
+      //background-color: $white12
 
   // Enforce correct pulling on .navbar
   .pull-right
@@ -63,24 +96,41 @@ $blue12: mix($blue, $blue2, 66%)
       line-height: 17px
       font-size: 17px
 
-  .side
-    float: left
-    //border: solid $blue12
-    border-width: 0 0 1px
-    margin: 0 0 -1px
+  .left-side-img, .right-side-img
+    background-repeat: no-repeat
+    position: absolute
+  .left-side-img
+    background-image: url(image-path("sidel.png"))
+    width: 40px
+    height: 36px
+    left: -39px
+  .right-side-img
+    background-image: url(image-path("sider.png"))
+    width: 40px
+    height: 72px
+    right: -29px
+    top: -36px
+  .svg & .left-side-img
+    background-image: url(image-path("sidel.svg"))
+  .svg & .right-side-img
+    background-image: url(image-path("sider.svg"))
 
   .menu-row .nav
-    background-color: mix($dblue, $ddblue)
-    +background-image(linear-gradient(top, $dblue, $ddblue))
+    //background-color: mix($dblue, $ddblue)
+    //+background-image(linear-gradient(top, $dblue, $ddblue))
+    //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3E4095', endColorstr='#FF2F3171', GradientType=0)
+    +border-radius(0)
+    +gradient($dblue, $ddblue)
+    max-height: 36px
     //border: solid mix($blue, $blue2)
     //border-width: 0 0 1px
     //margin-bottom: -1px
-    $rad: 6px
-    +border-top-radius($rad)
-    & > li:first-child > a
-      +border-top-left-radius($rad)
-    & > li:last-child > a
-      +border-top-right-radius($rad)
+    //$rad: 6px
+    //+border-top-radius($rad)
+    //& > li:first-child > a
+      //+border-top-left-radius($rad)
+    //& > li:last-child > a
+      //+border-top-right-radius($rad)
     & > li > a
       color: #eee
       +text-shadow(1px 1px 2px black)
@@ -100,6 +150,7 @@ $blue12: mix($blue, $blue2, 66%)
   .nav-collapse .dropdown-menu a:hover
     background-color: mix($blue, $dblue)
     +background-image(linear-gradient(top, $blue, $dblue))
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3E4095', endColorstr='#FF2F3171', GradientType=0)
 
   // fix icon-xxxx on .navbar
   .dropdown-toggle i
@@ -128,7 +179,7 @@ $blue12: mix($blue, $blue2, 66%)
 
 // div to push the navbar down when nothing bellow
 .push-down
-  height: 140px
+  height: 72px
 
 // CUSTOMIZE THE MODAL WINDOW
   --------------------------------------------------
@@ -179,13 +230,13 @@ $blue12: mix($blue, $blue2, 66%)
   background-color: transparent
   border: 0
   z-index: 15
-  top: 290px
+  top: 230px
 
 // Carousel base class
 .carousel
-  margin-bottom: 40px
-  .push-down
-    height: 84px
+  margin:
+    //top: 20px
+    bottom: 40px
 
   .item
     height: 500px
@@ -307,7 +358,7 @@ $blue12: mix($blue, $blue2, 66%)
       font-weight: normal
     .navbar-inner
       border-color: mix($blue, $blue2)
-    .side
+    .left-side-img, .right-side-img
       display: none
 
   .container
@@ -319,7 +370,7 @@ $blue12: mix($blue, $blue2, 66%)
       border-radius: 0
       margin: -20px 0
   .carousel-control
-    top: 265px
+    top: 205px
   .carousel
     margin-bottom: 20px
     .item
@@ -338,14 +389,15 @@ $blue12: mix($blue, $blue2, 66%)
       margin: 0 auto 20px
 
 @media (max-width: 767px)
+  body
+    padding:
+      left: 0
+      right: 0
   .navbar
     margin: 0
   .carousel-control
-    top: 215px
+    top: 155px
   .carousel
-    margin:
-      left: -20px
-      right: -20px
     .item
       height: 350px
     img
@@ -362,6 +414,10 @@ $blue12: mix($blue, $blue2, 66%)
   .featurette .lead
     font-size: 18px
     line-height: 1.5
+  body > .container, footer > .container
+    padding:
+      left: 20px
+      right: 20px
 
 
 // Footer logos

@@ -73,7 +73,7 @@
                 %i.icon-reorder
               -# Main root menu
               .nav-collapse.collapse.main-tabs
-                -#%img.side{src: asset_path("side.png")}
+                .left-side-img
                 %ul.nav
                   %li
                     %a{href: url_for(root_path)}=t ".home"
@@ -98,6 +98,7 @@
                                   - m.active_children.each do |m|
                                     %li
                                       %a{href: url_for(page_path(m.slug))}= m.title
+                .right-side-img
               
     -# Flash alerts bellow the menu but still inside the container
     - if flash[:error]

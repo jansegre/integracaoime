@@ -140,6 +140,9 @@ body
       +background-image(linear-gradient(top, $lblue2, $dlblue2))
       +text-shadow(-1px 1px 2px white)
 
+  .user-row
+    padding-right: 10px
+
   .nav > li > a
     padding: 8px 15px 8px
 
@@ -151,6 +154,15 @@ body
     background-color: mix($blue, $dblue)
     +background-image(linear-gradient(top, $blue, $dblue))
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3E4095', endColorstr='#FF2F3171', GradientType=0)
+
+  // properly position inputs on top login form
+  .navbar-form input
+    margin:
+      top: 3px
+      bottom: 3px
+  .navbar-form .btn-group
+    margin:
+      top: 0
 
   // fix icon-xxxx on .navbar
   .dropdown-toggle i

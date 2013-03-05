@@ -21,6 +21,10 @@ pt-BR:
       how_to: Orientações para convênio
       sponsor: Patrocine uma iniciativa
       highlight: Destaque (Deixe sua mensagem)
+      sign_in: Entrar
+      email: Email
+      password: Senha
+      sign_up: Registrar-se
 
     # login modal
     login:

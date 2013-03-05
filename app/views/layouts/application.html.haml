@@ -44,8 +44,7 @@
       -# main content will come here
       = yield
 
-    .container.container-fluid
-      = render "shared/footer"
+    = render "shared/footer"
 
     -# load Google Analytics when in production
     - if Rails.env.production?

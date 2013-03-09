@@ -1,4 +1,5 @@
 ActiveAdmin.register Partner do
+  menu parent: "Dashboard"
 
   filter :name
 

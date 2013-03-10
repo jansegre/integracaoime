@@ -365,6 +365,16 @@ body
 
 
 @media (max-width: 979px)
+  // consistent side margins for alerts
+  .alert
+    margin:
+      left: 20px
+      right: 20px
+
+  // nullify alert push-down on this kind of media
+  .navbar-wrapper .container .push-down
+    height: 0
+
   .navbar.navbar-integracao
     .row
       margin-left: 0

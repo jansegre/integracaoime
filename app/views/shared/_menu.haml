@@ -1,5 +1,6 @@
 .navbar-wrapper
   .container
+    .push-down
     = render "shared/old_browser"
     .navbar.navbar-integracao.navbar-fixed-top
       .navbar-inner
@@ -125,27 +126,34 @@
               
     -# Flash alerts bellow the menu but still inside the container
     - if flash[:error]
-      .alert.alert-error
+      .alert.fade.in.alert-error
         %button.close{data: {dismiss: "alert"}} &times;
         = flash[:error]
     - if flash[:alert]
-      .alert.alert-error
+      .alert.fade.in.alert-error
         %button.close{data: {dismiss: "alert"}} &times;
         = flash[:alert]
     - if flash[:success]
-      .alert.alert-success
+      .alert.fade.in.alert-success
         %button.close{data: {dismiss: "alert"}} &times;
         = flash[:success]
     - if flash[:notice]
-      .alert.alert-success
+      .alert.fade.in.alert-success
         %button.close{data: {dismiss: "alert"}} &times;
         = flash[:notice]
     - if flash[:info]
-      .alert.alert-info
+      .alert.fade.in.alert-info
         %button.close{data: {dismiss: "alert"}} &times;
         = flash[:info]
     - if flash[:warn]
-      .alert
+      .alert.fade.in
         %button.close{data: {dismiss: "alert"}} &times;
         = flash[:warn]
+    :javascript
+      $(function() {
+        $('.alert').alert()
+        setTimeout(function() {
+          $('.alert').alert('close')
+        }, 5000)
+      })
 

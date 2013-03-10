@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="80px" height="80px" viewBox="-16 -62 580 580">
 <filter id="s">
-  <feGaussianBlur stdDeviation="8" result="a" in="SourceAlpha"/>
-  <feOffset in="a" result="b" dx="10" dy="10"/>
-  <feColorMatrix in="b" result="c" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .6 0" type="matrix"/>
+  <feGaussianBlur stdDeviation="14.5" result="a" in="SourceAlpha"/>
+  <feOffset in="a" result="b" dx="7.25" dy="7.25"/>
+  <feColorMatrix in="b" result="c" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .3 0" type="matrix"/>
   <feMerge>
     <feMergeNode in="c"/>
     <feMergeNode in="SourceGraphic"/>

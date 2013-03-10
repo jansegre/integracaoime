@@ -8,7 +8,7 @@
     = csrf_meta_tags
     %title<
       - if content_for? :title
-        #{yield :title} - #{t :title}
+        #{yield(:title).gsub(/\n/,"")} - #{t :title}
       - else
         = t :title
     -# IE requires the "shortcut" keyword
@@ -39,7 +39,7 @@
     - else
       .push-down
 
-    .container.container-fluid
+    .container.container-fluid.main
       -# main content will come here
       = yield
 

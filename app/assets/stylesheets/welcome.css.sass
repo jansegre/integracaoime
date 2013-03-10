@@ -1,5 +1,5 @@
 @import compass
-
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans)
 
 $blue: #3e4095
 //$lblue: lighten($blue, 30%)
@@ -33,11 +33,22 @@ body
   color: #5a5a5a
   background-color: $white2
 
+// basic padding for pages
+.main
+  padding:
+    top: 40px
+    bottom: 40px
+
+.alert
+  margin:
+    top: 15px
+    bottom: 15px
+
 // CUSTOMIZE THE NAVBAR
   --------------------------------------------------
 
 .nav-footer
-  margin-top: 80px
+  //margin-top: 80px
   border-style: solid
   border-width: 1px 0 0
   border-color: $blue12
@@ -174,10 +185,11 @@ body
     padding: 10px 10px 0
     margin: 0 0 -1px
     color: $blue
-    font-size: 24px
+    font-size: 26px
+    font-family: 'Droid Sans', sans-serif
     //border: solid $blue
     //border-width: 0 0 1px
-    +text-shadow(1px 1px 3px rgba(0,0,0,0.2))
+    +text-shadow(1px 1px 2px rgba(0,0,0,0.3))
     //span
       //margin: 8px 100px 0px 20px
       //padding-top: 8px
@@ -235,7 +247,7 @@ body
   --------------------------------------------------
 
 .carousel-control
-  height: 80px
+  height: 40px
   margin-top: 0
   font-size: 40px
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4)
@@ -247,8 +259,8 @@ body
 // Carousel base class
 .carousel
   margin:
-    //top: 20px
-    bottom: 40px
+    top: 0
+    bottom: 0
 
   .item
     height: 500px

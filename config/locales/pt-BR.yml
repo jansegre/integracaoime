@@ -25,6 +25,7 @@ pt-BR:
       email: Email
       password: Senha
       sign_up: Registrar-se
+      change_password: Trocar senha
 
     # login modal
     login:
@@ -94,6 +95,11 @@ pt-BR:
     feedback:
       title: Feedback
       submit: Enviar
+    change_password:
+      title: Trocar senha
+      submit: Enviar
+      current_password: Senha atual
+      password: Nova senha
 
   mail:
     feedback:
@@ -292,6 +298,8 @@ pt-BR:
     error: Ocorreu um erro ao realizar essa ação.
     activated_selected: Os itens selecionados foram ativados com sucesso.
     deactivated_selected: Os itens selecionados foram desativados com sucesso.
+    password_changed: Senha atualizada com sucesso.
+    password_change_failed: Erro ao atualizar senha.
 
   # error pages
   error_404:

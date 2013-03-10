@@ -23,6 +23,8 @@ IntegracaoIME::Application.routes.draw do
 
   get "feedback" => "users#feedback", :as => :feedback
   post "feedback" => "users#send_feedback", :as => :send_feedback
+  get "change_password" => "users#change_password", :as => :change_password
+  put "change_password" => "users#update_password", :as => :update_password
 
   devise_for :users,
              :skip => [:sessions, :registrations],

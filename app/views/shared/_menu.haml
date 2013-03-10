@@ -59,6 +59,9 @@
                           %a.navbar-link{href: url_for(admin_root_path)}
                             =t ".admin_dashboard"
                       %li
+                        %a.navbar-link{href: url_for(change_password_path)}
+                          =t ".change_password"
+                      %li
                         %a.navbar-link{href: url_for(destroy_user_session_path), data: {method: "delete"}}
                           =t ".logout"
                           %i.icon-signout
@@ -123,7 +126,7 @@
                                     %li
                                       %a{href: url_for(page_path(m.slug))}= m.title
                 .right-side-img
-              
+
     -# Flash alerts bellow the menu but still inside the container
     - if flash[:error]
       .alert.fade.in.alert-error

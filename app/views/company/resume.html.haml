@@ -1,7 +1,10 @@
 - content_for :title do
   = @resume.user.name
 
-%h1= @resume.user.name
+%h1.resume-title
+  - unless @resume.nil? or @resume.image.url.nil?
+    %img.img-rounded{src: @resume.image.thumb.url, alt: @resume.user.name, }
+  = @resume.user.name
 
 .well
   = render "resumes/show"

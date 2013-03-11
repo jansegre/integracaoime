@@ -5,10 +5,8 @@ IntegracaoIME::Application.routes.draw do
   get "page/:slug" => "pages#show", :as => :page
 
   get "resume" => "students#resume", :as => :student_resume
-  get "resume/new" => "students#new_resume", :as => :student_new_resume
-  post "resume/new" => "students#create_resume", :as => :stdudent_create_resume
-  get "resume/edit" => "students#edit_resume", :as => :student_edit_resume
-  put "resume/edit" => "students#update_resume", :as => :student_update_resume
+  post "resume" => "students#create_resume", :as => :stdudent_create_resume
+  put "resume" => "students#update_resume", :as => :student_update_resume
   get "hints" => "students#hints", :as => :student_hints
 
   get "resumes" => "company#resumes", :as => :company_resumes

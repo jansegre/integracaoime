@@ -16,3 +16,4 @@
 //= require bootstrap
 //= require welcome
 //= require galleria
+//= require jquery_nested_form

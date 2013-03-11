@@ -1,6 +1,13 @@
-%dl
-  %dt=t ".references"
-  %dd= @resume.references
-%dl
-  %dt=t ".courses"
-  %dd= @resume.courses
+- [:professional_experiences, :voluntary_experiences, :language_experiences, :project_experiences, :notable_experiences, :publication_experiences, :course_experiences].each do |att|
+  %h2=t att, scope: "resumes.form"
+  - @resume.method(att).().each do |e|
+    %hr
+    %dl.dl-horizontal
+      - e.attributes.each do |a, v|
+        - unless a == "_id"
+          %dt=t a, scope: "activemodel.attributes.#{att}"
+          - unless v.nil? || v.empty?
+            %dd= v
+          - else
+            %dd &nbsp;
+  %hr.dark

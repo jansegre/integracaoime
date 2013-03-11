@@ -3,16 +3,12 @@ class StudentsController < ApplicationController
 
   # display resume
   def resume
-    @resume = current_user.resume
+    @resume = current_user.resume || Resume.new
     if @resume.nil?
-      redirect_to action: "new_resume"
+      @url = { action: "create_resume" }
+    else
+      @url = { action: "update_resume" }
     end
-  end
-
-  # display resume create page
-  def new_resume
-    @resume = Resume.new
-    @url = { action: "create_resume" }
   end
 
   # recive a post and create that resume
@@ -22,15 +18,6 @@ class StudentsController < ApplicationController
     else
       render action: "new_resume"
     end
-  end
-
-  # display resume edit page
-  def edit_resume
-    @resume = current_user.resume
-    if @resume.nil?
-      redirect_to new_resume_path
-    end
-    @url = { action: "update_resume" }
   end
 
   # recive a put and update a resume

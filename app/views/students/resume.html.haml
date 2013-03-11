@@ -1,9 +1,9 @@
 - content_for :title do
-  = @resume.user.name
+  = current_user.name
 
-%h1= @resume.user.name
+%h1.resume-title
+  - unless current_user.resume.nil? or current_user.resume.image.url.nil?
+    %img.img-rounded{src: current_user.resume.image.thumb.url, alt: current_user.name, }
+  = current_user.name
 
-.well
-  = render "resumes/show"
-
-%a.btn{ href: url_for(action: "edit_resume") }=t ".edit"
+= render 'resumes/form'

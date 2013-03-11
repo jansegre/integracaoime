@@ -70,7 +70,7 @@ pt-BR:
       title: Currículo
     resumes:
       title: Currículos
-      student_name: Nome do Aluno
+      student: Aluno
       resume: Ver currículo
     calendars:
       title: Calendários
@@ -90,6 +90,17 @@ pt-BR:
     show:
       references: Referências
       courses: Cursos
+    form:
+      submit: Salvar
+      professional_experiences: Experiência profissional
+      voluntary_experiences: Causas e Trabalhos Voluntários
+      language_experiences: Idiomas
+      project_experiences: Projetos
+      notable_experiences: Competências, Premiações e Certificados de Reconhecimento
+      publication_experiences: Publicações
+      course_experiences: Cursos
+      remove: Remover
+      add: Adicionar
 
   users:
     feedback:
@@ -245,6 +256,34 @@ pt-BR:
       partner:
         <<: *default_attrs
         link: Link
+      experience: &experience_attrs
+        name: Nome
+        position: Cargo
+        from: Início
+        to: Término
+        date: Data
+        description: Descrição
+      professional_experience:
+        <<: *experience_attrs
+        company: Empresa
+      voluntary_experience:
+        <<: *experience_attrs
+        initiative: Iniciativa
+      language_experience:
+        <<: *experience_attrs
+        language: Língua
+        level: Nível
+        certificates: Certificados
+      project_experience:
+        <<: *experience_attrs
+      notable_experience:
+        <<: *experience_attrs
+      publication_experience:
+        <<: *experience_attrs
+        topic: Área
+      course_experience:
+        <<: *experience_attrs
+        institution: Instituição
   mongoid:
     <<: *activemodel
   activerecord:

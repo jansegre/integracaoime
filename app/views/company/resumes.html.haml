@@ -5,10 +5,10 @@
 
 %table.table.table-bordered.table-hover
   %tr
-    %th=t ".student_name"
+    %th=t ".student"
     %th &nbsp;
   - @resumes.each do |r|
     %tr
       %td= r.user.name
       %td
-        %a{ href: url_for(user_resume_path r) }=t ".resume"
+        %a{ href: url_for(company_user_resume_path r) }=t ".resume"

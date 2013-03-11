@@ -6,8 +6,6 @@ ActiveAdmin.register Resume do
   form do |f|
     f.inputs "User Details" do
       f.input :user if f.object.new_record?
-      f.input :references
-      f.input :courses
     end
     f.actions
   end

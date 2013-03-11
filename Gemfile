@@ -12,8 +12,8 @@ group :development, :test do
   gem 'capistrano'
   gem 'rvm-capistrano'
 
-  # The ruby 1.9 debugger
-  # gem 'debugger', :platforms => :mri_19
+  # The ruby debugger
+  gem 'debugger', '~> 1.4.0', :platforms => :mri
 end
 
 # Gems used only for assets and not required
@@ -62,4 +62,7 @@ gem 'activeadmin-mongoid', :github => 'jansegre/activeadmin-mongoid'
 
 # This is a wysiyg html editor for the Active Admin interface using wysihtml5.
 gem 'activeadmin-wysihtml5', github: 'jansegre/activeadmin-wysihtml5', require: 'activeadmin-wysihtml5'
+
+# Rails plugin to conveniently handle multiple models in a single form.
+gem 'nested_form'
 

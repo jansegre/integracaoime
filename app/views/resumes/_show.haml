@@ -6,7 +6,7 @@
       - e.attributes.each do |a, v|
         - unless a == "_id"
           %dt=t a, scope: "activemodel.attributes.#{att}"
-          - unless v.nil? || v.empty?
+          - unless v.nil? || v == ""
             %dd= v
           - else
             %dd &nbsp;

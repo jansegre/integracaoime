@@ -34,5 +34,9 @@ class Menu
     def root_menu
       find_by slug: "__root__"
     end
+
+    def company_menu
+      find_by slug: "__company__"
+    end
   end
 end

@@ -42,22 +42,19 @@
                           %a.navbar-link{href: url_for(company_calendars_path)}
                             =t ".calendars"
                         %li
-                          %a.navbar-link{href: url_for(company_how_to_path)}
-                            =t ".how_to"
-                        %li
-                          %a.navbar-link{href: url_for(company_sponsor_path)}
-                            =t ".sponsor"
-                        %li
                           %a.navbar-link{href: url_for(company_highlight_path)}
                             =t ".highlight"
-                        %li
-                          %a.navbar-link{href: url_for(feedback_path)}
-                            =t ".feedback"
+                        - @company_menu.active_children.each do |m|
+                          %li
+                            %a.navbar-link{href: url_for(page_path(m.slug))}= m.title
                         %li.divider
                       - if current_user.admin?
                         %li
                           %a.navbar-link{href: url_for(admin_root_path)}
                             =t ".admin_dashboard"
+                      %li
+                        %a.navbar-link{href: url_for(feedback_path)}
+                          =t ".feedback"
                       %li
                         %a.navbar-link{href: url_for(change_password_path)}
                           =t ".change_password"

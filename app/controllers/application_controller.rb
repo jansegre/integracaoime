@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   def load_menu
     @root_menu = Menu.root_menu
+    @company_menu = Menu.company_menu
   end
 
   # Overwriting the sign_out redirect path method

@@ -69,3 +69,12 @@ create_menu_tree(
   { title: "Fotos e Vídeos", slug: "media", page: lorem_page },
   { title: "Contato", slug: "contact", page: lorem_page }
 ])
+
+create_menu_tree(
+  title: "__COMPANY__",
+  slug: "__company__",
+  active: false,
+  children: [
+  { title: "Orientações para o convênio", slug: "how_to", page: lorem_page },
+  { title: "Patrocine uma iniciativa", slug: "sponsor", page: lorem_page }
+])

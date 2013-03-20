@@ -7,7 +7,7 @@
   %ul.thumbnails
     - @hints.each do |h|
       %li.span4
-        .thumbnail
+        %a.thumbnail{href: h.url || '#'}
           = image_tag(h.image_url) unless h.image_url.nil?
           %p= h.description
 

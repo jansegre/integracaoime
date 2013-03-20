@@ -28,6 +28,7 @@ ActiveAdmin.register Hint do
     f.inputs do
       f.input :image
       f.input :description
+      f.input :url
     end
     f.actions
   end

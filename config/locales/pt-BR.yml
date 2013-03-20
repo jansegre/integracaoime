@@ -194,6 +194,7 @@ pt-BR:
         users: Usuários
         title: Título
         active: Ativado
+        url: Link
       user:
         <<: *default_attrs
         email: Email

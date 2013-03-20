@@ -15,7 +15,11 @@ class Menu
   index({ slug: 1 }, { unique: true, background: true })
 
   def active_children
-    children.where(active: true)
+    children.where active: true
+  end
+
+  def active_siblings
+    siblings.where active: true
   end
 
   def activate!

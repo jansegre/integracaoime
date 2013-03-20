@@ -22,4 +22,15 @@
         Galleria.run("#galleria");
       })
 
-!= @page.content
+.row-fluid
+  .span3
+    .sidebar-nav.well
+      %ul.nav.nav-list
+        - @menu.parent.active_children.each do |m|
+          - if m.active_children.empty?
+            %li{class: m.slug == @menu.slug ? "active" : nil}
+              %a{href: url_for_page(m)}= m.title
+          - else
+            %li.dropdown
+  .span9
+    != @page.content

@@ -362,6 +362,11 @@ pt-BR:
     password_changed: Senha atualizada com sucesso.
     password_change_failed: Erro ao atualizar senha.
 
+  # rmagick errors
+  errors:
+    messages:
+      rmagick_processing_error: Ocorreu um erro ao processar a imagem desejada.
+
   # error pages
   error_404:
     title: Não Encontrado

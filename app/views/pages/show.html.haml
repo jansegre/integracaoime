@@ -26,6 +26,8 @@
   .span3
     .sidebar-nav.well
       %ul.nav.nav-list
+        - if @menu.parent.active?
+          %li.nav-header= @menu.parent.title
         - @menu.parent.active_children.each do |m|
           - if m.active_children.empty?
             %li{class: m.slug == @menu.slug ? "active" : nil}

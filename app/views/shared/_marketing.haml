@@ -14,8 +14,9 @@
                   %a.btn{:href => s.link}!=t ".more"
   .span3
     .well.sidebar-nav
-      %ul.nav.nav-list
+      %ul.nav.nav-list.partners
         %li.nav-header=t ".partners"
         - @partners.each do |p|
           %li
-            %a{href: p.link}= p.name
+            %a{href: p.link}
+              %img{src: p.image.thumb.url, alt: p.name}

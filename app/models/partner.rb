@@ -4,6 +4,11 @@ class Partner
   field :name
   field :link
   field :active, type: Boolean, default: true
+  field :image
+
+  mount_uploader :image, PartnerImageUploader
+
+  validates_presence_of :name, :image, :link
 
   index({ active: 1 })
 

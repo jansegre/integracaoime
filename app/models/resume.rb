@@ -14,6 +14,9 @@ class Resume
   embeds_many :notable_experiences
   embeds_many :publication_experiences
   embeds_many :course_experiences
+  embeds_many :initiative_experiences
+  embeds_many :discipline_experiences
+  embeds_many :reference_experiences
 
   accepts_nested_attributes_for :professional_experiences,
                                 :voluntary_experiences,
@@ -22,6 +25,9 @@ class Resume
                                 :notable_experiences,
                                 :publication_experiences,
                                 :course_experiences,
+                                :initiative_experiences,
+                                :discipline_experiences,
+                                :reference_experiences,
                                 allow_destroy: true,
                                 reject_if: :all_blank
 

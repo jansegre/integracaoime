@@ -93,12 +93,25 @@ pt-BR:
     form:
       submit: Salvar
       professional_experiences: Experiência profissional
+      professional_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
       voluntary_experiences: Causas e Trabalhos Voluntários
+      voluntary_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
       language_experiences: Idiomas
+      language_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
       project_experiences: Projetos
+      project_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
       notable_experiences: Competências, Premiações e Certificados de Reconhecimento
+      notable_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
       publication_experiences: Publicações
+      publication_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
       course_experiences: Cursos
+      course_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      initiative_experiences: Iniciativas Estudantis
+      initiative_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      discipline_experiences: Disciplinas Cursadas
+      discipline_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      reference_experiences: Referências
+      reference_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
       remove: Remover
       add: Adicionar
 
@@ -284,6 +297,14 @@ pt-BR:
       course_experience:
         <<: *experience_attrs
         institution: Instituição
+      initiative_experience:
+        <<: *experience_attrs
+      discipline_experience:
+        <<: *experience_attrs
+      reference_experience:
+        <<: *experience_attrs
+        contact: Contato
+        file: Arquivo
   mongoid:
     <<: *activemodel
   activerecord:

@@ -1,13 +1,14 @@
 %hr
 
-= nested_form_for @resume, url: @url, html: {class: "form-horizontal"} do |f|
+= nested_form_for @resume, url: @url, html: {class: "form-horizontal", multipart: true} do |f|
 
   .control-group
     = f.label :image, class: "control-label"
     .controls
       = f.file_field :image
 
-  %h2=t ".professional_experiences"
+  %h3=t ".professional_experiences"
+  %p=t ".professional_experiences_desc"
   = f.fields_for :professional_experiences do |f|
     .control-group
       = f.label :company, class: "control-label"
@@ -35,7 +36,8 @@
   = f.link_to_add t(".add"), :professional_experiences, class: "btn btn-success controls"
   %hr
 
-  %h2=t ".voluntary_experiences"
+  %h3=t ".voluntary_experiences"
+  %p=t ".voluntary_experiences_desc"
   = f.fields_for :voluntary_experiences do |f|
     .control-group
       = f.label :initiative, class: "control-label"
@@ -63,7 +65,8 @@
   = f.link_to_add t(".add"), :voluntary_experiences, class: "btn btn-success controls"
   %hr
 
-  %h2=t ".language_experiences"
+  %h3=t ".language_experiences"
+  %p=t ".language_experiences_desc"
   = f.fields_for :language_experiences do |f|
     .control-group
       = f.label :language, class: "control-label"
@@ -83,7 +86,8 @@
   = f.link_to_add t(".add"), :language_experiences, class: "btn btn-success controls"
   %hr
 
-  %h2=t ".project_experiences"
+  %h3=t ".project_experiences"
+  %p=t ".project_experiences_desc"
   = f.fields_for :project_experiences do |f|
     .control-group
       = f.label :name, class: "control-label"
@@ -107,7 +111,8 @@
   = f.link_to_add t(".add"), :project_experiences, class: "btn btn-success controls"
   %hr
 
-  %h2=t ".notable_experiences"
+  %h3=t ".notable_experiences"
+  %p=t ".notable_experiences_desc"
   = f.fields_for :notable_experiences do |f|
     .control-group
       = f.label :name, class: "control-label"
@@ -127,7 +132,8 @@
   = f.link_to_add t(".add"), :notable_experiences, class: "btn btn-success controls"
   %hr
 
-  %h2=t ".publication_experiences"
+  %h3=t ".publication_experiences"
+  %p=t ".publication_experiences_desc"
   = f.fields_for :publication_experiences do |f|
     .control-group
       = f.label :name, class: "control-label"
@@ -151,7 +157,8 @@
   = f.link_to_add t(".add"), :publication_experiences, class: "btn btn-success controls"
   %hr
 
-  %h2=t ".course_experiences"
+  %h3=t ".course_experiences"
+  %p=t ".course_experiences_desc"
   = f.fields_for :course_experiences do |f|
     .control-group
       = f.label :name, class: "control-label"
@@ -173,6 +180,72 @@
       .controls
         = f.link_to_remove t(".remove"), class: "btn btn-danger"
   = f.link_to_add t(".add"), :course_experiences, class: "btn btn-success controls"
+  %hr
+
+  %h3=t ".initiative_experiences"
+  %p=t ".initiative_experiences_desc"
+  = f.fields_for :initiative_experiences do |f|
+    .control-group
+      = f.label :name, class: "control-label"
+      .controls
+        = f.text_field :name
+    .control-group
+      = f.label :from, class: "control-label"
+      .controls
+        = f.text_field :from
+    .control-group
+      = f.label :to, class: "control-label"
+      .controls
+        = f.text_field :to
+    .control-group
+      = f.label :description, class: "control-label"
+      .controls
+        = f.text_area :description, rows: 4
+    .control-group
+      .controls
+        = f.link_to_remove t(".remove"), class: "btn btn-danger"
+  = f.link_to_add t(".add"), :initiative_experiences, class: "btn btn-success controls"
+  %hr
+
+  %h3=t ".discipline_experiences"
+  %p=t ".discipline_experiences_desc"
+  = f.fields_for :discipline_experiences do |f|
+    .control-group
+      = f.label :name, class: "control-label"
+      .controls
+        = f.text_field :name
+    .control-group
+      = f.label :date, class: "control-label"
+      .controls
+        = f.date_select :date
+    .control-group
+      = f.label :description, class: "control-label"
+      .controls
+        = f.text_area :description, rows: 4
+    .control-group
+      .controls
+        = f.link_to_remove t(".remove"), class: "btn btn-danger"
+  = f.link_to_add t(".add"), :discipline_experiences, class: "btn btn-success controls"
+  %hr
+
+  %h3=t ".reference_experiences"
+  %p=t ".reference_experiences_desc"
+  = f.fields_for :reference_experiences do |f|
+    .control-group
+      = f.label :name, class: "control-label"
+      .controls
+        = f.text_field :name
+    .control-group
+      = f.label :contact, class: "control-label"
+      .controls
+        = f.text_field :contact
+    .control-group
+      = f.label :file, class: "control-label"
+      .controls
+        = f.file_field :file
+      .controls
+        = f.link_to_remove t(".remove"), class: "btn btn-danger"
+  = f.link_to_add t(".add"), :reference_experiences, class: "btn btn-success controls"
   %hr
 
   .control-group

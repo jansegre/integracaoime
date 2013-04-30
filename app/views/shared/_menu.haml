@@ -29,9 +29,6 @@
                         %li
                           %a.navbar-link{href: url_for(student_hints_path)}
                             =t ".tips"
-                        %li
-                          %a.navbar-link{href: url_for(feedback_path)}
-                            =t ".feedback"
                         %li.divider
                       - if current_user.company_member?
                         - if current_company.subscriber?

@@ -5,6 +5,7 @@ class Highlight
   field :image
   field :description
   field :title
+  field :link
   field :active, type: Boolean, default: false
 
   belongs_to :company
@@ -12,8 +13,6 @@ class Highlight
   mount_uploader :image, HighlightUploader
 
   validates_presence_of :image, :description, :title
-
-  attr_accessible :image, :image_cache, :description, :title, :active
 
   index({ active: 1 }, { background: true })
 

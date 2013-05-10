@@ -32,6 +32,7 @@ ActiveAdmin.register Highlight do
       f.input :image
       f.input :title
       f.input :description, :as => :text
+      f.input :link
       f.input :active, :as => :boolean
     end
     f.actions

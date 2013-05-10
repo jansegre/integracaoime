@@ -1,17 +1,19 @@
 - [:professional_experiences, :voluntary_experiences, :language_experiences, :project_experiences, :notable_experiences, :publication_experiences, :course_experiences, :initiative_experiences, :discipline_experiences, :reference_experiences].each do |att|
-  %h3=t att, scope: "resumes.form"
-  - @resume.method(att).().each do |e|
+  - unless @resume.method(att).().empty?
+    %h3=t att, scope: "resumes.form"
+    - @resume.method(att).().each do |e|
+      %hr
+      %dl.dl-horizontal
+        - e.attributes.each do |a, v|
+          - unless a == "_id"
+            %dt=t a, scope: "activemodel.attributes.#{att.to_s[0..-2]}"
+            - unless v.nil? || v == ""
+              %dd= v
+            - else
+              %dd &nbsp;
+        - if e[:file]
+          %dt=t :file, scope: "activemodel.attributes.#{att.to_s[0..-2]}"
+          %dd
+            %a{href: e.file.url}= e.file.filename
+    -# %hr.dark
     %hr
-    %dl.dl-horizontal
-      - e.attributes.each do |a, v|
-        - unless a == "_id"
-          %dt=t a, scope: "activemodel.attributes.#{att.to_s[0..-2]}"
-          - unless v.nil? || v == ""
-            %dd= v
-          - else
-            %dd &nbsp;
-      - if e[:file]
-        %dt=t :file, scope: "activemodel.attributes.#{att.to_s[0..-2]}"
-        %dd
-          %a{href: e.file.url}= e.file.filename
-  %hr.dark

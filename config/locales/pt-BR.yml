@@ -227,6 +227,9 @@ pt-BR:
         legal_name: Razão Social
         cnpj: CNPJ
         address: Endereço
+        site: Site
+        logo: Logo
+        headline: Descrição curta
       resume:
         <<: *default_attrs
         references: Referências
@@ -262,6 +265,8 @@ pt-BR:
         content: Conteúdo
         menu: Menu
         menu_id: Menu
+        show_members: Mostrar membros?
+        show_companies: Mostrar empresas?
       media:
         <<: *default_attrs
         gallery: Galeria

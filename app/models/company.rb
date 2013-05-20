@@ -7,6 +7,11 @@ class Company
   field :cnpj
   field :address
   field :subscriber, :type => Boolean
+  field :site
+  field :logo
+  field :headline
+
+  mount_uploader :logo, HintImageUploader
 
   has_many :users
   has_one :highlight

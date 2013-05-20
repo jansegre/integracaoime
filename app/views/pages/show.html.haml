@@ -32,14 +32,16 @@
           - if m.active_children.empty?
             %li{class: m.slug == @menu.slug ? "active" : nil}
               %a{href: url_for_page(m)}= m.title
-          -# elsif not m.active_children.empty?
-            %li.dropdown
-              %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}
-                %i.icon-angle-down
-                = m.title
-              %ul.dropdown-menu
+          - elsif not m.active_children.empty?
+            %li.muted
+              = m.title
+              %ul.nav.nav-list
                 - m.active_children.each do |m|
-                  %li
-                    %a{href: url_for_page(m)}= m.title
+                  - if m.active_children.empty?
+                    %li
+                      %a{href: url_for_page(m)}= m.title
+                  - else
+                    %li.muted
+                      = m.title
   .span9
     != @page.content

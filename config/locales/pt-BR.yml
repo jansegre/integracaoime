@@ -180,6 +180,9 @@ pt-BR:
       partner:
         one:   Parceiro
         other: Parceiros
+      logo:
+        one:   Logo
+        other: Logos
     attributes:
       default: &default_attrs
         _type: Tipo
@@ -307,6 +310,13 @@ pt-BR:
         <<: *experience_attrs
         contact: Contato
         file: Arquivo
+      logo:
+        <<: *default_attrs
+        image_svg: Imagem SVG
+        image_png: Imagem PNG
+        height: Altura (px)
+        width: Largura (px)
+        is_sponsor: É patrocinador?
   mongoid:
     <<: *activemodel
   activerecord:

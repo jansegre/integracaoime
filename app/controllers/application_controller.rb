@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   def load_menu
     @root_menu = Menu.root_menu
     @company_menu = Menu.company_menu
+    @logos = Logo.all_active
+    @sponsor_logos = @logos.where is_sponsor: true
+    @support_logos = @logos.where is_sponsor: false
   end
 
   # Overwriting the sign_out redirect path method

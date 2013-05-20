@@ -52,4 +52,12 @@
               %a.thumbnail{href: c.site || '#'}
                 = image_tag(c.logo.url) unless c.logo.url.nil?
                 %p= c.headline
+    - if @page.show_members?
+      .row-fluid
+        %ul.thumbnails
+          - @members.each do |m|
+            %li.span4
+              .thumbnail
+                = image_tag(m.resume.image.url) if m.resume? and not m.resume.image.url.nil?
+                %p= m.name
     != @page.content

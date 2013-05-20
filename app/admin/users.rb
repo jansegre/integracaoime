@@ -14,6 +14,7 @@ ActiveAdmin.register User do
     bcolumn :admin
     #bcolumn :unapproved
     bcolumn :student
+    bcolumn :member
     #column :current_sign_in_at
     #column :last_sign_in_at
     column :sign_in_count
@@ -30,6 +31,7 @@ ActiveAdmin.register User do
         f.input :approved, :as => :boolean
       end
       f.input :student, :as => :boolean
+      f.input :member, :as => :boolean
       f.input :company
       f.input :position
       f.input :representative, :as => :boolean

@@ -48,6 +48,7 @@ class User
   validates_length_of :name, minimum: 3, maximum: 128
 
   field :admin,   type: Boolean, default: false
+  field :member,  type: Boolean, default: false
   field :student, type: Boolean
 
   field :position

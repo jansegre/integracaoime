@@ -1,6 +1,6 @@
 IntegracaoIME::Application.routes.draw do
 
-  root :to => "welcome#index", as: :new_user_session
+  root :to => "welcome#index"
 
   get "page/:slug" => "pages#show", :as => :page
 

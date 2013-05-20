@@ -26,6 +26,7 @@ pt-BR:
       password: Senha
       sign_up: Registrar-se
       change_password: Trocar senha
+      forgot: Esqueceu sua senha?
 
     # login modal
     login:

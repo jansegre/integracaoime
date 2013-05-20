@@ -33,6 +33,12 @@ pt-BR:
       updated_not_active: 'Sua senha foi alterada com sucesso.'
       send_paranoid_instructions: 'Caso seu e-mail esteja cadastrado, você receberá um link para recuperação de senha no seu e-mail em poucos minutos.'
       no_token: 'Você não pode acessar esta página sem que seja a partir de um e-mail de reinicialização de senha. Se você chegou aqui através de um e-mail de reinicialização de senha, por favor verifique se você usou a URL completa que foi informada.'
+      new:
+        forgot: 'Esqueceu sua senha?'
+        send: 'Enviar instruções'
+      edit:
+        change_password: 'Redefinir senha'
+        send: 'Enviar senha nova'
     confirmations:
       send_instructions: 'Dentro de minutos você receberá um e-mail com instruções para confirmar a sua conta.'
       send_paranoid_instructions: 'Caso seu e-mail exista em nossa base, você receberá um e-mail em poucos minutos com instruções sobre como confirmar sua conta.'

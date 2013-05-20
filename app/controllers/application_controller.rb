@@ -12,8 +12,22 @@ class ApplicationController < ActionController::Base
   end
 
   # Overwriting the sign_out redirect path method
-  def after_sign_out_path_for(resource_or_scope)
+  def after_sign_out_path_for(resource)
     root_path
+  end
+
+  def after_sign_in_path_for(resource)
+    if current_user.admin
+      admin_root_path
+    elsif current_user.company_member?
+      if current_company.page?
+        company_page_path
+      else
+        root_path
+      end
+    else
+      student_resume_path
+    end
   end
 
   # For use with ActiveAdmin

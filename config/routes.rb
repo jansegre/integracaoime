@@ -12,6 +12,7 @@ IntegracaoIME::Application.routes.draw do
   get "resumes" => "company#resumes", :as => :company_resumes
   # the following route has to come after resume/new and resume/edit
   get "resume/:id" => "company#resume", :as => :company_user_resume
+  get "company" => "company#page", :as => :company_page
   get "calendars" => "company#calendars", :as => :company_calendars
   get "highlight" => "company#highlight", :as => :company_highlight
   post "highlight" => "company#create_highlight", :as => :company_create_highlight

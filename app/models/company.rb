@@ -15,6 +15,7 @@ class Company
 
   has_many :users
   has_one :highlight
+  belongs_to :page
 
   validates_presence_of :name, :legal_name, :cnpj, :address
 

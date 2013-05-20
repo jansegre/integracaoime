@@ -23,6 +23,11 @@ class CompanyController < ApplicationController
     @calendars = Calendar.all
   end
 
+  def page
+    @company = current_company
+    @page = current_company.page
+  end
+
   def highlight
     @highlight = current_company.highlight
     if @highlight.nil?

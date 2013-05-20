@@ -31,6 +31,10 @@
                             =t ".tips"
                         %li.divider
                       - if current_user.company_member?
+                        - if current_company.page?
+                          %li
+                            %a.navbar-link{href: url_for(company_page_path)}
+                              =t ".company_page"
                         - if current_company.subscriber?
                           %li
                             %a.navbar-link{href: url_for(company_resumes_path)}

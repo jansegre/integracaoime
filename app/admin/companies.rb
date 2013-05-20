@@ -25,6 +25,7 @@ ActiveAdmin.register Company do
       f.input :site
       f.input :logo
       f.input :headline
+      f.input :page
     end
     f.actions
   end

@@ -404,3 +404,4 @@ pt-BR:
     title: Erro do Servidor
     text1: Desculpe mas algo errado ocorreu no servidor.
     text2: Nos já fomos notificados e estamos concertando o problema.
+    text3: 'Se o problema persistir contacte-nos em <a href="mailto:organizacao@integracaoime.com.br">organizacao@integracaoime.com.br</a>'

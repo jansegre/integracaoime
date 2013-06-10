@@ -1,13 +1,18 @@
 - content_for :title do
   =t ".title"
 
-%h1=t ".title"
-
 .row-fluid
-  %ul.thumbnails
-    - @hints.each do |h|
-      %li.span4
-        %a.thumbnail{href: h.url || '#'}
-          = image_tag(h.image_url) unless h.image_url.nil?
-          %p= h.description
+  .span3
+    .sidebar-nav.well
+      = render 'users/menu'
 
+  .span9
+    %h1=t ".title"
+
+    .row-fluid
+      %ul.thumbnails
+        - @hints.each do |h|
+          %li.span4
+            %a.thumbnail{href: h.url || '#'}
+              = image_tag(h.image_url) unless h.image_url.nil?
+              %p= h.description

@@ -1,1 +1,7 @@
-!= @page.content
+.row-fluid
+  .span3
+    .sidebar-nav.well
+      = render 'users/menu'
+
+  .span9
+    != @page.content

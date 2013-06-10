@@ -1,9 +1,15 @@
 - content_for :title do
   = current_user.name
 
-%h1.resume-title
-  - unless current_user.resume.nil? or current_user.resume.image.url.nil?
-    %img.img-rounded{src: current_user.resume.image.thumb.url, alt: current_user.name, }
-  = current_user.name
+.row-fluid
+  .span3
+    .sidebar-nav.well
+      = render 'users/menu'
 
-= render 'resumes/form'
+  .span9
+    %h1.resume-title
+      - unless current_user.resume.nil? or current_user.resume.image.url.nil?
+        %img.img-rounded{src: current_user.resume.image.thumb.url, alt: current_user.name, }
+      = current_user.name
+
+    = render 'resumes/form'

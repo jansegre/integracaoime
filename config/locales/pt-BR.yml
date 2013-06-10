@@ -8,7 +8,7 @@ pt-BR:
       outdated: 'Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/">atualize seu navegador</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">ative o Google Chrome Frame</a> para melhorar sua experiência.'
 
     # top navbar
-    menu:
+    menu: &menu
       home: Home
       login: Entrar
       logout: Sair
@@ -128,6 +128,8 @@ pt-BR:
       submit: Enviar
       current_password: Senha atual
       password: Nova senha
+    menu:
+      <<: *menu
 
   mail:
     feedback:

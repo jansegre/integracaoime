@@ -1,0 +1,42 @@
+%ul.nav.nav-list
+  - if current_user.student?
+    %li
+      %a.navbar-link{href: url_for(student_resume_path)}
+        =t ".resume"
+    %li
+      %a.navbar-link{href: url_for(student_hints_path)}
+        =t ".tips"
+    %li.divider
+  - if current_user.company_member?
+    - if current_company.page?
+      %li
+        %a.navbar-link{href: url_for(company_page_path)}
+          =t ".company_page"
+    - if current_company.subscriber?
+      %li
+        %a.navbar-link{href: url_for(company_resumes_path)}
+          =t ".resumes"
+    %li
+      %a.navbar-link{href: url_for(company_calendars_path)}
+        =t ".calendars"
+    %li
+      %a.navbar-link{href: url_for(company_highlight_path)}
+        =t ".highlight"
+    - @company_menu.active_children.each do |m|
+      %li
+        %a.navbar-link{href: url_for(page_path(m.slug))}= m.title
+    %li.divider
+  - if current_user.admin?
+    %li
+      %a.navbar-link{href: url_for(admin_root_path)}
+        =t ".admin_dashboard"
+  %li
+    %a.navbar-link{href: url_for(feedback_path)}
+      =t ".feedback"
+  %li
+    %a.navbar-link{href: url_for(change_password_path)}
+      =t ".change_password"
+  %li
+    %a.navbar-link{href: url_for(destroy_user_session_path), data: {method: "delete"}}
+      =t ".logout"
+      %i.icon-signout

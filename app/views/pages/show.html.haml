@@ -25,24 +25,27 @@
 .row-fluid
   .span3
     .sidebar-nav.well
-      %ul.nav.nav-list
-        - if @menu.parent.active?
-          %li.nav-header= @menu.parent.title
-        - @menu.parent.active_children.each do |m|
-          - if m.active_children.empty?
-            %li{class: m.slug == @menu.slug ? "active" : nil}
-              %a{href: url_for_page(m)}= m.title
-          - elsif not m.active_children.empty?
-            %li.muted
-              = m.title
-              %ul.nav.nav-list
-                - m.active_children.each do |m|
-                  - if m.active_children.empty?
-                    %li
-                      %a{href: url_for_page(m)}= m.title
-                  - else
-                    %li.muted
-                      = m.title
+      - if @menu.user_page?
+        = render 'users/menu'
+      - else
+        %ul.nav.nav-list
+          - if @menu.parent.active?
+            %li.nav-header= @menu.parent.title
+          - @menu.parent.active_children.each do |m|
+            - if m.active_children.empty?
+              %li{class: m.slug == @menu.slug ? "active" : nil}
+                %a{href: url_for_page(m)}= m.title
+            - elsif not m.active_children.empty?
+              %li.muted
+                = m.title
+                %ul.nav.nav-list
+                  - m.active_children.each do |m|
+                    - if m.active_children.empty?
+                      %li
+                        %a{href: url_for_page(m)}= m.title
+                    - else
+                      %li.muted
+                        = m.title
   .span9
     - if @page.show_companies?
       .row-fluid

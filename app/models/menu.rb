@@ -30,6 +30,10 @@ class Menu
     self.active = false
   end
 
+  def user_page?
+    parent.slug == "__company__"
+  end
+
   class << self
     def all_active
       where active: true

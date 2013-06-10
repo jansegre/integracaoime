@@ -9,7 +9,8 @@ class UsersController < ApplicationController
   # receive post and email that feedback
   def send_feedback
     @message = params[:message]
-    if Staff.feedback_email(current_user, @message).deliver
+    @subject = params[:subject]
+    if Staff.feedback_email(current_user, @subject, @message).deliver
       redirect_to root_path, notice: t("flash.feedback_sent")
     else
       render action: "feedback", alert: t("flash.feedback_failed")

@@ -4,7 +4,9 @@
 %h1=t ".title"
 
 = form_tag action: "send_feedback" do
-  %fieldset
-    = text_area_tag :message
-  = submit_tag t(".submit"), class: "btn"
-
+  .form
+    %fieldset.controls
+      %input{type: :text, id: :subject, name: :subject, placeholder: t('.subject')}
+    %fieldset.controls
+      %textarea{id: :message, name: :message, rows: 5, cols: 60, placeholder: t('.message')}
+    = submit_tag t(".submit"), class: "btn"

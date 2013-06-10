@@ -5,10 +5,11 @@ class Staff < ActionMailer::Base
   #
   #   en.staff.feedback_email.subject
   #
-  def feedback_email user, message
+  def feedback_email user, subject, message
     @user = user
     @message = message
-    @subject = t "mail.feedback.subject", name: @user.name
+    #@subject = t "mail.feedback.subject", name: @user.name
+    @subject = subject
 
     mail from: "feedback@segre.in",
          to: User.admins.map{ |u| u.email },

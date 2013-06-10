@@ -121,6 +121,8 @@ pt-BR:
     feedback:
       title: Feedback
       submit: Enviar
+      subject: Assunto
+      message: Mensagem
     change_password:
       title: Trocar senha
       submit: Enviar

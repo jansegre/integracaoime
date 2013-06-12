@@ -87,7 +87,7 @@ production:
     default:
       database: integracaoime
       hosts:
-        - localhost:27017
+        - "mongodb.vialink.com.br:27017"
       options:
         consistency: :strong
   options:

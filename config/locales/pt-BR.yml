@@ -259,6 +259,7 @@ pt-BR:
         <<: *default_attrs
         content: Conteúdo
         link: Link
+        image: Imagem (275x200)
       menu:
         <<: *default_attrs
         slug: Slug
@@ -285,6 +286,7 @@ pt-BR:
       partner:
         <<: *default_attrs
         link: Link
+        image: Imagem (27x5)
       experience: &experience_attrs
         name: Nome
         position: Cargo

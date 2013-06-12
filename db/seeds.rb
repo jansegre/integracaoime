@@ -46,35 +46,43 @@ def lorem_page
   eos
 end
 
-create_menu_tree(
-  title: "__ROOT__",
-  slug: "__root__",
-  active: false,
-  children: [
-  { title: "Sabia Mais", slug: "more", children: [
-    { title: "Missão", slug: "mission", page: lorem_page },
-    { title: "Valores", slug: "values", page: lorem_page },
-    { title: "Membros", slug: "members", page: lorem_page }] },
-  { title: "O Evento", slug: "the-event", children: [
-    { title: "O que é", slug: "what-is", page: lorem_page },
-    { title: "Integração 2013", slug: "2013", children: [
-      { title: "Programação", slug: "schedule", page: lorem_page },
-      { title: "Empresas Participantes", slug: "companies", page: lorem_page },
-      { title: "Palestrantes Magnos", slug: "special-guest", page: lorem_page }] },
-    { title: "Eventos Anteriores", slug: "previous", page: lorem_page }] },
-  { title: "Empresa", slug: "the-company", children: [
-    { title: "Veja Quem Já Participou", slug: "all-participants", page: lorem_page },
-    { title: "Porque Participar", slug: "why-participate", page: lorem_page },
-    { title: "Participe", slug: "participate", page: lorem_page }] },
-  { title: "Fotos e Vídeos", slug: "media", page: lorem_page },
-  { title: "Contato", slug: "contact", page: lorem_page }
-])
+#create_menu_tree(
+#  title: "__ROOT__",
+#  slug: "__root__",
+#  active: false,
+#  children: [
+#  { title: "Sabia Mais", slug: "more", children: [
+#    { title: "Missão", slug: "mission", page: lorem_page },
+#    { title: "Valores", slug: "values", page: lorem_page },
+#    { title: "Membros", slug: "members", page: lorem_page }] },
+#  { title: "O Evento", slug: "the-event", children: [
+#    { title: "O que é", slug: "what-is", page: lorem_page },
+#    { title: "Integração 2013", slug: "2013", children: [
+#      { title: "Programação", slug: "schedule", page: lorem_page },
+#      { title: "Empresas Participantes", slug: "companies", page: lorem_page },
+#      { title: "Palestrantes Magnos", slug: "special-guest", page: lorem_page }] },
+#    { title: "Eventos Anteriores", slug: "previous", page: lorem_page }] },
+#  { title: "Empresa", slug: "the-company", children: [
+#    { title: "Veja Quem Já Participou", slug: "all-participants", page: lorem_page },
+#    { title: "Porque Participar", slug: "why-participate", page: lorem_page },
+#    { title: "Participe", slug: "participate", page: lorem_page }] },
+#  { title: "Fotos e Vídeos", slug: "media", page: lorem_page },
+#  { title: "Contato", slug: "contact", page: lorem_page }
+#])
+#
+#create_menu_tree(
+#  title: "__COMPANY__",
+#  slug: "__company__",
+#  active: false,
+#  children: [
+#  { title: "Orientações para o convênio", slug: "how_to", page: lorem_page },
+#  { title: "Patrocine uma iniciativa", slug: "sponsor", page: lorem_page }
+#])
 
 create_menu_tree(
-  title: "__COMPANY__",
-  slug: "__company__",
+  title: "__STUDENT__",
+  slug: "__student__",
   active: false,
   children: [
-  { title: "Orientações para o convênio", slug: "how_to", page: lorem_page },
-  { title: "Patrocine uma iniciativa", slug: "sponsor", page: lorem_page }
+  { title: "Home do Aluno", slug: "student_home", page: lorem_page },
 ])

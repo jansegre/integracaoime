@@ -31,7 +31,7 @@ class Menu
   end
 
   def user_page?
-    parent.slug == "__company__"
+    (parent.slug == "__company__") or (parent.slug == "__student__")
   end
 
   class << self
@@ -45,6 +45,10 @@ class Menu
 
     def company_menu
       find_by slug: "__company__"
+    end
+
+    def student_menu
+      find_by slug: "__student__"
     end
   end
 end

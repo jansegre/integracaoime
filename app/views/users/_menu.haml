@@ -1,5 +1,8 @@
 %ul.nav.nav-list
   - if current_user.student?
+    - @student_menu.active_children.each do |m|
+      %li
+        %a.navbar-link{href: url_for(page_path(m.slug))}= m.title
     %li
       %a.navbar-link{href: url_for(student_resume_path)}
         =t ".resume"

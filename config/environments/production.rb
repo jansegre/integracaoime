@@ -80,7 +80,7 @@ IntegracaoIME::Application.configure do
 
   # Set some mailer defaults
   #TODO change these after staging fase
-  config.action_mailer.default_url_options = {:host => 'integracaoime.segre.in'}
+  config.action_mailer.default_url_options = {:host => 'integracaoime.com.br'}
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true

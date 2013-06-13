@@ -27,7 +27,11 @@ class ApplicationController < ActionController::Base
         root_path
       end
     else
-      student_resume_path
+      if @student_menu.children?
+        page_path slug: @student_menu.children[0].slug
+      else
+        student_resume_path
+      end
     end
   end
 

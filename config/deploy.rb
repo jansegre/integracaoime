@@ -53,7 +53,7 @@ set :shared_children, shared_children + %w(public/uploads)
 namespace :app do
   for action in [:start, :stop, :restart, :reload]
     task action do
-      run "#{try_sudo} /etc/init.d/unicorn.#{application} #{action}"
+      run "#{sudo} /etc/init.d/unicorn.#{application} #{action}"
     end
   end
   task :reprocess_images do

@@ -8,4 +8,6 @@
 #IntegracaoIME::Application.config.session_store :active_record_store
 
 # Simple cache for development
-IntegracaoIME::Application.config.session_store :cache_store
+if Rails.env.development?
+  IntegracaoIME::Application.config.session_store :cache_store
+end

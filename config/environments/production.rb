@@ -87,5 +87,5 @@ IntegracaoIME::Application.configure do
 
   # Use memcached for session store
   require 'action_dispatch/middleware/session/dalli_store'
-  config.session_store :dalli_store
+  config.session_store :dalli_store, "memcached.vialink.com.br"
 end

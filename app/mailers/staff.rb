@@ -11,7 +11,7 @@ class Staff < ActionMailer::Base
     #@subject = t "mail.feedback.subject", name: @user.name
     @subject = subject
 
-    mail from: "feedback@integracaoime.com.br",
+    mail from: "Integração IME Feedback <feedback@integracaoime.com.br>",
          to: User.admins.map{ |u| u.email },
          subject: @subject
   end
@@ -26,7 +26,7 @@ class Staff < ActionMailer::Base
     @message = message
     @subject = t "mail.contact.subject", name: @name
 
-    mail from: "contact@integracaoime.com.br",
+    mail from: "Integração IME Contato <contato@integracaoime.com.br>",
          to: User.admins.map{ |u| u.email },
          subject: @subject
   end

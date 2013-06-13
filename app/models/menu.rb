@@ -31,7 +31,15 @@ class Menu
   end
 
   def user_page?
-    (parent.slug == "__company__") or (parent.slug == "__student__")
+    company_page? or student_page?
+  end
+
+  def company_page?
+    parent.slug == "__company__"
+  end
+
+  def student_page?
+    parent.slug == "__student__"
   end
 
   class << self

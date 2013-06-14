@@ -12,8 +12,6 @@ class Sponsor
 
   validates_presence_of :image, :content, :title
 
-  attr_accessible :image, :image_cache, :title, :content, :link, :active
-
   index({ active: 1 }, { background: true })
 
   def activate!

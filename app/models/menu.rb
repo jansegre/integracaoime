@@ -18,8 +18,16 @@ class Menu
     children.where active: true
   end
 
+  def active_children?
+    not active_children.empty?
+  end
+
   def active_siblings
     siblings.where active: true
+  end
+
+  def active_siblings?
+    not active_siblings.empty?
   end
 
   def activate!

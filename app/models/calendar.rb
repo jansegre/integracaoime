@@ -13,7 +13,5 @@ class Calendar
                             greater_than: 1700,
                             less_than: 2100
 
-  attr_accessible :calendar, :calendar_cache, :year, :specialty
-
   index({ year: 1})
 end

@@ -6,7 +6,7 @@ class Company
   field :legal_name
   field :cnpj
   field :address
-  field :subscriber, :type => Boolean
+  field :subscriber, type: Boolean
   field :site
   field :logo
   field :headline

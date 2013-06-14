@@ -27,8 +27,8 @@ class ApplicationController < ActionController::Base
         root_path
       end
     else
-      if @student_menu.children?
-        page_path slug: @student_menu.children[0].slug
+      if @student_menu.active_children?
+        page_path slug: @student_menu.active_children[0].slug
       else
         student_resume_path
       end

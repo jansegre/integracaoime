@@ -53,9 +53,11 @@ pt-BR:
 
   registrations:
     new:
+      terms_and_conditions: Termos e Condições
       title: Criar Usuário
       register: Registrar
       cancel: Cancelar
+      accept: Aceitar termos e condições
 
   students:
     resume:

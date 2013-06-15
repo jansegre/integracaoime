@@ -14,3 +14,28 @@
     = f.action :cancel, :label => t(".cancel"), :as => :link
     = f.action :submit, :label => t(".register"), :button_html => {:class => "btn btn-primary"}
 
+:javascript
+  $(function() {
+    $("#termsModal").modal("show")
+  })
+
+#termsModal.modal.hide.fade{:tabindex => -1, :role => :dialog, "aria-hidden" => :true, data: {backdrop: :static, keyboard: :false}}
+  = form_for(:user, :url => user_session_path) do |f|
+
+    .modal-header
+      -#%a.close{"data-dismiss" => :modal, "aria-hidden" => :true} &times;
+      %a.close{href: url_for(root_path), "aria-hidden" => :true} &times;
+      %h3=t ".terms_and_conditions"
+
+    .modal-body
+      %div{:style => "text-align: justify"}
+        %p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et massa eros, ut pretium velit. Maecenas eleifend massa id nulla porta malesuada. Duis pulvinar diam nec nulla gravida at varius urna congue. Mauris vitae tincidunt augue. Sed ullamcorper, orci vel consectetur adipiscing, lorem purus posuere arcu, id lacinia nisl diam ut sapien. Nullam metus tortor, pulvinar sit amet porta ac, volutpat a nisl. Fusce ultricies purus a sem dictum accumsan. Donec est sapien, mollis in blandit quis, facilisis vel nisl.
+        %p Fusce enim turpis, pulvinar ac semper vitae, posuere non turpis. Etiam lacinia pharetra volutpat. Aenean fermentum felis vel libero ultrices at pharetra ante pellentesque. Quisque imperdiet, est ut adipiscing convallis, erat nibh egestas nisi, tempus auctor elit neque sed tellus. Aenean malesuada massa at est malesuada imperdiet. Aenean elit felis, accumsan a vulputate et, scelerisque auctor tellus. Nam quis lorem justo, nec vehicula sapien. Duis eu convallis felis. Fusce massa magna, vulputate in molestie a, sollicitudin ac nulla. Suspendisse vitae magna lorem. Nunc at justo erat, quis mollis mauris. Donec lectus lacus, tristique lacinia consectetur vitae, elementum quis nisl. Nullam lectus purus, consectetur at condimentum at, convallis id sem. Vestibulum sagittis, lacus non egestas pretium, urna nibh congue diam, nec molestie elit sem non eros.
+        %p Curabitur scelerisque ipsum sit amet justo rhoncus cursus. Suspendisse potenti. Etiam at metus ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus justo, pretium id gravida in, pharetra ut turpis. Morbi ante nisl, scelerisque quis dapibus a, semper id sapien. Nunc eu purus arcu. Suspendisse ut sem magna, eu fringilla lorem. Integer nec nisl ac massa venenatis blandit. Cras iaculis felis ac diam mattis viverra. Nullam auctor semper erat, vel luctus orci ultricies sit amet.
+        %p Etiam pulvinar ante et libero consequat sit amet dictum nulla lacinia. Ut tortor mauris, ullamcorper id placerat ac, mollis sed ante. Ut ullamcorper gravida lorem, eu pretium quam cursus vitae. Duis aliquam ipsum a sem hendrerit eget pharetra ligula tincidunt. Suspendisse convallis dignissim dapibus. Mauris dapibus fermentum lobortis. Duis varius placerat elit vel commodo. Sed lectus est, fermentum ullamcorper rutrum id, mattis in metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis vitae varius diam. Morbi blandit velit odio, ut dictum enim. Proin euismod gravida libero. Aenean lacinia, erat sed bibendum auctor, felis nisl tempus nisi, et cursus quam odio sit amet erat.
+        %p Etiam blandit, dui eget dapibus molestie, massa elit elementum nulla, eget adipiscing neque diam molestie nunc. Fusce ornare tellus a elit facilisis sit amet malesuada justo iaculis. Quisque nibh odio, dictum eget consequat ut, sagittis et libero. Duis a porttitor massa. Duis congue nulla quam. Aliquam eu tortor magna. Suspendisse id risus lacus, vitae feugiat erat.
+        %p Morbi nec neque ipsum, eget auctor sem. Aenean eu eros lacus, ut congue sem. Maecenas sit amet aliquam felis. Vivamus nec ipsum urna. Donec ornare iaculis ante, et mollis nisl pretium interdum. Proin aliquam facilisis erat, quis tincidunt tortor convallis vitae. Vestibulum posuere consequat neque bibendum ultrices. Praesent venenatis dictum risus, eleifend varius massa varius ac. Pellentesque laoreet dolor sed risus feugiat tristique. Sed accumsan, odio eu faucibus pulvinar, dolor augue cursus lectus, adipiscing tempor justo lorem non quam. Suspendisse eu turpis sit amet odio commodo tempor a eget mauris. Nunc nisi lorem, scelerisque sit amet posuere non, auctor et neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+    .modal-footer
+      %a.btn{href: url_for(root_path), role: :button, "aria-hidden" => true}=t ".cancel"
+      %a.btn-primary.btn{href: "#", role: :button, "aria-hidden" => "true", data: {dismiss: :modal}}=t ".accept"

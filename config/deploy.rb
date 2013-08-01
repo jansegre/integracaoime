@@ -8,7 +8,8 @@ set :user, "capistrano"
 set :use_sudo, false
 set :deploy_via, :copy
 #set :deploy_to, "/var/www/rails/#{application}"
-set :deploy_to, "/var/www/integracaoime.com.br"
+#set :deploy_to, "/var/www/integracaoime.com.br"
+set :deploy_to, "/var/www/rails-projects/integracaoime.com.br"
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :scm, :git
@@ -17,10 +18,12 @@ set :copy_cache, true
 #role :app, "integracao.segre.in", primary: true
 #role :web, "integracao.segre.in"                          # Your HTTP server, Apache/etc
 ssh_options[:port] = 11235
-role :app, "web-clientes.s.vialink.com.br", primary: true
-role :web, "web-clientes.s.vialink.com.br"                          # Your HTTP server, Apache/etc
 #role :db,  "integracao.segre.in", :primary => true # This is where Rails migrations will run
 #role :db,  "integracao.segre.in"
+#role :app, "web-clientes.s.vialink.com.br", primary: true
+#role :web, "web-clientes.s.vialink.com.br"                          # Your HTTP server, Apache/etc
+role :app, "www.vialink.com.br", primary: true
+role :web, "www.vialink.com.br"                          # Your HTTP server, Apache/etc
 
 #set :rake, "/usr/local/bin/rake"
 #set :bundle, "/usr/local/bin/bundle"

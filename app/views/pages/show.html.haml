@@ -61,6 +61,6 @@
           - @members.each do |m|
             %li.span4
               .thumbnail
-                = image_tag(m.resume.image.url) if m.resume? and not m.resume.image.url.nil?
-                %p= m.name
+                = image_tag(m.resume.image.thumb.url) if m.resume? and not m.resume.image.url.nil?
+                %p.lead= m.name
     != @page.content

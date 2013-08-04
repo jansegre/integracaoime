@@ -5,7 +5,7 @@
       .row-fluid.marketing.thumbnails
         - ss.each do |s|
           .span4.sponsor
-            %a.thumbnail{href: s.link? ? s.link : "#"}
+            %a.thumbnail{href: s.link? ? s.link : "#", target: "_blank"}
               %img{ src: s.image.thumb.url, alt: s.title }
               %h3= s.title
               %p= s.content
@@ -18,5 +18,5 @@
         %li.nav-header=t ".partners"
         - @partners.each do |p|
           %li
-            %a{href: p.link}
+            %a{href: p.link, target: "_blank"}
               %img{src: p.image.thumb.url, alt: p.name}

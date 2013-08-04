@@ -10,5 +10,5 @@ class Page
   field :show_members, type: Boolean, default: false
   has_one :company
 
-  validates_presence_of :content, :name
+  validates_presence_of :name
 end

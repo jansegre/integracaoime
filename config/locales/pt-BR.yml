@@ -372,6 +372,7 @@ pt-BR:
         <<: *default_attrs
         image_svg: Imagem SVG
         image_png: Imagem PNG
+        link: Link
         height: Altura (px)
         width: Largura (px)
         is_sponsor: É patrocinador?

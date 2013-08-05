@@ -4,6 +4,7 @@ class Logo
   field :name
   field :image_svg
   field :image_png
+  field :link
   field :height, type: Integer
   field :width, type: Integer
   field :is_sponsor, type: Boolean

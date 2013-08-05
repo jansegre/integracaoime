@@ -37,6 +37,7 @@ ActiveAdmin.register Logo do
       f.input :image_svg
       f.input :image_png
       f.input :name
+      f.input :link
       f.input :width
       f.input :height
       f.input :is_sponsor, as: :boolean

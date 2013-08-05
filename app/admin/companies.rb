@@ -4,7 +4,7 @@ ActiveAdmin.register Company do
   filter :legal_name
   filter :cnpj
 
-  actions :index, :show, :new, :create, :update, :edit
+  #actions :index, :show, :new, :create, :update, :edit
 
   index do
     selectable_column

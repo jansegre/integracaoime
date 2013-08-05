@@ -48,18 +48,19 @@
                         = m.title
   .span9
     - unless @companies.nil?
-      .row-fluid
-        %ul.thumbnails
-          - @companies.each do |c|
-            %li.span4
+      - @companies.each_slice(3) do |cc|
+        .row-fluid.thumbnails
+          - cc.each do |c|
+            .span4
               %a.thumbnail{href: c.site || '#'}
                 = image_tag(c.logo.thumb.url) unless c.logo.url.nil?
-                %p= c.headline
+                - unless c.headline.nil?
+                  %p.lead= c.headline
     - unless @members.nil?
-      .row-fluid
-        %ul.thumbnails
-          - @members.each do |m|
-            %li.span4
+      - @members.each_slice(3) do |mm|
+        .row-fluid.thumbnails
+          - mm.each do |m|
+            .span4
               .thumbnail
                 = image_tag(m.resume.image.thumb.url) if m.resume? and not m.resume.image.url.nil?
                 %p.lead= m.name

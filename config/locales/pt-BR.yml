@@ -97,25 +97,64 @@ pt-BR:
     form:
       submit: Salvar
       professional_experiences: Experiência profissional
-      professional_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      professional_experiences_desc: >
+        Pensando em trazer mais benefícios para você, a Integração IME criou esse
+        passo a passo para fazer o seu currículo, deixando-o bem estruturado e completo!
+        Siga as instruções de cada campo até finalizar e deixar salvo o seu novo currículo
+        em nosso banco de dados, pronto para aquela empresa que você tanto gosta bater
+        o olho e escolher você.
+        </p><p>
+        Neste campo <b>Experiência Profissional</b>, complete com as informações
+        sobre os locais onde já trabalhou. Vale estágio e, inclusive, empresa júnior. Lembrese de fazer uma descrição sucinta das suas principais atividades dentro desse
+        trabalho. Para colocar mais de uma empresa, apenas clique em <b>Adicionar</b>.
       voluntary_experiences: Causas e Trabalhos Voluntários
-      voluntary_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      voluntary_experiences_desc: >
+        Aqui você deve listar aqueles trabalhos dos quais participou que não
+        são considerados empregos, mas que são relevantes para a sua formação, por
+        exemplo, o trabalho em uma ONG. Lembre-se que as empresas também buscam
+        aquele profissional com visão ampla das situações e que tenha tido experiências
+        diversas.
       language_experiences: Idiomas
-      language_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      language_experiences_desc: >
+        Este campo é bem simples: complete com os idiomas que você já aprendeu.
+        Classifique o Nível em: <b>Básico</b>, <b>Intermediário</b>, <b>Avançado</b> ou <b>Fluente</b>.
       project_experiences: Projetos
-      project_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      project_experiences_desc: >
+        Essa é a hora de colocar aquele projeto de trabalho ou de pesquisa que
+        você desenvolveu e acha importante que o seu futuro empregador conheça.
       notable_experiences: Competências, Premiações e Certificados de Reconhecimento
-      notable_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      notable_experiences_desc: >
+        Lembre-se dos seus prêmios, certificados (olimpíadas universitárias, bolsas
+        de iniciação científica, etc.) e coloque-os nesse campo para valorizar ainda mais o
+        seu currículo.
       publication_experiences: Publicações
-      publication_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      publication_experiences_desc: >
+        Liste os seus artigos e qualquer outro tipo de publicação neste campo, sem
+        se esquecer de descrever bem resumidamente o conteúdo de cada um deles.
       course_experiences: Cursos
-      course_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      course_experiences_desc: >
+        Já estamos quase acabando! Coloque aqui os seus cursos extracurriculares
+        que achar relevante (aquele curso de verão no IMPA, por exemplo). Essa é uma
+        parte muito importante do seu currículo!
       initiative_experiences: Iniciativas Estudantis
-      initiative_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      initiative_experiences_desc: >
+        Informe para enriquecer o seu histórico as iniciativas dentro e fora do IME
+        das quais você fez ou faz parte, informando na descrição como era o seu trabalho
+        Atenção: proatividade e comprometimento são reconhecidos pelas empresas!
       discipline_experiences: Disciplinas Cursadas
-      discipline_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      discipline_experiences_desc: >
+        Dedique este campo para evidenciar aquelas disciplinas as quais você
+        cursou e cursos à distância que você acha que merecem destaque, devido à
+        importância deles na vida profissional.
       reference_experiences: Referências
-      reference_experiences_desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, felis accumsan rhoncus porttitor, odio odio malesuada nisl, nec fermentum est dui et eros. Nam a nisi sit amet ipsum sodales gravida nec non urna. Nulla id ante felis. Pellentesque sed erat urna. Proin vitae fermentum justo. Proin mattis hendrerit mattis.
+      reference_experiences_desc: >
+        Chegamos à última etapa! Faça o upload de um arquivo.pdf com um texto de
+        referência sobre você feito por algum empregador ou pessoa que o conheça bem e
+        possa redigir isso. Se não tiver isso nesse momento, você pode providenciar para
+        depois voltar aqui e deixar tudo bem completo.
+        </p><p>
+        E assim, você terminou o seu currículo! Agora é só esperar uma das tantas
+        empresas que a Integração IME traz para o nosso Instituto fazer contato com você!
       remove: Remover
       add: Adicionar
 

@@ -53,7 +53,7 @@
           - @companies.each do |c|
             %li.span4
               %a.thumbnail{href: c.site || '#'}
-                = image_tag(c.logo.url) unless c.logo.url.nil?
+                = image_tag(c.logo.thumb.url) unless c.logo.url.nil?
                 %p= c.headline
     - unless @members.nil?
       .row-fluid

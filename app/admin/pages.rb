@@ -29,6 +29,8 @@ ActiveAdmin.register Page do
       #TODO wysiwyg editor
       f.input :content, as: :wysihtml5
       f.input :show_companies, as: :boolean
+      f.input :show_participating, as: :boolean
+      f.input :show_sponsors, as: :boolean
       f.input :show_members, as: :boolean
     end
     f.actions

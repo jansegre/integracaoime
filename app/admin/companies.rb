@@ -22,6 +22,7 @@ ActiveAdmin.register Company do
       f.input :address
       f.input :subscriber, :as => :boolean
       f.input :participating, :as => :boolean
+      f.input :sponsor, :as => :boolean
       f.input :users
       f.input :site
       f.input :logo

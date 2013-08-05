@@ -47,7 +47,7 @@
                       %li.muted
                         = m.title
   .span9
-    - if @page.show_companies?
+    - unless @companies.nil?
       .row-fluid
         %ul.thumbnails
           - @companies.each do |c|
@@ -55,7 +55,7 @@
               %a.thumbnail{href: c.site || '#'}
                 = image_tag(c.logo.url) unless c.logo.url.nil?
                 %p= c.headline
-    - if @page.show_members?
+    - unless @members.nil?
       .row-fluid
         %ul.thumbnails
           - @members.each do |m|

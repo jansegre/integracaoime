@@ -8,6 +8,7 @@ class Company
   field :address
   field :subscriber, type: Boolean
   field :participating, type: Boolean
+  field :sponsor, type: Boolean
   field :site
   field :logo
   field :headline

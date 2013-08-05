@@ -271,6 +271,7 @@ pt-BR:
         <<: *default_attrs
         subscriber: Assinante
         participating: Participante
+        sponsor: Patrocinadora
         name: Nome Fictício
         legal_name: Razão Social
         cnpj: CNPJ
@@ -315,7 +316,9 @@ pt-BR:
         menu: Menu
         menu_id: Menu
         show_members: Mostrar membros?
-        show_companies: Mostrar empresas?
+        show_companies: Mostrar todas as empresas?
+        show_participating: Mostrar empresas participantes?
+        show_sponsors: Mostrar empresas patrocinadoras?
       media:
         <<: *default_attrs
         gallery: Galeria

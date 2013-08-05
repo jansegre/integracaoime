@@ -12,7 +12,8 @@ class Staff < ActionMailer::Base
     @subject = subject
 
     mail from: "Integração IME Feedback <feedback@integracaoime.com.br>",
-         to: User.admins.map{ |u| u.email },
+         #to: User.admins.map{ |u| u.email },
+         to: "Integração IME <integracao-ime@googlegroups.com>",
          subject: @subject
   end
 

@@ -29,9 +29,9 @@
         = render 'users/menu'
       - else
         %ul.nav.nav-list
-          - if @menu.parent.active?
+          - if @parent_menu.active?
             %li.nav-header= @menu.parent.title
-          - @menu.parent.active_children.each do |m|
+          - @parent_menu.active_children.each do |m|
             - if m.active_children.empty?
               %li{class: m.slug == @menu.slug ? "active" : nil}
                 %a{href: url_for_page(m)}= m.title

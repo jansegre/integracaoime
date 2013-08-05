@@ -1,6 +1,11 @@
 class PagesController < ApplicationController
   def show
     @menu = Menu.find_by(slug: params[:slug])
+    if @menu.parent.nil?
+      @parent_menu = Menu.root_menu
+    else
+      @parent_menu = @menu.parent
+    end
     if @menu.company_page?
       authenticate_company_user!
     elsif @menu.student_page?

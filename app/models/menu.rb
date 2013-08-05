@@ -43,11 +43,11 @@ class Menu
   end
 
   def company_page?
-    parent.slug == "__company__"
+    not parent.nil? and parent.slug == "__company__"
   end
 
   def student_page?
-    parent.slug == "__student__"
+    not parent.nil? and parent.slug == "__student__"
   end
 
   class << self

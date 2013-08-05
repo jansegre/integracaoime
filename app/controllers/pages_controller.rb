@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     elsif @menu.student_page?
       authenticate_student_user!
     end
-    @companies = Company.all
+    @companies = Company.where participating: true
     @members = User.where member: true
     @page = @menu.page
   end

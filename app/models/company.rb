@@ -7,6 +7,7 @@ class Company
   field :cnpj
   field :address
   field :subscriber, type: Boolean
+  field :participating, type: Boolean
   field :site
   field :logo
   field :headline

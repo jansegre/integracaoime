@@ -270,6 +270,7 @@ pt-BR:
       company:
         <<: *default_attrs
         subscriber: Assinante
+        participating: Participante
         name: Nome Fictício
         legal_name: Razão Social
         cnpj: CNPJ

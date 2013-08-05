@@ -6,7 +6,7 @@
         .carousel-caption{class: (i % 2 == 1 ? "right": nil)}
           .container
             - if h.link?
-              %a{href: h.link}
+              %a{href: h.link, target: "_blank"}
                 %h1= h.title
                 %p.lead= h.description
             - else

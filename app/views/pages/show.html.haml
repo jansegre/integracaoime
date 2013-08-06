@@ -62,6 +62,9 @@
           - mm.each do |m|
             .span4
               .thumbnail
-                = image_tag(m.resume.image.thumb.url) if m.resume? and not m.resume.image.url.nil?
+                - if m.resume? and not m.resume.image.url.nil?
+                  = image_tag(m.resume.image.thumb.url)
+                - else
+                  = image_tag("placeholder.png")
                 %p.lead= m.name
     != @page.content

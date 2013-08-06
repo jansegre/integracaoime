@@ -228,7 +228,7 @@ hr
   .brand
     //min-height: 100%
     padding: 10px 10px 0
-    margin: 0 0 -1px
+    margin: 0 -100px 0 -1px
     color: $blue
     font-size: 26px
     font-family: 'Droid Sans', sans-serif
@@ -359,7 +359,8 @@ hr
     &:last-child
       margin-bottom: 0
   .sponsor
-    text-align: center
+    &, p
+      text-align: center
     h2
       font-weight: normal
     p
@@ -418,6 +419,8 @@ hr
     padding:
       left: 20px
       right: 20px
+  .main
+    min-height: 250px
 
 
 @media (max-width: 979px)
@@ -518,6 +521,8 @@ hr
 
 // Footer logos
 .logos
+  a:hover
+    text-decoration: none
   &, p
     text-align: center
   padding-bottom: 80px

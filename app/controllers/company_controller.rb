@@ -19,10 +19,6 @@ class CompanyController < ApplicationController
     end
   end
 
-  def calendars
-    @calendars = Calendar.all
-  end
-
   def page
     @company = current_company
     @page = current_company.page

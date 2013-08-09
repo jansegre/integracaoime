@@ -13,12 +13,12 @@ IntegracaoIME::Application.routes.draw do
   # the following route has to come after resume/new and resume/edit
   get "resume/:id" => "company#resume", :as => :company_user_resume
   get "company" => "company#page", :as => :company_page
-  get "calendars" => "company#calendars", :as => :company_calendars
   get "highlight" => "company#highlight", :as => :company_highlight
   post "highlight" => "company#create_highlight", :as => :company_create_highlight
   put "highlight" => "company#update_highlight", :as => :company_update_highlight
 
   get "feedback" => "users#feedback", :as => :feedback
+  get "calendars" => "users#calendars", :as => :calendars
   post "feedback" => "users#send_feedback", :as => :send_feedback
   get "change_password" => "users#change_password", :as => :change_password
   put "change_password" => "users#update_password", :as => :update_password

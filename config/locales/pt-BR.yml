@@ -77,11 +77,6 @@ pt-BR:
       title: Currículos
       student: Aluno
       resume: Ver currículo
-    calendars:
-      title: Calendários
-      year: Ano
-      specialty: Especialidade
-      download: Download
     how_to:
       title: Orientações para o convênio
     sponsor:
@@ -165,6 +160,11 @@ pt-BR:
       submit: Enviar
       subject: Assunto
       message: Mensagem
+    calendars:
+      title: Calendários
+      year: Ano de Conclusão
+      specialty: Especialidade
+      download: Download
     change_password:
       title: Trocar senha
       submit: Enviar
@@ -295,7 +295,7 @@ pt-BR:
       calendar:
         <<: *default_attrs
         calendar: Calendário
-        year: Ano
+        year: Ano de Conclusão
         specialty: Especialidade
       highlight:
         <<: *default_attrs

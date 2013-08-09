@@ -32,6 +32,9 @@
                         %li
                           %a.navbar-link{href: url_for(student_hints_path)}
                             =t ".tips"
+                        %li
+                          %a.navbar-link{href: url_for(calendars_path)}
+                            =t ".calendars"
                         %li.divider
                       - if current_user.company_member?
                         - if current_company.page?
@@ -43,7 +46,7 @@
                             %a.navbar-link{href: url_for(company_resumes_path)}
                               =t ".resumes"
                         %li
-                          %a.navbar-link{href: url_for(company_calendars_path)}
+                          %a.navbar-link{href: url_for(calendars_path)}
                             =t ".calendars"
                         %li
                           %a.navbar-link{href: url_for(company_highlight_path)}

@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     @message = ""
   end
 
+  def calendars
+    @calendars = Calendar.all
+  end
+
   # receive post and email that feedback
   def send_feedback
     @message = params[:message]

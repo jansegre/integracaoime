@@ -43,11 +43,11 @@ body
   background-color: $white2
 
   .text-right
-    text-align: right
+    text-align: right !important
   .text-left
-    text-align: left
+    text-align: left !important
   .text-center
-    text-align: center
+    text-align: center !important
 
   .col2
     column-count: 2
@@ -265,6 +265,13 @@ hr
   a
     padding: 6px
     font-size: 14px
+
+// the terms modal
+@media (min-width: 767px)
+  .terms.modal
+    width: 660px
+    margin: -300px 0 0 -330px
+
 
 
 // CUSTOMIZE THE CAROUSEL TRANSITION

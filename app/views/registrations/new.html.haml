@@ -19,7 +19,7 @@
     $("#termsModal").modal("show")
   })
 
-#termsModal.modal.hide.fade{:tabindex => -1, :role => :dialog, "aria-hidden" => :true, data: {backdrop: :static, keyboard: :false}}
+#termsModal.terms.modal.hide.fade{:tabindex => -1, :role => :dialog, "aria-hidden" => :true, data: {backdrop: :static, keyboard: :false}}
   = form_for(:user, :url => user_session_path) do |f|
 
     .modal-header
@@ -29,13 +29,216 @@
 
     .modal-body
       %div{:style => "text-align: justify"}
-        %p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et massa eros, ut pretium velit. Maecenas eleifend massa id nulla porta malesuada. Duis pulvinar diam nec nulla gravida at varius urna congue. Mauris vitae tincidunt augue. Sed ullamcorper, orci vel consectetur adipiscing, lorem purus posuere arcu, id lacinia nisl diam ut sapien. Nullam metus tortor, pulvinar sit amet porta ac, volutpat a nisl. Fusce ultricies purus a sem dictum accumsan. Donec est sapien, mollis in blandit quis, facilisis vel nisl.
-        %p Fusce enim turpis, pulvinar ac semper vitae, posuere non turpis. Etiam lacinia pharetra volutpat. Aenean fermentum felis vel libero ultrices at pharetra ante pellentesque. Quisque imperdiet, est ut adipiscing convallis, erat nibh egestas nisi, tempus auctor elit neque sed tellus. Aenean malesuada massa at est malesuada imperdiet. Aenean elit felis, accumsan a vulputate et, scelerisque auctor tellus. Nam quis lorem justo, nec vehicula sapien. Duis eu convallis felis. Fusce massa magna, vulputate in molestie a, sollicitudin ac nulla. Suspendisse vitae magna lorem. Nunc at justo erat, quis mollis mauris. Donec lectus lacus, tristique lacinia consectetur vitae, elementum quis nisl. Nullam lectus purus, consectetur at condimentum at, convallis id sem. Vestibulum sagittis, lacus non egestas pretium, urna nibh congue diam, nec molestie elit sem non eros.
-        %p Curabitur scelerisque ipsum sit amet justo rhoncus cursus. Suspendisse potenti. Etiam at metus ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus justo, pretium id gravida in, pharetra ut turpis. Morbi ante nisl, scelerisque quis dapibus a, semper id sapien. Nunc eu purus arcu. Suspendisse ut sem magna, eu fringilla lorem. Integer nec nisl ac massa venenatis blandit. Cras iaculis felis ac diam mattis viverra. Nullam auctor semper erat, vel luctus orci ultricies sit amet.
-        %p Etiam pulvinar ante et libero consequat sit amet dictum nulla lacinia. Ut tortor mauris, ullamcorper id placerat ac, mollis sed ante. Ut ullamcorper gravida lorem, eu pretium quam cursus vitae. Duis aliquam ipsum a sem hendrerit eget pharetra ligula tincidunt. Suspendisse convallis dignissim dapibus. Mauris dapibus fermentum lobortis. Duis varius placerat elit vel commodo. Sed lectus est, fermentum ullamcorper rutrum id, mattis in metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis vitae varius diam. Morbi blandit velit odio, ut dictum enim. Proin euismod gravida libero. Aenean lacinia, erat sed bibendum auctor, felis nisl tempus nisi, et cursus quam odio sit amet erat.
-        %p Etiam blandit, dui eget dapibus molestie, massa elit elementum nulla, eget adipiscing neque diam molestie nunc. Fusce ornare tellus a elit facilisis sit amet malesuada justo iaculis. Quisque nibh odio, dictum eget consequat ut, sagittis et libero. Duis a porttitor massa. Duis congue nulla quam. Aliquam eu tortor magna. Suspendisse id risus lacus, vitae feugiat erat.
-        %p Morbi nec neque ipsum, eget auctor sem. Aenean eu eros lacus, ut congue sem. Maecenas sit amet aliquam felis. Vivamus nec ipsum urna. Donec ornare iaculis ante, et mollis nisl pretium interdum. Proin aliquam facilisis erat, quis tincidunt tortor convallis vitae. Vestibulum posuere consequat neque bibendum ultrices. Praesent venenatis dictum risus, eleifend varius massa varius ac. Pellentesque laoreet dolor sed risus feugiat tristique. Sed accumsan, odio eu faucibus pulvinar, dolor augue cursus lectus, adipiscing tempor justo lorem non quam. Suspendisse eu turpis sit amet odio commodo tempor a eget mauris. Nunc nisi lorem, scelerisque sit amet posuere non, auctor et neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        %h4.text-center
+          TERMOS E CONDIÇÕES GERAIS DE PRESTAÇÃO DE SERVIÇOS PELA
+          INTEGRAÇÃO IME PARA ALUNO ASSINANTE
+
+        %h5 1. DAS PARTES
+
+        %p
+          De um lado, a iniciativa <b>INTEGRAÇÃO IME</b>, apoiada pela <b>EMPRESA JÚNIOR
+          DE ENGENHARIA DO INSTITUTO MILITAR DE ENGENHARIA</b>, inscrita
+          no CNPJ nº 11.461.491/0001-94, estabelecida na Incubadora em Empresas de Base
+          Tecnológica do Exército, no Pátio de Instrução Ricardo Franco, Avenida João Luiz
+          Alves, sem número, Fortaleza São João, Urca, CEP 22291-090, Rio de Janeiro,
+          Estado do Rio de Janeiro, doravante denominada “<b>INTEGRAÇÃO IME</b>”; e de outro,
+          a pessoa física associada, doravante designado(a) <b>ALUNO ASSINANTE</b>, neste
+          ato, portador(a) deste documento, devidamente cadastrado no banco de dados da
+          INTEGRAÇÃO IME, através de seus códigos de acesso, identificados pelo login e
+          senha, resolvem, de comum acordo, celebrar o presente Acordo de Prestação de
+          Serviços, que será regido pelas seguintes cláusulas e condições:
+
+        %p
+          1.1. Os Termos e Condições Gerais deste contrato dizem respeito às partes citadas
+          acima e aplicam-se ao uso de serviços oferecidos pela INTEGRAÇÃO IME. Todo
+          ALUNO ASSINANTE que pretenda utilizar os serviços da INTEGRAÇÃO IME deverá
+          aceitar os Termos e Condições Gerais, e todas as demais políticas e princípios que o
+          regem.
+
+        %p
+          1.2. Na impossibilidade de o ALUNO ASSINANTE ser caracterizado como
+          responsável, as obrigações apresentadas neste contrato serão transferidas para seus
+          responsáveis legais.
+
+        %p
+          1.3.  As partes reconhecem o correio eletrônico (e-mail) cadastrado no ato da
+          contratação como forma válida e eficaz de comunicação e aceitam o SITE da 
+          %a{href: "http://integracaoime.com.br/"} http://integracaoime.com.br/
+          como suficiente para os serviços que se refiram a este
+          contrato, assim como as condições de sua prestação ou a qualquer outro assunto nele
+          abordado.
+
+        %h5 2. DO OBJETO E DA NATUREZA DA PRESTAÇÃO DOS SERVIÇOS
+
+        %p
+          2.1. O objeto do presente Acordo é a prestação de serviços de internet
+          pela INTEGRAÇÃO  IME ao ALUNO ASSINANTE, por meio do SITE
+          %a{href: "http://integracaoime.com.br/"} http://integracaoime.com.br/
+          , em que a INTEGRAÇÃO  IME disponibilizará ao ALUNO
+          ASSINANTE os serviços a seguir:
+
+        %p
+          a) criação, divulgação, visualização, inclusão e alteração do próprio currículo;<br>
+          b) dicas para processos seletivos e afins;<br>
+          c) visualização de notícias e atualizações;<br>
+          d) acesso as ferramentas de serviços que vierem a ser disponibilizados pela
+          INTEGRAÇÃO IME.
+
+        %p
+          2.2. Os serviços prestados pela INTEGRAÇÃO  IME não abrangem, em nenhuma
+          hipótese, promessa de estágio ou emprego para o ALUNO ASSINANTE. A
+          INTEGRAÇÃO IME não garante a colocação profissional dos ALUNOS ASSINANTES,
+          não realiza qualquer cobrança relacionada a essas atividades, sendo o SITE somente
+          uma ferramenta online que permite ao ALUNO ASSINANTE, deixar seu currículo a
+          disposição de empresas cadastradas ou que vierem a se cadastrar que possuem este
+          direito mediante acordo com a INTEGRAÇÂO IME.
+
+        %p
+          2.3. As cláusulas apresentadas no presente contrato estarão aceitas a partir do
+          momento em que o ALUNO ASSINANTE der sua concordância, clicando o botão
+          “CONCORDO COM O CONTRATO E QUERO CONTINUAR” no final do cadastro no
+          SITE.
+
+        %p
+          2.4. O sistema do SITE requisitará ao ALUNO ASSINANTE o login e senha
+          (devidamente cadastrados no momento da inclusão de dados pessoais e do currículo)
+          para acesso à área exclusiva.
+
+        %p
+          2.5. O ALUNO ASSINANTE será exclusivamente responsável pela guarda e
+          manutenção de seu login e senha, que tem natureza pessoal e intransferível, para
+          todos os fins legais.
+
+        %h5 3. DA VIGÊNCIA DO CONTRATO
+
+        %p
+          3.1. Este contrato vigerá por prazo indeterminado, permanecendo válido enquanto o
+          ALUNO ASSINANTE mantiver seu login e senha ativos no SITE.
+
+        %h5 4. DEVERES E DIREITOS DA INTEGRAÇÃO IME
+
+        %p
+          4.1. A INTEGRAÇÃO IME permitirá acesso 24 (vinte e quatro) horas por dia, 07 (sete)
+          dias por semana aos ALUNOS ASSINANTES, exceto pelos motivos descritos na
+          cláusula 4.2., alínea “d”.
+
+        %p
+          4.2. O ALUNO ASSINANTE concorda expressamente que o seu acesso ao SITE
+          depende de fatores alheios ao controle da INTEGRAÇÃO  IME e que, por isso,
+          tal acesso poderá, eventualmente, sofrer interrupções nos seguintes casos: (a)
+          indisponibilidade gerada por problemas do responsável pela conexão do SITE ou
+          dos computadores ou rede utilizados (internet); (b) casos fortuitos que impeçam a
+          prestação dos serviços; (c) falta de fornecimento de energia elétrica; e (d) problemas
+          técnicos e/ou operacionais que exijam o desligamento temporário do sistema, ajustes
+          que previnam ocorrências de falhas no sistema de transmissão e/ou roteamento no
+          acesso à Internet.
+
+        %p
+          4.3. A INTEGRAÇÃO IME se reserva o direito de efetuar modificações, alterações
+          e  eventuais manutenções em seus sistemas, visando melhorias na qualidade dos
+          serviços prestados sem prévio aviso.
+
+        %p
+          4.4. Na hipótese de eventuais modificações ou alterações nos serviços prestados pela
+          INTEGRAÇÃO IME, caberá ao ALUNO ASSINANTE o direito de entrar em contato por
+          escrito, através de e-mail, para solicitar informações sobre as mudanças efetuadas.
+
+        %p
+          4.5. A INTEGRAÇÃO IME se reserva o direito de excluir qualquer currículo que
+          apresente inveracidades, divergências de dados, visando garantir a qualidade,
+          correção e legalidade dos serviços prestados.
+
+        %p
+          4.6. As Partes estão cientes e concordam que a INTEGRAÇÃO IME:<br>
+          (i) poderá excluir o ALUNO ASSINANTE e seu registro de login e senha, caso constate
+          qualquer procedimento indevido por ele praticado, como, por exemplo, tentar acessar
+          páginas ou dados não especificamente destinados a ele, que não estejam claramente
+          colocados à disposição do público, que sejam de uso reservado ou protegido por
+          senha de outrem, que tenham qualquer tipo de limitação de acesso ou que estejam
+          em diretórios internos do SITE, sendo certo que qualquer direito não concedido
+          expressamente ao ALUNO ASSINANTE e ou aos usuários do SITE é reservado
+          exclusivamente à INTEGRAÇÃO  IME; e (ii) poderá suspender o acesso do ALUNO
+          ASSINANTE aos serviços objeto deste acordo, se for constatada qualquer divergência
+          em caso de inconsistência em seu cadastro, fornecido pelo ALUNO ASSINANTE, até
+          sua respectiva regularização.
+
+        %p
+          4.7. Tendo em vista que os dados fornecidos pelo ALUNO ASSINANTE são
+          acessados por empresas previamente determinadas, que possuem este direito
+          mediante acordo entre a empresa e a INTEGRAÇÂO IME, o ALUNO ASSINANTE
+          está ciente de que o seu currículo e demais informações inseridas no SITE poderão
+          ser visualizadas por terceiros. Dessa forma, ao aceitar o serviço da INTEGRAÇÃO
+          IME, o ALUNO ASSINANTE sabe e reconhece que há o risco de que seu  currículo
+          seja acessado por terceiros, sendo certo que o ALUNO ASSINANTE reconhece e
+          concorda expressamente que a INTEGRAÇÂO IME não poderá ser responsabilizada,
+          em nenhuma hipótese, por  eventuais danos sofridos pelo ALUNO ASSINANTE
+          decorrentes da visualização de seu currículo no SITE por qualquer das empresas
+          associadas ou por aquelas que se associarem, haja vista que terão visualização de
+          todos os currículos já cadastrados no banco de dados.
+
+        %p
+          4.8. Os acessos do ALUNO ASSINANTE ao SITE, ou seja, o login e a senha, são
+          de seu conhecimento e uso exclusivo, sendo que a INTEGRAÇÃO  IME não será
+          responsável por eventuais danos decorrentes do ACESSO ILÍCITO por terceiros ou
+          hackers ao SITE, valendo-se do login e senha do ALUNO ASSINANTE.
+
+        %p
+          4.9. Ao concordar com os serviços oferecidos pela INTEGRAÇÃO IME, o ALUNO
+          ASSINANTE autoriza expressamente a  INTEGRAÇÃO IME a manter o currículo do
+          ALUNO ASSINANTE em seu cadastro por um período indeterminado, bem como
+          qualquer outra informação que o ALUNO ASSINANTE incluir no SITE, como por
+          exemplo, cartas de apresentação, de referência, pesquisas de qualidade e outras
+          informações relacionadas, podendo utilizá-las exclusivamente para fins de divulgação
+          no SITE. O ALUNO ASSINANTE está ciente e concorda que poderá revogar tal
+          autorização mediante simples  comunicação por e-mail para a INTEGRAÇÃO IME, a
+          qualquer momento, sem nenhum prejuízo.
+
+        %h5 5. DEVERES E DIREITOS DO ALUNO ASSINANTE
+
+        %p
+          5.1. O acesso à Internet é de responsabilidade única e exclusiva do ALUNO
+          ASSINANTE, que deverá providenciar o acesso à rede mundial de computadores
+          (internet) para ter acesso ao SITE da INTEGRAÇÃO IME, através da correta utilização
+          do seu login e senha.
+
+        %p
+          5.2. O ALUNO ASSINANTE será o único responsável (i) pela veracidade de seus
+          dados, informações atualizadas e completas, conforme solicitado nas páginas do
+          cadastro, (ii) pela correta utilização de seu login e senha, que são de uso pessoal
+          e intransferível, (iii) pelo conteúdo e veracidade das informações contidas em seu
+          currículo, (iv) por qualquer atividade que ocorra no âmbito de seus acessos, (v) por
+          seu acesso à internet, respondendo isoladamente, portanto, por quaisquer ônus e/ou
+          sanções civis e/ou penais que eventualmente decorram de erro ou dolo porventura
+          cometido pelo ALUNO ASSINANTE na utilização do SITE e ainda (vi) por atos que
+          terceiros praticarem em seu nome, por meio de uso de seu login e senha de acesso,
+          desde que comprovada a culpa ou dolo do ALUNO ASSINANTE.
+
+        %h5 6. POLÍTICA DE PRIVACIDADE DO SITE
+
+        %p
+          6.1. Mensagens: a INTEGRAÇÃO IME comunica-se com seus ALUNO ASSINANTES
+          essencialmente por meio de e-mails.
+          6.2. Privacidade: somente os dados constantes dos currículos, questionários e outros
+          dados do ALUNO ASSINANTE são divulgados para as empresas, com o objetivo de
+          agilizar o contato com o ALUNO ASSINANTE.
+
+        %p
+          6.3. Conteúdo do site: a INTEGRAÇÃO IME não se responsabiliza por conteúdos de
+          outras páginas na internet acessadas por meio do site.
+
+        .pull-right
+          %p.text-right
+            INTEGRAÇÃO IME
+            %br
+            %a{href: "mailto:organizacao@integracaoime.com.br"} organizacao@integracaoime.com.br
+            %br
+            Internet:
+            %a{href: "http://integracaoime.com.br/"} http://integracaoime.com.br/
+          %p.text-right
+            IME JUNIOR
+            %br
+            CNPJ nº 11.461.491/0001-94
 
     .modal-footer
       %a.btn{href: url_for(root_path), role: :button, "aria-hidden" => true}=t ".cancel"
-      %a.btn-primary.btn{href: "#", role: :button, "aria-hidden" => "true", data: {dismiss: :modal}}=t ".accept"
+      %a.btn-primary.btn{href: "#", role: :button, "aria-hidden" => "true", data: {dismiss: :modal}} Concordo com o contrato e quero continuar

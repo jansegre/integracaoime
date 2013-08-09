@@ -84,6 +84,7 @@ pt-BR:
     highlight:
       title: Destaque
       active: Ativo
+      help: Se você deseja divulgar em nossa página inicial alguma atividade da sua empresa, como um processo seletivo ou um concurso cultural, você pode nos enviar seu pedido por aqui, explicando sua ideia.
       not_active: Inativo
 
   resumes:

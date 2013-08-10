@@ -92,6 +92,7 @@ pt-BR:
       references: Referências
       courses: Cursos
     form:
+      image_help: A exibição da sua foto será feita em uma janela quadrada, caso sua foto possua outro formato ela será cortada pela porção inferior.
       submit: Salvar
       professional_experiences: Experiência profissional
       professional_experiences_desc: >

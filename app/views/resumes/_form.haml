@@ -2,6 +2,7 @@
 
 = nested_form_for @resume, url: @url, html: {class: "form-horizontal", multipart: true} do |f|
 
+  %p=t ".image_help"
   .control-group
     = f.label :image, class: "control-label"
     .controls

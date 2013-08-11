@@ -440,14 +440,35 @@ hr
 // RESPONSIVE CSS
   --------------------------------------------------
 
+@media (min-width: 1800px)
+  .carousel
+    .item
+      height: 800px
+    img
+      width: auto
+      height: 800px
+
+@media (min-width: 1500px)
+  .carousel
+    .item
+      height: 650px
+    img
+      width: auto
+      height: 650px
+
 @media (min-width: 1200px)
+  .carousel
+    .item
+      height: 550px
+    img
+      width: auto
+      height: 550px
   .navbar .nav > li > a
     padding:
       left: 20px
       right: 20px
   .main
     min-height: 250px
-
 
 @media (max-width: 979px)
   // consistent side margins for alerts

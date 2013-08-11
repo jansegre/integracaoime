@@ -157,9 +157,23 @@
         = flash[:warn]
     :javascript
       $(function() {
+        var countdown;
+
+        $('.alert').show(resetCountdown)
+        $('.alert').mouseenter(stopCountdown)
+        $('.alert').mouseleave(resetCountdown)
+
+        function stopCountdown() {
+           clearTimeout(countdown);
+        }
+
+        function resetCountdown() {
+          stopCountdown();
+          countdown = setTimeout(function() {
+            $('.alert').alert('close');
+          }, 3500);
+        }
+
         $('.alert').alert()
-        setTimeout(function() {
-          $('.alert').alert('close')
-        }, 5000)
       })
 

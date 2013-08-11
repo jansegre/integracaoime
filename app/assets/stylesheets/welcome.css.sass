@@ -54,6 +54,7 @@ $bgcolor: $llgrey
 
 // Padding below the footer and lighter body text
 body
+  min-width: 700px
   color: #5a5a5a
   background-color: $white2
 
@@ -74,6 +75,10 @@ body
     bottom: 40px
 
 .alert
+  position: absolute
+  left: 0
+  right: 0
+  z-index: 20
   margin:
     top: 15px
     bottom: 15px
@@ -120,14 +125,8 @@ hr
 
 // Special class on .container surrounding .navbar, used for positioning it into place.
 .navbar-wrapper
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  z-index: 20
-  //margin-top: 20px
-  //margin-bottom: -90px
-  // Negative margin to pull up carousel. 90px is roughly margins and height of navbar.
+  &, .container
+    position: relative
 
 // Fix .navbar-text
 .navbar-text
@@ -135,6 +134,8 @@ hr
   line-height: 20px
 
 .navbar.navbar-integracao
+  &.navbar-fixed-top
+    margin-bottom: 0
   .navbar-inner
     padding: 0px
     min-height: 72px

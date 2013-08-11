@@ -6,7 +6,6 @@
 
 - if @page.gallery?
   - content_for :after_menu do
-    .push-down
     #galleria
       - @page.gallery.medias.each do |m|
         - case m

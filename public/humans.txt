@@ -1,16 +1,25 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+/* TEAM */
+	Develper: Jan Segre
+	Site: jan.segre.in
+	Contact: jan [at] segre.in
 
-# DEVELOPER
+/ THANKS */
+	Project Intermediator: IME Júnior
+	Contact: contato [at] imejunior.com.br
 
-    Jan Segre
+	Initial Layout: Isaac Aragão
+	Contact: isaac.aragao [at] integracaoime.com.br
 
-# TECHNOLOGY COLOPHON
+	Content Administrator: Stephano Gabriel
+	Contact: stephano.gabriel [at] integracaoime.com.br
 
-    HTML5, CSS3, JavaScript
-    Haml, Sass, CoffeeScript
-    jQuery, Modernizr, HTML5 Boilerplate
-    Font Awesome, Bootstrap
-    Ruby, Rails, Unicorn
-    MongoDB, Memcached
-    Nginx, Gentoo
+	Contributor: Rodrigo Kassouf Balbino
+
+/* SITE */
+	Language: Brazillian Portuguese
+	Standards: HTML5, CSS3
+	Technology: Rails, Haml, Sass, CoffeeScript, MongoDB, Memcached
+	Components: jQuery, Modernizr, HTML5 Boilerplate, Font Awesome, Bootstrap
+	//Server-side: Nginx, Gentoo// temporarily down
+	Server-side: Apache, Ubuntu
+	Software: vim, ruby, Google Chrome, Sublime Editor, Inkscape, Gimp

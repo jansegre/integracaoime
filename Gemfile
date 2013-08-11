@@ -1,3 +1,4 @@
+# vim: filetype=ruby
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
@@ -25,7 +26,7 @@ group :assets do
 
   gem 'jquery-rails'
   gem 'font-awesome-sass-rails'
-  gem 'bootstrap-sass'
+  gem 'bootstrap-sass', '~> 2.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', '>= 0.11.3', :platforms => :ruby

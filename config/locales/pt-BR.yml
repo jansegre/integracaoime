@@ -47,7 +47,7 @@ pt-BR:
       partners: Parceiros
 
   # footer
-  developed_by: Sistema desenvolvido por <a href="http://jan.segre.in/" rel="author" target="_blank">Jan Segre</a>
+  developed_by: Sistema desenvolvido por %{developer}
   holder: Integração IME
   rights: Todos os direitos reservados
   back_to_top: Voltar ao topo

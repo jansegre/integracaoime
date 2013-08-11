@@ -1,6 +1,6 @@
 %hr
 
-= nested_form_for @resume, url: @url, html: {class: "form-horizontal", multipart: true} do |f|
+= nested_form_for @resume, url: @url, html: {class: "form-horizontal resume", multipart: true} do |f|
 
   %p=t ".image_help"
   .control-group
@@ -24,11 +24,11 @@
         .control-group
           = f.label :from, class: "control-label"
           .controls
-            = f.text_field :from
+            = f.text_field :from, :value => (f.object.from.strftime('%d/%m/%Y') if f.object.from)
         .control-group
           = f.label :to, class: "control-label"
           .controls
-            = f.text_field :to
+            = f.text_field :to, :value => (f.object.to.strftime('%d/%m/%Y') if f.object.to)
         .control-group
           = f.label :description, class: "control-label"
           .controls
@@ -55,11 +55,11 @@
         .control-group
           = f.label :from, class: "control-label"
           .controls
-            = f.text_field :from
+            = f.text_field :from, :value => (f.object.from.strftime('%d/%m/%Y') if f.object.from)
         .control-group
           = f.label :to, class: "control-label"
           .controls
-            = f.text_field :to
+            = f.text_field :to, :value => (f.object.to.strftime('%d/%m/%Y') if f.object.to)
         .control-group
           = f.label :description, class: "control-label"
           .controls
@@ -105,11 +105,11 @@
         .control-group
           = f.label :from, class: "control-label"
           .controls
-            = f.text_field :from
+            = f.text_field :from, :value => (f.object.from.strftime('%d/%m/%Y') if f.object.from)
         .control-group
           = f.label :to, class: "control-label"
           .controls
-            = f.text_field :to
+            = f.text_field :to, :value => (f.object.to.strftime('%d/%m/%Y') if f.object.to)
         .control-group
           = f.label :description, class: "control-label"
           .controls
@@ -132,7 +132,7 @@
         .control-group
           = f.label :date, class: "control-label"
           .controls
-            = f.text_field :date
+            = f.text_field :date, :value => (f.object.date.strftime('%d/%m/%Y') if f.object.date)
         .control-group
           = f.label :description, class: "control-label"
           .controls
@@ -155,7 +155,7 @@
         .control-group
           = f.label :date, class: "control-label"
           .controls
-            = f.text_field :date
+            = f.text_field :date, :value => (f.object.date.strftime('%d/%m/%Y') if f.object.date)
         .control-group
           = f.label :topic, class: "control-label"
           .controls
@@ -182,7 +182,7 @@
         .control-group
           = f.label :date, class: "control-label"
           .controls
-            = f.text_field :date
+            = f.text_field :date, :value => (f.object.date.strftime('%d/%m/%Y') if f.object.date)
         .control-group
           = f.label :institution, class: "control-label"
           .controls
@@ -209,11 +209,11 @@
         .control-group
           = f.label :from, class: "control-label"
           .controls
-            = f.text_field :from
+            = f.text_field :from, :value => (f.object.from.strftime('%d/%m/%Y') if f.object.from)
         .control-group
           = f.label :to, class: "control-label"
           .controls
-            = f.text_field :to
+            = f.text_field :to, :value => (f.object.to.strftime('%d/%m/%Y') if f.object.to)
         .control-group
           = f.label :description, class: "control-label"
           .controls
@@ -236,7 +236,7 @@
         .control-group
           = f.label :date, class: "control-label"
           .controls
-            = f.text_field :date
+            = f.text_field :date, :value => (f.object.date.strftime('%d/%m/%Y') if f.object.date)
         .control-group
           = f.label :description, class: "control-label"
           .controls

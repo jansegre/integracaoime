@@ -338,9 +338,9 @@ pt-BR:
       experience: &experience_attrs
         name: Nome
         position: Cargo
-        from: Início
-        to: Término
-        date: Data
+        from: De (dd/mm/aaaa)
+        to: Até (dd/mm/aaaa)
+        date: Data (dd/mm/aaaa)
         description: Descrição
       professional_experience:
         <<: *experience_attrs

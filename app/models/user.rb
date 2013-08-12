@@ -62,7 +62,7 @@ class User
 
   def initialize *args
     super
-    self[:unapproved] = true
+    #self[:unapproved] = true
   end
 
   def approve!

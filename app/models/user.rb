@@ -60,6 +60,10 @@ class User
 
   index({ email: 1 }, { unique: true, background: true })
 
+  def nice_email
+    "#{name} <#{email}>"
+  end
+
   def initialize *args
     super
     #self[:unapproved] = true

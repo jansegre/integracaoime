@@ -70,6 +70,16 @@ pt-BR:
     hints:
       title: Dicas
 
+  student:
+    welcome_email:
+      subject: Bem-vindo à plataforma da Integração IME
+      text1: Caro aluno, gostaríamos de informá-lo que seu cadastro foi aprovado com sucesso.
+      text2: Seu acesso à Área Restrita do Site está liberado e você pode terminar o cadastro do seu currículo.
+      site: Site da Integração IME
+      text3: Para fazer login basta clicar no link acima e entrar com seu email e senha no canto superior direito da tela.
+      close1: Atenciosamente,
+      close2: Organização Integração IME
+
   company:
     resume:
       title: Currículo

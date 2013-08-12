@@ -43,6 +43,7 @@ ActiveAdmin.register User do
     user = User.find(params[:id])
     user.approve!
     if user.save
+      Student.welcome_email(user).deliver
       redirect_to({:action => :show}, :notice => t("flash.approved"))
     else
       redirect_to({:action => :show}, :warn => t("flash.error"))

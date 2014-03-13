@@ -1,6 +1,11 @@
 # Integração IME - site
 
-TODO: explicação
+- base: Rails
+- db: MongoDB (usa a biblioteca Mongoid)
+- paginas:
+  - HAML (abstração de HTML)
+  - JavaScript
+  - SASS (abstrai CSS)
 
 ## Licensa
 
